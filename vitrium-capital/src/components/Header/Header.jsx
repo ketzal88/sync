@@ -4,9 +4,23 @@ import { Link } from "react-router-dom";
 const Header = () => {
 	return (
 		<div className="header">
-			<nav style={{color: "white"}}>
-				<Link to="/apartments">Apartments</Link>  
-			</nav>
+			<div className="header-wrapper">
+				<nav>
+					<Link to="/apartments">INICIO</Link>  
+				</nav>
+				<nav>
+					<Link to="/apartments">EL EDIFICIO</Link>  
+				</nav>
+				<nav>
+					<Link to="/apartments">APARTMENTOS</Link>  
+				</nav>
+				<nav>
+					<Link to="/apartments">AMENITIES</Link>  
+				</nav>
+				<nav>
+					<Link to="/apartments">CONTACTO</Link>  
+				</nav>
+			</div>
 		</div>
 	)
 }

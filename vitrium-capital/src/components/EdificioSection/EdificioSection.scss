@@ -1,5 +1,25 @@
-.wrapper {
+@import "styles/colors.scss";
+
+.building-wrapper {
 	border: 1px solid black;
-	height: 500px;
+	color: $sync-blue;
+	height: 100vh;
 	padding: 50px;
+}
+
+.building-info {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.building-title {
+	margin-bottom: 50px;
+}
+
+.content-column {
+	height: 100%;
+	right: 10vw;
+	position: absolute;
 }

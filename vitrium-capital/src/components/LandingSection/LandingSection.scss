@@ -1,5 +1,35 @@
-.wrapper {
-	border: 1px solid black;
-	height: 500px;
+@import "styles/colors.scss";
+
+.landing-button {
+	background: none;
+	border: 1px solid white;
+	border-radius: 150px;
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	height: 83px;
+	width: 372px;
+
+	&.ver {
+		background-color: $sync-blue;
+		border: 0;
+		margin-right: 60px;
+	}
+}
+
+.location {
+	color: white;
+	font-weight: 200;
+	font-size: 30px;
+}
+
+.landing-wrapper {
+	background-image: url(../../../public/images/landing-image.jpg);
+	background-size: cover;
+	background-repeat: none;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
 	padding: 50px;
 }
