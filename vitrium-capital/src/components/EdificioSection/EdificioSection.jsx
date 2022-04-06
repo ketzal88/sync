@@ -26,7 +26,7 @@ const EdificioSection = () => {
 				</div>
 			</div>
 			<div className="edificio-section">
-				<div className="edificio-image placeholder-background"></div>
+				<div className="edificio-image placeholder-background">foto</div>
 				<div className="edificio-features">
 					<h2> Domótica </h2>
 					<h4>

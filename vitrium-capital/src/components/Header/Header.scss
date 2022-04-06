@@ -5,11 +5,14 @@
   background: none;
   color: white;
   height: 15vh;
-  //font-size: 24px;
   font-weight: 300;
   position: absolute;
   top: 0;
   width: 98vw;
+
+  @media (min-width: 1920px) {
+    font-size: 23px;
+  }
 }
 
 .header-wrapper {

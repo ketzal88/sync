@@ -7,9 +7,12 @@
 	color: white;
 	font-size: 22px;
 	font-weight: bold;
-	height: 83px;
-	width: 372px;
 
+	@media (min-width: 1920px) {
+		height: 83px;
+		width: 372px;
+	}
+	
 	&.ver {
 		background-color: $sync-blue;
 		border: 0;
@@ -29,7 +32,10 @@
 	background-repeat: none;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 	justify-content: center;
 	padding: 5vh 5vw;
+
+	@media (min-width: 1920px) {
+		height: 893px;
+	}
 }

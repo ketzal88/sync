@@ -1,4 +1,54 @@
-.wrapper {
-	height: 100vh;
+@import "styles/colors.scss";
+
+.apartamentos-wrapper {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
 	padding: 50px;
+}
+
+.apartamentos-features-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	
+	@media (min-width: 1920px) {
+		height: 930px;
+		width: 1709px;
+	}
+}
+
+.apartamentos-feature {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-end;
+
+	@media (min-width: 1920px) {
+		width: 549px;
+	}
+
+	.feature-title {
+		@media (min-width: 1920px) {
+			font-size: 40px;
+		}
+	}
+
+	.feature-description {
+		@media (min-width: 1920px) {
+			font-size: 24px;
+		}
+	}
+
+}
+
+.apartamentos-title {
+	color: $sync-blue;
+
+	@media (min-width: 1920px) {
+		margin-top: 112px;
+		margin-bottom: 60px;
+	}
 }
