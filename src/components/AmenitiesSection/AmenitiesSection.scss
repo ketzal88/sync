@@ -1,4 +1,21 @@
-.wrapper {
+@import "styles/colors.scss";
+
+.amenities-wrapper {
 	height: 100vh;
 	padding: 50px;
+}
+
+.amenities-header {
+	height: 10vh;
+	width: 100%;
+}
+
+.amenities-gallery {
+	background-color: $sync-blue;
+	position: absolute;
+	left: 0;
+	width: 99vw;
+	@media (min-width: 1920px) {
+		height: 863px;
+	}
 }
