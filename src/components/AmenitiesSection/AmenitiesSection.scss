@@ -1,7 +1,9 @@
 @import "styles/colors.scss";
 
 .amenities-wrapper {
-	height: 100vh;
+		@media (min-width: 1920px) {
+		height: 893px;
+	}
 	padding: 50px;
 }
 
@@ -12,10 +14,36 @@
 
 .amenities-gallery {
 	background-color: $sync-blue;
+	color: white;
+	display: flex;
 	position: absolute;
 	left: 0;
 	width: 99vw;
 	@media (min-width: 1920px) {
 		height: 863px;
+	}
+
+	.image {
+		display: flex;
+		@media (min-width: 1920px) {
+			height: 863px;
+			width: 1240px;
+		}
+	}
+
+	.left-container {
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		padding-left: 100px;
+		padding-right: 31px;
+	}
+
+	.gallery-controller {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 102px;
+		width: 100%;
 	}
 }
