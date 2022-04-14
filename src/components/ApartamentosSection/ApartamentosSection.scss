@@ -1,10 +1,11 @@
 @import "styles/colors.scss";
+@import "../../App.scss";
 
 .apartamentos-wrapper {
 	background-color: white;
 	display: flex;
 	flex-direction: column;
-	padding: 50px;
+	padding: 50px 100px;
 }
 
 .apartamentos-features-container {
@@ -90,22 +91,10 @@
 		}
 	}	
 
-	.ver-unidades-btn {
-		background-color: $sync-blue;
-		border: 0;
+	.ver-tipologia-btn {
 		margin-bottom: 90px;
 		margin-top: 64px;
-		color: $sync-orange;
-		font-size: 22px;
-		font-weight: bold;
-
-		@media (min-width: 1920px) {
-			border-radius: 46px;
-			height: 83px;
-			width: 372px;
-		}
 	}
-}
 
 
 .apartamentos-title {
@@ -115,4 +104,5 @@
 		margin-top: 112px;
 		margin-bottom: 60px;
 	}
+}
 }

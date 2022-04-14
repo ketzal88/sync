@@ -1,14 +1,18 @@
 @import "styles/colors.scss";
 
 .amenities-wrapper {
+	display: flex;
+	flex-direction: column;
 		@media (min-width: 1920px) {
-		height: 893px;
+		//height: 1850px; //200 title, 893 gallery, 756 recorrido virtual
+		width: 100%;
 	}
-	padding: 50px;
 }
 
 .amenities-header {
+	color: $sync-blue;
 	height: 10vh;
+	padding: 0 100px;
 	width: 100%;
 }
 
@@ -16,11 +20,11 @@
 	background-color: $sync-blue;
 	color: white;
 	display: flex;
-	position: absolute;
+	position: relative;
 	left: 0;
-	width: 99vw;
 	@media (min-width: 1920px) {
 		height: 863px;
+		width: 100%;
 	}
 
 	.image {
@@ -43,7 +47,35 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		margin-top: 102px;
 		width: 100%;
+	}
+}
+
+.co-working {
+	background-position: center;
+	color: white !important;
+	width: 100%;
+
+	@media (min-width: 1920px) {
+		height: 926px;
+	}
+
+	.co-working-text {
+		color: white;
+		font-size: 141px;
+		font-weight: 900;
+	}
+}
+
+.recorrido-virtual {
+	display: flex;
+	background-image: url(../../../public/images/imagen-recorrido-virtual.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: none;
+	width: 100%;
+
+	@media (min-width: 1920px) {
+		height: 594px;
 	}
 }

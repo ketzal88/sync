@@ -1,4 +1,5 @@
 @import "../styles/fonts.scss";
+@import "../styles/colors.scss";
 
 a { color: white; text-decoration: none;}
 
@@ -64,4 +65,18 @@ h4 {
 .placeholder-background {
   background-color: bisque;
   color: black;
+}
+
+.standard-button {
+  background-color: $sync-blue;
+  border: 0;
+  color: $sync-orange;
+  font-size: 22px;
+  font-weight: bold;
+
+  @media (min-width: 1920px) {
+    border-radius: 46px;
+    height: 83px;
+    width: 372px;
+  }
 }

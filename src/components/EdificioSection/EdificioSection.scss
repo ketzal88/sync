@@ -49,10 +49,6 @@
 }
 
 .edificio-info {
-	align-items: flex-start;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	margin-bottom: 40px;
 }
 
@@ -67,10 +63,7 @@
 
 .edificio-features {
 	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100vh;
+	height: 100%;
 	padding: 0 2vw;
 	width: 43vw;
 }
