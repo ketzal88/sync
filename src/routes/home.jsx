@@ -5,7 +5,7 @@ import AmenitiesSection from "../components/AmenitiesSection/AmenitiesSection";
 import ApartamentosSection from "../components/ApartamentosSection/ApartamentosSection";
 import EdificioSection from "../components/EdificioSection/EdificioSection";
 import EntrevistaSection from "../components/EntrevistaSection/EntrevistaSection";
-import LocacionSection from "../components/LocacionSection/LocacionSection";
+import UbicacionSection from "../components/UbicacionSection/UbicacionSection";
 import PrensaSection from "../components/PrensaSection/PrensaSection";
 
 
@@ -20,7 +20,7 @@ export default function Home() {
         <ApartamentosSection />
         <AmenitiesSection />
         <PrensaSection />
-        <LocacionSection />
+        <UbicacionSection />
         <EntrevistaSection />
       </div>
     );

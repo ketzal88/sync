@@ -1,4 +1,15 @@
-.wrapper {
+@import "styles/colors.scss";
+
+.entrevista-wrapper {
+	color: $sync-blue;
 	height: 100vh;
 	padding: 50px;
+}
+
+.form-entrevista {
+	width: 1100px !important;
+}
+
+.form-input {
+	width: 534px;
 }
