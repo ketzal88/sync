@@ -3,8 +3,6 @@
 
 .apartamentos-wrapper {
 	background-color: white;
-	display: flex;
-	flex-direction: column;
 	padding: 50px 100px;
 }
 
@@ -77,10 +75,7 @@
 }
 
 .monoambiente-info {
-	align-items: center;
 	color: $sync-blue;
-	display: flex;
-	flex-direction: column;
 	margin-top: 99px;
 
 	.scrolling-animation {

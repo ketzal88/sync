@@ -1,8 +1,6 @@
 @import "styles/colors.scss";
 
 .amenities-wrapper {
-	display: flex;
-	flex-direction: column;
 		@media (min-width: 1920px) {
 		//height: 1850px; //200 title, 893 gallery, 756 recorrido virtual
 		width: 100%;
@@ -36,17 +34,11 @@
 	}
 
 	.left-container {
-		justify-content: center;
-		display: flex;
-		flex-direction: column;
 		padding-left: 100px;
 		padding-right: 31px;
 	}
 
 	.gallery-controller {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
 		width: 100%;
 	}
 }
@@ -68,7 +60,6 @@
 }
 
 .recorrido-virtual {
-	display: flex;
 	background-image: url(../../../public/images/imagen-recorrido-virtual.jpg);
 	background-position: center;
 	background-size: cover;

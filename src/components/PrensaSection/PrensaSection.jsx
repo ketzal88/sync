@@ -7,16 +7,16 @@ const PrensaSection = () => {
 	const articles = [1, 2, 3];
 
 	return (
-		<Grid container flexDirection={"column"}>
+		<Grid container flexDirection="column">
 			<Grid item className="prensa-title">
 				<h1> Prensa </h1>
 			</Grid>
-			<Grid container flexDirection={"row"} className="card-container">
+			<Grid container flexDirection="row" className="card-container">
 				{
 					articles.map((key) => (
-						<Grid container flexDirection={"column"} className="prensa-card">
+						<Grid container flexDirection="column" className="prensa-card">
 							<img className="article-image placeholder-background"></img>
-							<Grid key={key} container flexDirection={"column"} justifyContent={"center"} className="article-info">
+							<Grid key={key} container flexDirection="column" justifyContent="center" className="article-info">
 								<Grid item className="article-title">
 									01 Sync: Conoce lo nuevo
 								</Grid>
