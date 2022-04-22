@@ -1,19 +1,20 @@
 import logo from './logo.svg';
-import './App.scss';
+//import './App.scss';
+import theme from "./theme/default";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './routes/home';
 import { Outlet, Link, useLocation } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
 
 function App() {
   const location = useLocation();
-  console.log("asd", location.pathname);
   return (
-    <div className="App"> 
+    <ThemeProvider theme={theme}>
       <Header />
       { location.pathname === "/" ? <Home /> : <Outlet /> }
       <Footer />
-    </div>
+    </ThemeProvider>  
   );
 }
 

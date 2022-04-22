@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 
 let theme = createTheme({
   breakpoints: {
@@ -7,9 +7,11 @@ let theme = createTheme({
     }
   },
   typography: {
+    fontFamily: "Montserrat",
     h1: {
       fontFamily: "Montserrat",
       fontWeight: "bold",
+      fontStyle: "normal",
       "@media (min-width: 1920px)": {
         fontSize: "60px"
       }
@@ -37,3 +39,5 @@ let theme = createTheme({
     },
   }
 });
+
+export default theme;

@@ -7,6 +7,8 @@ import EdificioSection from "../components/EdificioSection/EdificioSection";
 import EntrevistaSection from "../components/EntrevistaSection/EntrevistaSection";
 import UbicacionSection from "../components/UbicacionSection/UbicacionSection";
 import PrensaSection from "../components/PrensaSection/PrensaSection";
+import { ThemeProvider } from "@mui/styles";
+import theme from "../theme/default";
 
 
 
