@@ -19,8 +19,16 @@ const LandingSection = () => {
 				</Typography>
 			</Grid>
 			<Grid container className="buttons">
-				<Button className="landing-button ver"> VER APARTAMENTOS </Button>
-				<Button className="landing-button"> DESCARGAR BROCHURE </Button>
+				<button className="landing-button ver"> 
+					<Typography variant="h4" fontWeight={700}>
+						VER APARTAMENTOS
+					</Typography>
+				</button>
+				<button className="landing-button"> 
+					<Typography variant="h4" fontWeight={700}>
+						RECORRIDO VIRTUAL
+					</Typography>
+				</button>
 			</Grid>
 		</Grid>
 	)
