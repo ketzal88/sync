@@ -8,6 +8,7 @@ let theme = createTheme({
   },
   palette: {
     primary: {
+      main: "#FFF",
       syncBlue: "#132127",
       syncGrey: "#F7F7F7",
       syncOrange: "#F1804F"
