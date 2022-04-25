@@ -6,6 +6,13 @@ let theme = createTheme({
       xl: 1920
     }
   },
+  palette: {
+    primary: {
+      syncBlue: "#132127",
+      syncGrey: "#F7F7F7",
+      syncOrange: "#F1804F"
+    }
+  },
   typography: {
     fontFamily: "Montserrat",
     h1: {

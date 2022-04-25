@@ -14,16 +14,32 @@ const Header = () => {
 					</Link>  
 				</nav>
 				<nav>
-					<Link to="/apartments">EL EDIFICIO</Link>  
+					<Link to="/apartments">
+						<Typography>
+							EL EDIFICIO
+						</Typography>
+					</Link>  
 				</nav>
 				<nav>
-					<Link to="/apartments">APARTMENTOS</Link>  
+					<Link to="/apartments">
+						<Typography>
+							APARTMENTOS
+						</Typography>
+					</Link>  
 				</nav>
 				<nav>
-					<Link to="/apartments">AMENITIES</Link>  
+					<Link to="/apartments">
+						<Typography>
+							AMENITIES
+						</Typography>
+					</Link>  
 				</nav>
 				<nav>
-					<Link to="/apartments">CONTACTO</Link>  
+					<Link to="/apartments">
+						<Typography>
+							CONTACTO
+						</Typography>
+					</Link>  
 				</nav>
 			</div>
 		</div>

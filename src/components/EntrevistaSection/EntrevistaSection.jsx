@@ -1,12 +1,12 @@
 import './EntrevistaSection.scss';
 import { Link } from "react-router-dom";
-import { Grid, FormControl, InputLabel, Input, TextField } from '@mui/material';
+import { Grid, FormControl, InputLabel, Input, TextField, Typography } from '@mui/material';
 
 const EntrevistaSection = () => {
 	return (
 		<Grid container flexDirection={"column"} className="entrevista-wrapper">
 			<Grid item>
-				<h1> Agendemos una <br /> entrevista </h1>
+				<Typography variant="h1"> Agendemos una <br /> entrevista </Typography>
 			</Grid>
 			<Grid container flexDirection={"row"} sx={{marginTop: "80px"}}>
 				<Grid item className="foto-christian"></Grid>

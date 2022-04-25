@@ -1,6 +1,6 @@
 import './PrensaSection.scss';
 import { Link } from "react-router-dom";
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 const PrensaSection = () => {
 
@@ -9,7 +9,7 @@ const PrensaSection = () => {
 	return (
 		<Grid container flexDirection="column">
 			<Grid item className="prensa-title">
-				<h1> Prensa </h1>
+				<Typography variant="h1"> Prensa </Typography>
 			</Grid>
 			<Grid container flexDirection="row" className="card-container">
 				{
@@ -18,13 +18,19 @@ const PrensaSection = () => {
 							<img className="article-image placeholder-background"></img>
 							<Grid key={key} container flexDirection="column" justifyContent="center" className="article-info">
 								<Grid item className="article-title">
-									01 Sync: Conoce lo nuevo
+									<Typography fontWeight={700} variant="h3">
+										01 Sync: Conoce lo nuevo
+									</Typography>
 								</Grid>
 								<Grid item className="article-intro">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									<Typography variant="h4">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									</Typography>
 								</Grid>
 								<Grid item className="ver-mas">
-									Ver más
+									<Typography variant="h4" fontWeight={700}>
+										Ver más
+									</Typography>
 								</Grid>
 							</Grid>
 						</Grid>
