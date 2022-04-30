@@ -3,6 +3,9 @@ import { createTheme } from "@mui/material/styles";
 let theme = createTheme({
   breakpoints: {
     values: {
+      sm: 425,
+      md: 775,
+      lg: 1200,
       xl: 1920,
     },
   },

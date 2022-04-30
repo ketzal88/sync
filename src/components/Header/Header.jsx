@@ -21,28 +21,11 @@ const Header = () => {
         >
           <Link to="/apartaments">VITRIUM CAPITAL</Link>
         </Grid>
-        <Box
-          sx={{
-            marginLeft: "40px",
-            width: "114px",
-            height: "187px",
-            backgroundColor: "#0A1217",
-            border: "1px solid #707070",
-            borderRadius: "0px 0px 23px 23px;",
-          }}
-        >
+        <Box className={classes.imgContainer}>
           <img
             src={entrevistaRapida}
             alt="Entrevista Rápida"
-            style={{
-              margin: "95px 21px 20px 21px",
-
-              backgroundColor: "white",
-              borderRadius: "50%",
-              padding: "17.48px",
-              width: "37.4px",
-              height: "37.4px",
-            }}
+            className={classes.imgStyles}
           />
         </Box>
       </Grid>

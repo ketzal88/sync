@@ -6,12 +6,7 @@ const LandingSection = () => {
   const navigate = useNavigate();
   const classes = useLadingSectionStyles();
   return (
-    <Grid
-      container
-      flexDirection="column"
-      justifyContent="center"
-      className={classes.wrapper}
-    >
+    <Grid container spacing={0} className={classes.wrapper}>
       <Grid item className={classes.textWrapper}>
         <Typography className={classes.location} variant="h3">
           Montevideo, Uruguay
@@ -21,13 +16,13 @@ const LandingSection = () => {
         </Typography>
 
         <Grid item className={classes.buttonWrapper}>
-          <Button
+          <button
             className={classes.apartamentsButton}
             onClick={() => navigate("/apartaments")}
           >
             VER APARTAMENTOS
-          </Button>
-          <Button className={classes.recorridoButton}>RECORRIDO VIRTUAL</Button>
+          </button>
+          <button className={classes.recorridoButton}>RECORRIDO VIRTUAL</button>
         </Grid>
       </Grid>
     </Grid>
