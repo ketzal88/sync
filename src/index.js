@@ -1,20 +1,18 @@
-import React from 'react';
-import { ReactDOM, render } from 'react-dom';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { render } from "react-dom";
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ApartmentsCatalogue from './routes/apartmentsCatalogue';
-import Apartment from './routes/apartment';
-import Home from './routes/home';
-
+import ApartmentsCatalogue from "./routes/apartmentsCatalogue";
+import Apartment from "./routes/apartment";
 
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="apartments" element={<ApartmentsCatalogue />}>
+        <Route path="/apartments" element={<ApartmentsCatalogue />}>
           <Route path=":apartmentId" element={<Apartment />} />
         </Route>
         <Route
