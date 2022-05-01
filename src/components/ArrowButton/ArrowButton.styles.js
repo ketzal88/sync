@@ -1,12 +1,13 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  "arrow-button": {
+  arrowButton: {
     border: "1px solid white",
     borderRadius: "50%",
-    height: "108px",
-    width: "108px"
-  }
-}))
+    height: "124px",
+    width: "124px",
+    marginTop: "76px",
+  },
+}));
 
-export default useStyles
+export default useStyles;
