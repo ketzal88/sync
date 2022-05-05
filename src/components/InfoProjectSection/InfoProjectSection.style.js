@@ -12,7 +12,7 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => {
     },
     imageBox: {
       [theme.breakpoints.up("xl")]: {
-        width: "1080px",
+        width: "860px",
         height: "662px",
         marginTop: "87px",
         backgroundImage: `url(${domotica})`,
@@ -30,23 +30,19 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => {
         color: "white",
       },
     },
-    titleSection: {
-      [theme.breakpoints.up("xl")]: {
-        fontSize: "60px !important",
-        fontWeight: "700 !important",
-      },
-    },
     subTitleSection: {
       [theme.breakpoints.up("xl")]: {
         paddingTop: "80px",
         fontSize: "46px !important",
         fontWeight: "bold !important",
+        lineHeight: ".8 !important",
+        letterSpacing: "0px !important",
       },
     },
     text: {
       [theme.breakpoints.up("xl")]: {
         fontSize: "23px !important",
-        marginTop: "13px",
+        paddingTop: "20px",
         letterSpacing: "0px !important",
       },
     },

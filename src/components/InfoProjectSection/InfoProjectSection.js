@@ -12,11 +12,8 @@ const InfoProjectSection = () => {
         <Box className={classes.imageBox} />
       </Box>
       <Box className={classes.textBox}>
-        <Typography variant="h3" className={classes.titleSection}>
-          Tecnología
-        </Typography>
         <Typography variant="h4" className={classes.subTitleSection}>
-          Domótica
+          Más conectados <br /> que nunca
         </Typography>
         <Typography paragraph className={classes.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

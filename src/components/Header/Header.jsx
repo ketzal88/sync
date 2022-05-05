@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { navLinks } from "./headerLinksList";
 import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
 import { useHeaderStyles } from "./header.styles";
+import logoSync from "../../assets/images/logo_sync.svg";
 
 const Header = () => {
   const classes = useHeaderStyles();
   return (
-    <Stack sx={{ position: "relative" }}>
-      <Grid container spacing={0} className={classes.textWrapper}>
+    <Box sx={{ position: "relative" }}>
+      <Grid container className={classes.textWrapper}>
+        <img src={logoSync} alt="Logo Sync" className={classes.logo} />
         {navLinks.map((item, index) => (
           <Grid key={index} item className={classes.navLink}>
             <Link to={item.link}>{item.label}</Link>
@@ -17,7 +19,7 @@ const Header = () => {
         <Grid
           item
           className={classes.navLink}
-          sx={{ paddingLeft: "149px", fontWeight: "bold" }}
+          sx={{ paddingLeft: "100px", fontWeight: "bold" }}
         >
           <Link to="/apartaments">VITRIUM CAPITAL</Link>
         </Grid>
@@ -29,7 +31,7 @@ const Header = () => {
           />
         </Box>
       </Grid>
-    </Stack>
+    </Box>
   );
 };
 

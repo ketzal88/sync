@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useLadingSectionStyles } from "./landingSection.styles";
 

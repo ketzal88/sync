@@ -4,7 +4,10 @@ export const useHeaderStyles = makeStyles((theme) => {
   return {
     textWrapper: {
       position: "absolute",
-      paddingLeft: "454px",
+    },
+    logo: {
+      marginLeft: "91px",
+      marginRight: "100px",
     },
     navLink: {
       paddingRight: "24px",
@@ -12,7 +15,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       paddingTop: "95px",
     },
     imgContainer: {
-      marginLeft: "40px",
+      // marginLeft: "10px",
       width: "114px",
       height: "187px",
       backgroundColor: "#0A1217",
