@@ -9,15 +9,9 @@ function App() {
   const location = useLocation();
   return (
     <ThemeProvider theme={theme}>
-      {location.pathname === "/" ? (
-        <Home />
-      ) : (
-        <>
-          <Header />
-          <Outlet />
-          <Footer />
-        </>
-      )}
+      <Header />
+      {location.pathname === "/" ? <Home /> : <Outlet />}
+      <Footer />
     </ThemeProvider>
   );
 }

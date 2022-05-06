@@ -4,15 +4,22 @@ export const useHeaderStyles = makeStyles((theme) => {
   return {
     textWrapper: {
       position: "absolute",
+      display: "flex",
+      justifyContent: "space-between",
+      paddingLeft: "91px",
+      paddingRight: "111px",
+      paddingTop: "72px",
+      left: "0",
+      right: "0",
     },
     logo: {
-      marginLeft: "91px",
-      marginRight: "100px",
+      width: "132px",
+      height: "136px",
     },
     navLink: {
+      marginTop: "23px",
       paddingRight: "24px",
       fontSize: "23px",
-      paddingTop: "95px",
     },
     imgContainer: {
       // marginLeft: "10px",

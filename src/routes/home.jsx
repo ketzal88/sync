@@ -14,20 +14,16 @@ import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
-    <Stack direction="column" alignItems="center">
-      <Box sx={{ backgroundColor: "white", maxWidth: "1600px" }}>
-        <Header />
-        <LandingSection />
-        <EdificioSection />
-        <FirstCarrouselSection />
-        <InfoProjectSection />
-        <ApartamentosSection />
-        <AmenitiesSection />
-        <PrensaSection />
-        <UbicacionSection />
-        <EntrevistaSection />
-        <Footer />
-      </Box>
-    </Stack>
+    <>
+      <LandingSection />
+      <EdificioSection />
+      <FirstCarrouselSection />
+      <InfoProjectSection />
+      <ApartamentosSection />
+      <AmenitiesSection />
+      <PrensaSection />
+      <UbicacionSection />
+      <EntrevistaSection />
+    </>
   );
 }

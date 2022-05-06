@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import { navLinks } from "./headerLinksList";
 import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
 import { useHeaderStyles } from "./header.styles";
@@ -9,28 +9,32 @@ const Header = () => {
   const classes = useHeaderStyles();
   return (
     <Box sx={{ position: "relative" }}>
-      <Grid container className={classes.textWrapper}>
+      <Box container className={classes.textWrapper}>
         <img src={logoSync} alt="Logo Sync" className={classes.logo} />
-        {navLinks.map((item, index) => (
-          <Grid key={index} item className={classes.navLink}>
-            <Link to={item.link}>{item.label}</Link>
-          </Grid>
-        ))}
-        <Grid
-          item
-          className={classes.navLink}
-          sx={{ paddingLeft: "100px", fontWeight: "bold" }}
-        >
-          <Link to="/apartaments">VITRIUM CAPITAL</Link>
-        </Grid>
-        <Box className={classes.imgContainer}>
-          <img
-            src={entrevistaRapida}
-            alt="Entrevista Rápida"
-            className={classes.imgStyles}
-          />
+        <Box style={{ marginTop: "23px" }}>
+          {navLinks.map((item, index) => (
+            <Link to={item.link} className={classes.navLink}>
+              {item.label}
+            </Link>
+          ))}
         </Box>
-      </Grid>
+        <Box sx={{ display: "flex" }}>
+          <Link
+            to="/apartaments"
+            className={classes.navLink}
+            sx={{ fontWeight: "bold" }}
+          >
+            VITRIUM CAPITAL
+          </Link>
+          <Box className={classes.imgContainer}>
+            <img
+              src={entrevistaRapida}
+              alt="Entrevista Rápida"
+              className={classes.imgStyles}
+            />
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
