@@ -12,8 +12,8 @@ const Header = () => {
       <Box container className={classes.textWrapper}>
         <img src={logoSync} alt="Logo Sync" className={classes.logo} />
         <Box style={{ marginTop: "23px" }}>
-          {navLinks.map((item, index) => (
-            <Link to={item.link} className={classes.navLink}>
+          {navLinks.map((item) => (
+            <Link key={item.label} to={item.link} className={classes.navLink}>
               {item.label}
             </Link>
           ))}

@@ -1,6 +1,7 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { useEdificioStyles } from "./edificioSection.styles";
 import { edificioDetailList } from "./edificioDetailList";
+import { Fragment } from "react";
 
 const EdificioSection = () => {
   const classes = useEdificioStyles();
@@ -13,12 +14,12 @@ const EdificioSection = () => {
           </Typography>
           <Box sx={{ marginTop: "70px" }}>
             {edificioDetailList.map(({ label, quantity }) => (
-              <>
+              <Fragment key={label}>
                 <Typography className={classes.listQuantity}>
                   {quantity}
                 </Typography>
                 <Typography className={classes.listLabel}>{label}</Typography>
-              </>
+              </Fragment>
             ))}
           </Box>
         </Box>

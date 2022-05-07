@@ -11,6 +11,7 @@ const AmenitiesSection = () => {
         className={classes.titleSection}
         sx={{
           marginLeft: "100px !important",
+          marginBottom: "116px !important",
         }}
       >
         Work & Live
@@ -25,8 +26,7 @@ const AmenitiesSection = () => {
           </Typography>
           <Typography paragraph className={classes.textSection}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
-            malesuada pellentesque
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Typography>
           <Stack
             sx={{ paddingTop: "auto" }}
@@ -34,7 +34,9 @@ const AmenitiesSection = () => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <ArrowButton />
+            <Box className={classes.iconContainer}>
+              <ArrowButton />
+            </Box>
             <Typography className={classes.carrouselNumber}>01/05</Typography>
           </Stack>
         </Box>

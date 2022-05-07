@@ -4,8 +4,8 @@ const useStyles = makeStyles((theme) => ({
   arrowButton: {
     border: "1px solid white",
     borderRadius: "50%",
-    height: "124px",
-    width: "124px",
+    height: "100%",
+    width: "100%",
   },
 }));
 
