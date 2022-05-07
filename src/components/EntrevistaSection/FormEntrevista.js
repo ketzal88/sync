@@ -14,7 +14,6 @@ const FormEntrevista = () => {
   const classes = usePrensaSectionStyles();
   return (
     <Stack
-      container
       direction="row"
       flexWrap="wrap"
       justifyContent="space-between"
@@ -112,7 +111,7 @@ const FormEntrevista = () => {
         <RadioGroup>
           <FormControlLabel
             control={<Radio className={classes.radioButton} />}
-            componentsProps={classes.labelRadioButton}
+            componentsProps={usePrensaSectionStyles.labelRadioButton}
             value="true"
             label="Acepto términos y condiciones"
           />

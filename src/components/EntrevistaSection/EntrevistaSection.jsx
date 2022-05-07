@@ -27,7 +27,7 @@ const EntrevistaSection = () => {
       <Typography variant="h2" className={classes.titleSection}>
         Agendemos una <br /> entrevista
       </Typography>
-      <Stack container direction="row">
+      <Stack direction="row">
         <Box sx={{ height: "821px", position: "relative" }}>
           <img
             src={images[sellerChoosed].img}

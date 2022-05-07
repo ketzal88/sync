@@ -9,7 +9,7 @@ const Header = () => {
   const classes = useHeaderStyles();
   return (
     <Box sx={{ position: "relative" }}>
-      <Box container className={classes.textWrapper}>
+      <Box className={classes.textWrapper}>
         <img src={logoSync} alt="Logo Sync" className={classes.logo} />
         <Box style={{ marginTop: "23px" }}>
           {navLinks.map((item) => (
