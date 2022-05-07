@@ -17,7 +17,7 @@ const PrensaElement = ({ title, text, buttonLabel, imgURL }) => {
         <Typography paragraph className={classes.elementText}>
           {text}
         </Typography>
-        <Link to={"/"} paragraph className={classes.elementButton}>
+        <Link to={"/"} className={classes.elementButton}>
           {buttonLabel}
         </Link>
       </Box>

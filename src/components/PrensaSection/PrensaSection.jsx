@@ -33,8 +33,8 @@ const PrensaSection = () => {
         Prensa
       </Typography>
       <Stack direction="row" sx={{ gap: "30px" }}>
-        {articles.map((article) => (
-          <PrensaElement {...article} />
+        {articles.map((article, index) => (
+          <PrensaElement key={index} {...article} />
         ))}
       </Stack>
     </Box>
