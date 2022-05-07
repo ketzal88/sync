@@ -30,6 +30,12 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => {
         color: "white",
       },
     },
+    titleSection: {
+      [theme.breakpoints.up("xl")]: {
+        fontSize: "60px !important",
+        fontWeight: "bold !important",
+      },
+    },
     subTitleSection: {
       [theme.breakpoints.up("xl")]: {
         paddingTop: "80px",

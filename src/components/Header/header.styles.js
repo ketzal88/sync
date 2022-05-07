@@ -28,6 +28,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       backgroundColor: "#0A1217",
       border: "1px solid #707070",
       borderRadius: "0px 0px 23px 23px;",
+      marginTop: "-72px",
     },
     imgStyles: {
       margin: "95px 21px 20px 21px",

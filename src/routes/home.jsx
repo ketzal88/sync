@@ -8,9 +8,7 @@ import UbicacionSection from "../components/UbicacionSection/UbicacionSection";
 import PrensaSection from "../components/PrensaSection/PrensaSection";
 import FirstCarrouselSection from "../components/FirstCarrouselSection/FirstCarrouselSection";
 import InfoProjectSection from "../components/InfoProjectSection/InfoProjectSection";
-import { Box, Stack } from "@mui/material";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import CoworkingSection from "../components/CoworkingSection/CoworkingSection";
 
 export default function Home() {
   return (
@@ -21,6 +19,7 @@ export default function Home() {
       <InfoProjectSection />
       <ApartamentosSection />
       <AmenitiesSection />
+      <CoworkingSection />
       <PrensaSection />
       <UbicacionSection />
       <EntrevistaSection />

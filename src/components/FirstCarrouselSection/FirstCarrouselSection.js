@@ -20,7 +20,9 @@ const FirstCarrouselSection = () => {
           malesuada pellentesque elit eget gravida cum sociis natoque penatibus.
           Pharetra massa massa ultricies mi quis hendrerit dolor magna.
         </Typography>
-        <ArrowButton />
+        <Box sx={{ marginTop: "76px" }}>
+          <ArrowButton />
+        </Box>
       </Box>
     </Stack>
   );
