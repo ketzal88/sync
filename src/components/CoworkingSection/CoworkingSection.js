@@ -1,40 +1,38 @@
-import "./AmenitiesSection.scss";
-import { Grid, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
+import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
 
 const CoworkingSection = () => {
+  const classes = useCoworkingSectionStyles();
   return (
-    <Grid>
-      <Grid
-        className="co-working placeholder-background"
-        container
-        flexDirection={"column"}
-        alignItems={"center"}
-        justifyContent={"center"}
+    <>
+      <Stack
+        direction="column"
+        justifyContent="center"
+        className={classes.wrapperSection}
       >
-        <Grid item className="co-working-text">
-          <Typography fontSize={141} fontWeight={900}>
-            Co-Working
-          </Typography>
-        </Grid>
-        <Typography variant="h4">
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna{" "}
+        <Typography
+          className={classes.titleSection}
+          variant="h2"
+          fontSize={141}
+          fontWeight={900}
+        >
+          Co-Working
         </Typography>
-      </Grid>
-      <Grid
-        container
+        <Typography paragraph className={classes.textSection}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
+          malesuada pellentesque.
+        </Typography>
+      </Stack>
+      <Stack
+        direction="column"
         justifyContent="center"
         alignItems="center"
-        className="recorrido-virtual"
+        className={classes.recorridoVirtualWrapper}
       >
-        <button className="standard-button">
-          <Typography variant="h4" fontWeight={700}>
-            RECORRIDO VIRTUAL
-          </Typography>
-        </button>
-      </Grid>
-    </Grid>
+        <button className={classes.recorridoButton}>RECORRIDO VIRTUAL</button>
+      </Stack>
+    </>
   );
 };
 export default CoworkingSection;
