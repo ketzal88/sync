@@ -4,20 +4,36 @@ import domotica from "../../assets/images/domotica.jpeg";
 export const useFirstCarrouselSection = makeStyles((theme) => {
   return {
     wrapper: {
-      height: "1080px",
       backgroundColor: theme.palette.primary.syncBlue,
+      [theme.breakpoints.up("lg")]: {
+        height: "768px",
+      },
+      [theme.breakpoints.up("xl")]: {
+        height: "1080px",
+      },
     },
     imageBox: {
+      backgroundImage: `url(${domotica})`,
+      backgroundSize: "cover",
+      backgroundrepeat: "no-repeat",
+      [theme.breakpoints.up("lg")]: {
+        width: "100%",
+        height: "100%",
+        backgroundPosition: "0px -59px",
+      },
       [theme.breakpoints.up("xl")]: {
         width: "1180px",
         height: "1080px",
-        backgroundImage: `url(${domotica})`,
-        backgroundSize: "cover",
-        backgroundrepeat: "no-repeat",
         backgroundPosition: "0px -59px",
       },
     },
     textBox: {
+      [theme.breakpoints.up("lg")]: {
+        width: "602px",
+        paddingInline: "112px",
+        paddingTop: "136px",
+        color: "white",
+      },
       [theme.breakpoints.up("xl")]: {
         width: "549px",
         paddingLeft: "80px",
@@ -27,12 +43,21 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     titleSection: {
+      [theme.breakpoints.up("lg")]: {
+        fontSize: "48px !important",
+        fontWeight: "700 !important",
+      },
       [theme.breakpoints.up("xl")]: {
         fontSize: "60px !important",
         fontWeight: "700 !important",
       },
     },
     subTitleSection: {
+      [theme.breakpoints.up("lg")]: {
+        paddingTop: "60px",
+        fontSize: "34px !important",
+        fontWeight: "bold !important",
+      },
       [theme.breakpoints.up("xl")]: {
         paddingTop: "80px",
         fontSize: "46px !important",
@@ -40,10 +65,33 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     text: {
+      [theme.breakpoints.up("lg")]: {
+        fontSize: "20px !important",
+        marginTop: "24px !important",
+        letterSpacing: "0px !important",
+        display: "-webkit-box !important",
+        "-webkit-box-orient": "vertical !important",
+        "-webkit-line-clamp": "6 !important",
+        lineClamp: "6 !important",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+      },
       [theme.breakpoints.up("xl")]: {
         fontSize: "23px !important",
-        marginTop: "13px",
+        marginTop: "13px !important",
         letterSpacing: "0px !important",
+      },
+    },
+    arrowContainer: {
+      [theme.breakpoints.up("lg")]: {
+        marginTop: "68px",
+        width: "74px",
+        height: "74px",
+      },
+      [theme.breakpoints.up("xl")]: {
+        marginTop: "76px",
+        width: "124px",
+        height: "124px",
       },
     },
   };
