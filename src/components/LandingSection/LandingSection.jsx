@@ -11,10 +11,9 @@ const LandingSection = () => {
         <Typography className={classes.location} variant="h3">
           Montevideo, Uruguay
         </Typography>
-        <Typography sx={{ color: "white", marginBottom: "45px" }} variant="h1">
+        <Typography className={classes.mainTitle} variant="h1">
           Diseñados para <br /> una nueva era
         </Typography>
-
         <Grid item className={classes.buttonWrapper}>
           <button
             className={classes.apartamentsButton}

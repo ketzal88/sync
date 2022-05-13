@@ -21,8 +21,7 @@ const Header = () => {
         <Box sx={{ display: "flex" }}>
           <Link
             to="/apartaments"
-            className={classes.navLink}
-            sx={{ fontWeight: "bold" }}
+            className={`${classes.navLink} ${classes.LinkVitrium}`}
           >
             VITRIUM CAPITAL
           </Link>

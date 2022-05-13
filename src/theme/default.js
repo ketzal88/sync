@@ -5,7 +5,7 @@ let theme = createTheme({
     values: {
       sm: 425,
       md: 775,
-      lg: 1200,
+      lg: 1366,
       xl: 1920,
     },
   },
