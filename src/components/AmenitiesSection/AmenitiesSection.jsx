@@ -37,7 +37,13 @@ const AmenitiesSection = () => {
             <Box className={classes.iconContainer}>
               <ArrowButton />
             </Box>
-            <Typography className={classes.carrouselNumber}>01/05</Typography>
+            <Typography className={classes.carrouselNumber}>
+              {" "}
+              <Typography component="span" className={classes.selectedSlide}>
+                01/
+              </Typography>
+              05
+            </Typography>
           </Stack>
         </Box>
         <Box className={classes.imgSection} />
