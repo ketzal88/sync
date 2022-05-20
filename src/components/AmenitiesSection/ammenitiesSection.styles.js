@@ -72,6 +72,12 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       },
     },
     selectedSlide: {
+      [theme.breakpoints.up("xl")]: {
+        fontSize: "24px !important",
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: "30px !important",
+      },
       fontWeight: "bold !important",
     },
     iconContainer: {

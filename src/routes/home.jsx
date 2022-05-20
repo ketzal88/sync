@@ -20,9 +20,9 @@ export default function Home() {
       <ApartamentosSection />
       <AmenitiesSection />
       <CoworkingSection />
-      {/* <PrensaSection />
+      <PrensaSection />
       <UbicacionSection />
-      <EntrevistaSection /> */}
+      <EntrevistaSection />
     </>
   );
 }
