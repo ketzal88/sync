@@ -7,19 +7,19 @@ import elementImg1 from "../../assets/images/landing-image.jpg";
 const articles = [
   {
     title: "01 Sync: \n Conoce lo nuevo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, tenetur! Totam saepe aspernatur voluptatem odit architecto quam, labore cum ipsa dolor, nesciunt iste sed, veritatis vel fugit commodi? Quod itaque quisquam mollitia esse possimus magnam aliquid ab delectus tempora ut voluptatibus est rem inventore, nihil libero, quibusdam maiores modi quam.",
     buttonLabel: "Ver más...",
     imgURL: elementImg,
   },
   {
     title: "01 Sync: \n Conoce lo nuevo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, tenetur! Totam saepe aspernatur voluptatem odit architecto quam, labore cum ipsa dolor, nesciunt iste sed, veritatis vel fugit commodi? Quod itaque quisquam mollitia esse possimus magnam aliquid ab delectus tempora ut voluptatibus est rem inventore, nihil libero, quibusdam maiores modi quam.",
     buttonLabel: "Ver más...",
     imgURL: elementImg1,
   },
   {
     title: "01 Sync: \n Conoce lo nuevo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, tenetur! Totam saepe aspernatur voluptatem odit architecto quam, labore cum ipsa dolor, nesciunt iste sed, veritatis vel fugit commodi? Quod itaque quisquam mollitia esse possimus magnam aliquid ab delectus tempora ut voluptatibus est rem inventore, nihil libero, quibusdam maiores modi quam.",
     buttonLabel: "Ver más...",
     imgURL: elementImg,
   },

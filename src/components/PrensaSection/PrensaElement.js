@@ -14,6 +14,7 @@ const PrensaElement = ({ title, text, buttonLabel, imgURL }) => {
           <br />
           {titleFormated[1]}
         </Typography>
+        <Typography className={classes.elementDate}>Feb 26, 2022</Typography>
         <Typography paragraph className={classes.elementText}>
           {text}
         </Typography>
