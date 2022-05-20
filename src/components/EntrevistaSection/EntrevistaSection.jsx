@@ -28,7 +28,7 @@ const EntrevistaSection = () => {
         Agendemos una <br /> entrevista
       </Typography>
       <Stack direction="row">
-        <Box sx={{ height: "821px", position: "relative" }}>
+        <Box className={classes.sellerImgContainer}>
           <img
             src={images[sellerChoosed].img}
             alt="Vendedor/a Sync"
@@ -46,7 +46,7 @@ const EntrevistaSection = () => {
                   width: "39px",
                   height: "39px",
                 }}
-              />{" "}
+              />
               {images[sellerChoosed].phoneNumber}
             </Typography>
           </Box>

@@ -13,15 +13,7 @@ import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 const FormEntrevista = () => {
   const classes = usePrensaSectionStyles();
   return (
-    <Stack
-      direction="row"
-      flexWrap="wrap"
-      justifyContent="space-between"
-      sx={{
-        paddingRight: "118px",
-        paddingLeft: "71px",
-      }}
-    >
+    <Box component="form" className={classes.formContainer}>
       <FormControl className={classes.formControl}>
         <InputLabel
           shrink
@@ -58,8 +50,8 @@ const FormEntrevista = () => {
         </InputLabel>
         <Input classes={{ underline: classes.underlineInput }} />
       </FormControl>
-      <Stack direction="row" justifyContent="space-between" gap="45px">
-        <FormControl sx={{ width: "175px" }}>
+      <Stack direction="row" justifyContent="space-between">
+        <FormControl className={classes.codAreaForm}>
           <InputLabel
             shrink
             className={classes.inputLabel}
@@ -70,7 +62,7 @@ const FormEntrevista = () => {
           </InputLabel>
           <Input classes={{ underline: classes.underlineInput }} />
         </FormControl>
-        <FormControl sx={{ width: "323px" }}>
+        <FormControl className={classes.phoneNumberInput}>
           <InputLabel
             shrink
             className={classes.inputLabel}
@@ -79,10 +71,7 @@ const FormEntrevista = () => {
           >
             Teléfono
           </InputLabel>
-          <Input
-            className={classes.input}
-            classes={{ underline: classes.underlineInput }}
-          />
+          <Input classes={{ underline: classes.underlineInput }} />
         </FormControl>
       </Stack>
       <FormControl className={classes.formControl}>
@@ -107,7 +96,8 @@ const FormEntrevista = () => {
         </InputLabel>
         <Input classes={{ underline: classes.underlineInput }} />
       </FormControl>
-      <Box style={{ marginLeft: "730px", marginBottom: "50px" }}>
+      <Box className={classes.formControl} />
+      <Box className={classes.formControl}>
         <RadioGroup>
           <FormControlLabel
             control={<Radio className={classes.radioButton} />}
@@ -117,13 +107,11 @@ const FormEntrevista = () => {
           />
         </RadioGroup>
         <button className={classes.buttonSubmit}>
-          Enviar{" "}
-          <ArrowForwardIosIcon
-            sx={{ color: "white", marginLeft: "88px", paddingRight: "42px" }}
-          />
+          ENVIAR <ArrowForwardIosIcon className={classes.carrotButton} />
         </button>
       </Box>
-    </Stack>
+      {/* </Box> */}
+    </Box>
   );
 };
 export default FormEntrevista;

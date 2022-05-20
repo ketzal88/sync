@@ -38,7 +38,6 @@ const AmenitiesSection = () => {
               <ArrowButton />
             </Box>
             <Typography className={classes.carrouselNumber}>
-              {" "}
               <Typography component="span" className={classes.selectedSlide}>
                 01/
               </Typography>

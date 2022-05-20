@@ -5,15 +5,53 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     paddingTop: "100px",
   },
   titleSection: {
-    marginLeft: "100px !important",
-    fontSize: "60px !important",
-    marginBottom: "80px !important",
-  },
-  formControl: { width: "550px", height: "176px" },
-  input: {
-    "&:after": {
-      marginTop: "44px !important",
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "93px !important",
+      fontSize: "48px !important",
+      marginBottom: "72px !important",
     },
+    [theme.breakpoints.up("xl")]: {
+      marginLeft: "100px !important",
+      fontSize: "60px !important",
+      marginBottom: "80px !important",
+    },
+  },
+  formContainer: {
+    display: "flex",
+    flexWrap: "wrap",
+    [theme.breakpoints.up("lg")]: {
+      columnGap: "112px",
+      paddingRight: "108px",
+      marginLeft: "-50px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingRight: "118px",
+      paddingLeft: "71px",
+    },
+  },
+  formControl: {
+    [theme.breakpoints.up("lg")]: {
+      width: "368px",
+      height: "79px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "534px",
+    },
+  },
+  codAreaForm: {
+    [theme.breakpoints.up("lg")]: {
+      visibility: "hidden",
+      width: "0px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      visibility: "visible",
+      marginRight: "45px !important",
+      width: "175px",
+    },
+  },
+  phoneNumberInput: {
+    [theme.breakpoints.up("lg")]: { width: "368px" },
+    [theme.breakpoints.up("xl")]: { width: "323px" },
   },
   inputLabel: {
     marginLeft: "-15px !important",
@@ -36,41 +74,70 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     borderBottom: "4px solid #E3855A",
     marginTop: "44px !important",
     "&:after": {
-      borderBottom: "0 !important",
+      borderBottom: "4px solid #E3855A !important",
+    },
+    "&:hover": {
+      borderBottom: "4px solid #E3855A !important",
     },
     "&:active": {
-      borderBottom: "0 !important",
+      borderBottom: "4px solid #E3855A !important",
     },
     "&:focus": {
-      borderBottom: "0 !important",
+      borderBottom: "4px solid #E3855A !important",
     },
   },
+  sellerImgContainer: {
+    height: "821px",
+    position: "relative",
+  },
   sellerContainer: {
-    paddingTop: "35px",
-    width: "388px",
     backgroundColor: "#132127",
-    borderTopRightRadius: "145px",
-    position: "absolute",
-    bottom: "0",
-    paddingLeft: "93px",
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: "35px",
+      width: "388px",
+      borderTopRightRadius: "145px",
+      position: "absolute",
+      bottom: "0",
+      paddingLeft: "93px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingTop: "35px",
+      width: "388px",
+      borderTopRightRadius: "145px",
+      position: "absolute",
+      bottom: "0",
+      paddingLeft: "93px",
+    },
   },
   sellerName: {
-    fontSize: "30px !important",
-    fontWeight: "bold !important",
-    color: "#F1804F",
-    marginBottom: "0px !important",
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "30px !important",
+      fontWeight: "bold !important",
+      color: "#F1804F",
+      marginBottom: "0px !important",
+    },
   },
   sellerPhone: {
-    fontSize: "30px !important",
-    color: "white",
-    marginBottom: "35px !important",
-    lineHeight: "-1.3 !important",
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "30px !important",
+      color: "white",
+      marginBottom: "35px !important",
+      lineHeight: "-1.3 !important",
+    },
   },
   imgSeller: {
-    height: "676px",
-    width: "457px",
-    objectFit: "contain",
-    transform: "translateX(-15%) translateY(8%) scale(1.2)",
+    [theme.breakpoints.up("lg")]: {
+      height: "676px",
+      width: "457px",
+      objectFit: "contain",
+      transform: "translateX(-13%) translateY(5%) scale(1.2)",
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: "676px",
+      width: "457px",
+      objectFit: "contain",
+      transform: "translateX(-15%) translateY(8%) scale(1.2)",
+    },
   },
   radioButton: {
     "& svg": {
@@ -89,12 +156,39 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       color: "#132127",
     },
   },
+  buttonContainer: {
+    display: "flex",
+    width: "100%",
+  },
   buttonSubmit: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: "#F1804F",
-    padding: "29px 0px 29px 134px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: "nowrap",
     borderRadius: "46px",
-    fontSize: "22px",
     fontWeight: "bold",
+    [theme.breakpoints.up("lg")]: {
+      padding: "29px 0px 29px 134px",
+      fontSize: "17px",
+      width: "372px",
+      // marginTop: "87px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      padding: "29px 0px 29px 134px",
+      fontSize: "22px",
+    },
+  },
+  carrotButton: {
+    color: "white",
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "97px",
+      paddingRight: "37px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      marginLeft: "88px",
+      paddingRight: "42px",
+    },
   },
 }));
