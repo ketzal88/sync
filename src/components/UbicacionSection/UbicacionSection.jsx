@@ -1,13 +1,17 @@
-import './UbicacionSection.scss';
-import { Link } from "react-router-dom";
-import { Grid, Typography } from '@mui/material';
+import { Box, Stack, Typography } from "@mui/material";
+import { useUbicacionSectionStyles } from "./UbicacionSection.styles";
 
 const UbicacionSection = () => {
-	return (
-		<Grid className="ubicacion-wrapper"> 
-			<Typography variant="h1"> Ubicación </Typography>
-		</Grid>
-	)
-}
+  const classes = useUbicacionSectionStyles();
+  return (
+    <Stack direction="row" justifyContent="center">
+      <Box className={classes.ubicacionWrapper}>
+        <Typography className={classes.titleSection} variant="h2">
+          Ubicación
+        </Typography>
+      </Box>
+    </Stack>
+  );
+};
 
 export default UbicacionSection;

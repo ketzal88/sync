@@ -2,8 +2,9 @@ import { makeStyles } from "@mui/styles";
 
 export const useFooterStyles = makeStyles((theme) => ({
   footerContainer: {
+    maxWidth: "1920px",
+    width: "100%",
     color: "white",
-    backgroundColor: theme.palette.primary.syncBlue,
     padding: "111px 100px 80px 100px",
   },
   subTitle: {

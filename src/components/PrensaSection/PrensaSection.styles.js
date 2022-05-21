@@ -2,6 +2,8 @@ import { makeStyles } from "@mui/styles";
 
 export const usePrensaSectionStyles = makeStyles((theme) => ({
   wrapperSection: {
+    maxWidth: "1920px",
+    width: "100%",
     [theme.breakpoints.up("lg")]: {
       padding: "49px 112px 147px 100px",
     },

@@ -4,6 +4,8 @@ export const useApartamentsStyles = makeStyles((theme) => {
   return {
     container: {
       paddingTop: "40px",
+      maxWidth: "1920px",
+      width: "100%",
     },
     sectionTitle: {
       paddingLeft: "100px",

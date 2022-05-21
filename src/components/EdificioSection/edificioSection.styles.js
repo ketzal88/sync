@@ -7,6 +7,9 @@ export const useEdificioStyles = makeStyles((theme) => {
       backgroundImage: `url(${edificio})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      width: "100%",
+      maxWidth: "1920px",
       [theme.breakpoints.up("lg")]: {
         backgroundPosition: "-350px 0px",
         height: "769px",

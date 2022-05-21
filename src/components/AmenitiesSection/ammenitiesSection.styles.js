@@ -4,6 +4,8 @@ import galeria from "../../assets/images/imagen-galeria.jpg";
 export const useAmennitiesSectionStyles = makeStyles((theme) => {
   return {
     wrapperSection: {
+      maxWidth: "1920px",
+      width: "100%",
       [theme.breakpoints.up("lg")]: {
         marginTop: "83px",
       },

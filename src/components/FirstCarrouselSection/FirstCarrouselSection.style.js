@@ -4,7 +4,7 @@ import domotica from "../../assets/images/domotica.jpeg";
 export const useFirstCarrouselSection = makeStyles((theme) => {
   return {
     wrapper: {
-      backgroundColor: theme.palette.primary.syncBlue,
+      maxWidth: "1920px",
       [theme.breakpoints.up("lg")]: {
         height: "768px",
       },
@@ -13,9 +13,8 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     imageBox: {
-      backgroundImage: `url(${domotica})`,
-      backgroundSize: "cover",
-      backgroundrepeat: "no-repeat",
+      objectFit: "cover",
+      objectPosition: "0% 10%",
       [theme.breakpoints.up("lg")]: {
         width: "100%",
         height: "100%",

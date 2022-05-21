@@ -3,6 +3,8 @@ import { makeStyles } from "@mui/styles";
 export const usePrensaSectionStyles = makeStyles((theme) => ({
   wrapperSection: {
     paddingTop: "100px",
+    maxWidth: "1920px",
+    width: "100%",
   },
   titleSection: {
     [theme.breakpoints.up("lg")]: {
@@ -19,12 +21,15 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   formContainer: {
     display: "flex",
     flexWrap: "wrap",
+    alignContent: "flex-start",
     [theme.breakpoints.up("lg")]: {
       columnGap: "112px",
+      rowGap: "58px",
       paddingRight: "108px",
       marginLeft: "-50px",
     },
     [theme.breakpoints.up("xl")]: {
+      rowGap: "100px",
       paddingRight: "118px",
       paddingLeft: "71px",
     },

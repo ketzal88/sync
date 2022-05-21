@@ -8,7 +8,14 @@ import logoSync from "../../assets/images/logo_sync.svg";
 const Header = () => {
   const classes = useHeaderStyles();
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+        maxWidth: "1920px",
+        left: "50%",
+        transform: "translateX(-50%)",
+      }}
+    >
       <Box className={classes.textWrapper}>
         <img src={logoSync} alt="Logo Sync" className={classes.logo} />
         <Box style={{ marginTop: "23px" }}>

@@ -15,6 +15,7 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       [theme.breakpoints.up("xl")]: {
         minHeight: "1080px",
         paddingTop: "392px",
+        maxWidth: "1920px",
       },
     },
     textWrapper: {

@@ -8,6 +8,8 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     color: "white",
+    maxWidth: "1920px",
+    width: "100%",
     [theme.breakpoints.up("lg")]: {
       height: "762px",
     },
@@ -43,6 +45,8 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     backgroundImage: `url(${recorridoVirtual})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    maxWidth: "1920px",
+    width: "100%",
     [theme.breakpoints.up("lg")]: {
       height: "512px",
     },

@@ -28,16 +28,18 @@ const articles = [
 const PrensaSection = () => {
   const classes = usePrensaSectionStyles();
   return (
-    <Box className={classes.wrapperSection}>
-      <Typography variant="h2" className={classes.titleSection}>
-        Prensa
-      </Typography>
-      <Stack direction="row" sx={{ gap: "30px" }}>
-        {articles.map((article, index) => (
-          <PrensaElement key={index} {...article} />
-        ))}
-      </Stack>
-    </Box>
+    <Stack direction="row" justifyContent="center">
+      <Box className={classes.wrapperSection}>
+        <Typography variant="h2" className={classes.titleSection}>
+          Prensa
+        </Typography>
+        <Stack direction="row" sx={{ gap: "30px" }}>
+          {articles.map((article, index) => (
+            <PrensaElement key={index} {...article} />
+          ))}
+        </Stack>
+      </Box>
+    </Stack>
   );
 };
 
