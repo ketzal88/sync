@@ -1,50 +1,43 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import ArrowButton from "../ArrowButton/ArrowButton";
 import { useAmennitiesSectionStyles } from "./ammenitiesSection.styles";
+import galeria from "../../assets/images/imagen-galeria.jpg";
 
 const AmenitiesSection = () => {
   const classes = useAmennitiesSectionStyles();
   return (
-    <>
-      <Stack direction="row" justifyContent="center">
-        <Box className={classes.wrapperSection}>
-          <Typography
-            variant="h2"
-            className={classes.titleSection}
-            sx={{
-              marginLeft: "100px !important",
-              marginBottom: "116px !important",
-            }}
-          >
-            Work & Live
-          </Typography>
-        </Box>
-      </Stack>
+    <Stack
+      direction="column"
+      alignItems="center"
+      sx={{
+        backgroundColor: (theme) => theme.palette.primary.syncBlue,
+      }}
+    >
       <Stack
         direction="row"
         justifyContent="center"
-        sx={{
-          // minWidth: "100vw",
-          backgroundColor: (theme) => theme.palette.primary.syncBlue,
-        }}
+        className={classes.titleWrapper}
       >
-        <Box
-          sx={{
-            // minWidth: "100vw",
-            backgroundColor: (theme) => theme.palette.primary.syncBlue,
-          }}
-        >
+        <Typography variant="h2" className={classes.titleSection}>
+          Work & Live
+        </Typography>
+      </Stack>
+      <Box className={classes.wrapperSection}>
+        <Stack direction="row" justifyContent="center">
           <Grid className={classes.amenitiesGallery}>
             <Box className={classes.textWrapper}>
-              <Typography variant="h2" className={classes.titleSection}>
+              <Typography variant="h2" className={classes.titleSection1}>
                 Amenities
               </Typography>
               <Typography variant="h3" className={classes.subTitleSection}>
                 Gimnasio
               </Typography>
               <Typography paragraph className={classes.textSection}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus, architecto corporis culpa obcaecati sit beatae aut
+                corrupti qui eligendi tempore, hic magni vel molestiae expedita
+                alias fuga ratione porro eius. Impedit quod soluta, commodi
+                facere asperiores non quis possimus ullam.
               </Typography>
               <Stack
                 sx={{ paddingTop: "auto" }}
@@ -58,7 +51,7 @@ const AmenitiesSection = () => {
                 <Typography className={classes.carrouselNumber}>
                   <Typography
                     component="span"
-                    className={classes.selectedSlide}
+                    className={`${classes.carrouselNumber} ${classes.selectedSlide}`}
                   >
                     01/
                   </Typography>
@@ -66,11 +59,11 @@ const AmenitiesSection = () => {
                 </Typography>
               </Stack>
             </Box>
-            <Box className={classes.imgSection} />
+            <img className={classes.imgSection} src={galeria} alt="galeria" />
           </Grid>
-        </Box>
-      </Stack>
-    </>
+        </Stack>
+      </Box>
+    </Stack>
   );
 };
 

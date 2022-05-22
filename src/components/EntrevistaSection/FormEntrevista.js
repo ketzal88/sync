@@ -50,7 +50,11 @@ const FormEntrevista = () => {
         </InputLabel>
         <Input classes={{ underline: classes.underlineInput }} />
       </FormControl>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        columnGap={{ md: "26px", lg: "40px" }}
+      >
         <FormControl className={classes.codAreaForm}>
           <InputLabel
             shrink

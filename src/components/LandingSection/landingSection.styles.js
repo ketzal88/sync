@@ -7,6 +7,11 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       backgroundImage: `url(${imageLanding})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
+      [theme.breakpoints.down("lg")]: {
+        minHeight: "745px",
+        paddingLeft: "98px",
+        paddingTop: "296px",
+      },
       [theme.breakpoints.up("lg")]: {
         minHeight: "745px",
         paddingLeft: "98px",
@@ -19,32 +24,33 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       },
     },
     textWrapper: {
-      [theme.breakpoints.up("lg")]: {
-        color: "white",
-      },
+      color: "white",
     },
     location: {
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "24px !important",
+        marginBottom: "12px !important",
+      },
       [theme.breakpoints.up("lg")]: {
-        fontWeight: 300,
-        fontSize: "24px",
+        fontSize: "24px !important",
         marginBottom: "12px !important",
       },
       [theme.breakpoints.up("xl")]: {
-        fontSize: "30px",
+        fontSize: "30px !important",
         marginBottom: "10px !important",
       },
     },
     mainTitle: {
-      color: "white",
-      [theme.breakpoints.up("lg")]: {
-        marginBottom: "45px !important",
-        fontSize: "48px !important",
-      },
-      [theme.breakpoints.up("xl")]: {
+      [theme.breakpoints.up("md")]: {
         marginBottom: "83px !important",
+        fontSize: "48px !important",
       },
     },
     buttonWrapper: {
+      [theme.breakpoints.down("lg")]: {
+        marginTop: "64px",
+        marginBottom: "244px",
+      },
       [theme.breakpoints.up("lg")]: {
         marginTop: "64px",
         marginBottom: "244px",
@@ -63,6 +69,13 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         backgroundColor: theme.palette.primary.syncBlue,
         borderColor: "none",
         boxShadow: "none",
+      },
+      [theme.breakpoints.down("lg")]: {
+        borderRadius: "46px",
+        fontSize: "17px",
+        fontWeight: "bold",
+        padding: "32px 46px",
+        marginRight: "20px",
       },
       [theme.breakpoints.up("lg")]: {
         borderRadius: "46px",
@@ -94,6 +107,11 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       border: "1px solid white",
       color: "white",
       borderRadius: "46px",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "17px",
+        fontWeight: "bold",
+        padding: "32px 46px",
+      },
       [theme.breakpoints.up("lg")]: {
         fontSize: "17px",
         fontWeight: "bold",

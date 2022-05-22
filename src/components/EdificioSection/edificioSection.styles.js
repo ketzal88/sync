@@ -10,6 +10,10 @@ export const useEdificioStyles = makeStyles((theme) => {
       backgroundPosition: "center",
       width: "100%",
       maxWidth: "1920px",
+      [theme.breakpoints.down("lg")]: {
+        backgroundPosition: "-270px 0px",
+        height: "567px",
+      },
       [theme.breakpoints.up("lg")]: {
         backgroundPosition: "-350px 0px",
         height: "769px",
@@ -20,6 +24,10 @@ export const useEdificioStyles = makeStyles((theme) => {
       },
     },
     secondWrapper: {
+      [theme.breakpoints.down("lg")]: {
+        marginTop: "38px",
+        marginRight: "75px",
+      },
       [theme.breakpoints.up("lg")]: {
         marginTop: "93px",
         marginRight: "124px",
@@ -31,6 +39,9 @@ export const useEdificioStyles = makeStyles((theme) => {
     },
     titleSection: {
       color: "black",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "34px !important",
+      },
       [theme.breakpoints.up("lg")]: {
         fontSize: "48px !important",
       },
@@ -40,6 +51,10 @@ export const useEdificioStyles = makeStyles((theme) => {
     },
     listLabel: {
       color: "#384146",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "17px !important",
+        marginBottom: "8px !important",
+      },
       [theme.breakpoints.up("lg")]: {
         fontSize: "20px !important",
         marginBottom: "35px !important",
@@ -51,6 +66,9 @@ export const useEdificioStyles = makeStyles((theme) => {
     },
     listQuantity: {
       fontWeight: "bold !important",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "17px !important",
+      },
       [theme.breakpoints.up("lg")]: {
         fontSize: "34px !important",
         lineHeight: "1.2 !important",

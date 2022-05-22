@@ -10,6 +10,9 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     color: "white",
     maxWidth: "1920px",
     width: "100%",
+    [theme.breakpoints.down("lg")]: {
+      height: "759px",
+    },
     [theme.breakpoints.up("lg")]: {
       height: "762px",
     },
@@ -19,7 +22,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   },
   titleSection: {
     textAlign: "center",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "96px !important",
     },
     [theme.breakpoints.up("xl")]: {
@@ -27,7 +30,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   textSection: {
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "20px !important",
       paddingInline: "382px !important",
       lineHeight: "1.3 !important",
@@ -47,7 +50,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     maxWidth: "1920px",
     width: "100%",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       height: "512px",
     },
     [theme.breakpoints.up("xl")]: {
@@ -57,7 +60,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: "#F1804F",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "22px",
       fontWeight: "bold",
       padding: "29px 62px",

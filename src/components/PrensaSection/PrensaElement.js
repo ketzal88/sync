@@ -8,7 +8,7 @@ const PrensaElement = ({ title, text, buttonLabel, imgURL }) => {
   return (
     <Box className={classes.elementWrapper}>
       <img src={imgURL} className={classes.elementIMG} alt="Sección Prensa" />
-      <Box className={classes.elementTextWrap}>
+      <Box className={classes.elementTextWrapper}>
         <Typography className={classes.elementTitle} variant="h3">
           {titleFormated[0] + ":"}
           <br />

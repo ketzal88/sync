@@ -40,14 +40,7 @@ const EntrevistaSection = () => {
                 {images[sellerChoosed].sellerName}
               </Typography>
               <Typography paragraph className={classes.sellerPhone}>
-                <WhatsAppIcon
-                  sx={{
-                    verticalAlign: "middle",
-                    marginTop: "-8px",
-                    width: "39px",
-                    height: "39px",
-                  }}
-                />
+                <WhatsAppIcon className={classes.whatsAppIcon} />
                 {images[sellerChoosed].phoneNumber}
               </Typography>
             </Box>

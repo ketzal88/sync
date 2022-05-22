@@ -5,6 +5,9 @@ export const useUbicacionSectionStyles = makeStyles((theme) => ({
     marginTop: "72px",
     maxWidth: "1920px",
     width: "100%",
+    [theme.breakpoints.down("lg")]: {
+      height: "808px",
+    },
     [theme.breakpoints.up("lg")]: {
       height: "1040px",
     },
@@ -14,7 +17,7 @@ export const useUbicacionSectionStyles = makeStyles((theme) => ({
   },
   titleSection: {
     paddingLeft: "100px !important",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "48px !important",
     },
     [theme.breakpoints.up("xl")]: {

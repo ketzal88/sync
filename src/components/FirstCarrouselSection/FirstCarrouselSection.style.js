@@ -1,10 +1,13 @@
 import { makeStyles } from "@mui/styles";
-import domotica from "../../assets/images/domotica.jpeg";
 
 export const useFirstCarrouselSection = makeStyles((theme) => {
   return {
     wrapper: {
       maxWidth: "1920px",
+      overflow: "hidden",
+      [theme.breakpoints.down("lg")]: {
+        height: "768px",
+      },
       [theme.breakpoints.up("lg")]: {
         height: "768px",
       },
@@ -15,34 +18,37 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
     imageBox: {
       objectFit: "cover",
       objectPosition: "0% 10%",
+      height: "100%",
+      [theme.breakpoints.down("lg")]: {
+        width: "422px",
+        objectPosition: "center",
+      },
       [theme.breakpoints.up("lg")]: {
         width: "100%",
-        height: "100%",
-        backgroundPosition: "0px -59px",
       },
       [theme.breakpoints.up("xl")]: {
         width: "1180px",
-        height: "1080px",
-        backgroundPosition: "0px -59px",
       },
     },
     textBox: {
-      [theme.breakpoints.up("lg")]: {
-        width: "602px",
+      color: "white",
+      width: "100%",
+      [theme.breakpoints.down("lg")]: {
         paddingInline: "112px",
         paddingTop: "136px",
-        color: "white",
+      },
+      [theme.breakpoints.up("lg")]: {
+        paddingInline: "112px",
+        paddingTop: "136px",
       },
       [theme.breakpoints.up("xl")]: {
-        width: "549px",
         paddingLeft: "80px",
         paddingRight: "111px",
         paddingTop: "236px",
-        color: "white",
       },
     },
     titleSection: {
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up("md")]: {
         fontSize: "48px !important",
         fontWeight: "700 !important",
       },
@@ -52,7 +58,7 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     subTitleSection: {
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up("md")]: {
         paddingTop: "60px",
         fontSize: "34px !important",
         fontWeight: "bold !important",
@@ -64,7 +70,7 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     text: {
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up("md")]: {
         fontSize: "20px !important",
         marginTop: "24px !important",
         letterSpacing: "0px !important",
@@ -82,6 +88,11 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     arrowContainer: {
+      [theme.breakpoints.down("lg")]: {
+        marginTop: "71px",
+        width: "72px",
+        height: "72px",
+      },
       [theme.breakpoints.up("lg")]: {
         marginTop: "68px",
         width: "74px",
