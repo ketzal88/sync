@@ -14,4 +14,9 @@ export const useFooterStyles = makeStyles((theme) => ({
   text: {
     fontSize: "20px !important",
   },
+  socialMedias: {
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
+  },
 }));

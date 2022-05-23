@@ -32,10 +32,13 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   textSection: {
     [theme.breakpoints.up("md")]: {
       fontSize: "20px !important",
-      paddingInline: "382px !important",
       lineHeight: "1.3 !important",
       letterSpacing: "-.9px !important",
       marginTop: "40px !important",
+      paddingInline: "211px !important",
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingInline: "382px !important",
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: "23px !important",

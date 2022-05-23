@@ -45,7 +45,7 @@ const Footer = () => {
               brokers@vitriumcapital.com
             </Typography>
           </Box>
-          <Box className="rrss-and-legal">
+          <Box className={classes.socialMedias}>
             <Stack direction="row" gap="25px">
               <img src={facebook} alt="Facebook" />
               <img src={instagram} alt="Instagram" />

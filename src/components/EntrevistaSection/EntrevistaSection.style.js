@@ -4,29 +4,30 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   wrapperSection: {
     maxWidth: "1920px",
     width: "100%",
+    boxSizing: "border-box",
+    position: "relative",
     [theme.breakpoints.down("lg")]: {
-      paddingTop: "67px",
-      height: "calc(1006px - 67px)",
+      minHeight: "1006px",
     },
-    [theme.breakpoints.up("lg")]: {
-      paddingTop: "123px",
-      height: "calc(1006px - 123px)",
-    },
+    // [theme.breakpoints.up("lg")]: {
+    //   height: "1006px",
+    // },
     [theme.breakpoints.up("xl")]: {
-      paddingTop: "100px",
-      height: "calc(1359px - 100px)",
+      MINheight: "1151px",
     },
   },
   titleSection: {
     [theme.breakpoints.up("md")]: {
       marginLeft: "93px !important",
       fontSize: "48px !important",
-      marginBottom: "72px !important",
+      // marginBottom: "72px !important",
     },
     [theme.breakpoints.up("lg")]: {
+      // paddingTop: "88px !important",
       marginBottom: "72px !important",
     },
     [theme.breakpoints.up("xl")]: {
+      // paddingTop: "102px !important",
       marginLeft: "100px !important",
       fontSize: "60px !important",
       marginBottom: "80px !important",
@@ -36,6 +37,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignContent: "flex-start",
+    marginTop: "92px",
     [theme.breakpoints.up("md")]: {
       columnGap: "26px",
       rowGap: "58px",
@@ -119,18 +121,28 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   sellerImgContainer: {
     position: "relative",
+    marginBottom: "-1px",
     [theme.breakpoints.down("lg")]: {
-      marginTop: "300px",
+      marginTop: "388px",
       height: "506px",
     },
     [theme.breakpoints.up("lg")]: {
-      marginTop: 0,
+      marginTop: "72px",
       height: "821px",
     },
   },
   sellerContainer: {
     backgroundColor: "#132127",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.down("lg")]: {
+      paddingTop: "18px",
+      width: "301px",
+      height: "90px",
+      borderTopRightRadius: "145px",
+      position: "absolute",
+      bottom: "0",
+      paddingLeft: "53px",
+    },
+    [theme.breakpoints.up("lg")]: {
       paddingTop: "35px",
       width: "388px",
       borderTopRightRadius: "145px",
@@ -181,7 +193,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       height: "506px",
       width: "271px",
-      transform: "translateX(-13%) translateY(-4.5%) scale(1.2)",
+      transform: "translateX(-10%) translateY(-8%)",
     },
     [theme.breakpoints.up("lg")]: {
       height: "676px",
