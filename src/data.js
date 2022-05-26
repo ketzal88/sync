@@ -7,7 +7,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf101-401-801.png",
+    "img1": "images/planosApartamentos/uf101-401-801.png",
     "tipo": "dosambientes"
   },
   {
@@ -18,7 +18,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf102-402-802.png",
+    "img1": 'images/planosApartamentos/uf102-402-802.png',
     "tipo": "monoambiente"
   },
   {
@@ -29,7 +29,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf103-403-803.png",
+    "img1": "images/planosApartamentos/uf103-403-803.png",
     "tipo": "monoambiente"
   },
   {
@@ -40,7 +40,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf104-404-804.png",
+    "img1": "images/planosApartamentos/uf104-404-804.png",
     "tipo": "dosambientes"
   },
   {
@@ -51,7 +51,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf105-405-805.png",
+    "img1": "images/planosApartamentos/uf105-405-805.png",
     "tipo": "dosambientes"
   },
   {
@@ -62,7 +62,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf106-406-806.png",
+    "img1": "images/planosApartamentos/uf106-406-806.png",
     "tipo": "monoambiente"
   },
   {
@@ -73,7 +73,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf107-407-807.png",
+    "img1": "images/planosApartamentos/uf107-407-807.png",
     "tipo": "monoambiente"
   },
   {
@@ -84,7 +84,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf108-408-808.png",
+    "img1": "images/planosApartamentos/uf108-408-808.png",
     "tipo": "dosambientes"
   },
   {
@@ -95,7 +95,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf201.png",
+    "img1": "images/planosApartamentos/uf201.png",
     "tipo": "dosambientes"
   },
   {
@@ -106,7 +106,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf202.png",
+    "img1": "images/planosApartamentos/uf202.png",
     "tipo": "monoambiente"
   },
   {
@@ -117,7 +117,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf203.png",
+    "img1": "images/planosApartamentos/uf203.png",
     "tipo": "monoambiente"
   },
   {
@@ -128,7 +128,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf204.png",
+    "img1": "images/planosApartamentos/uf204.png",
     "tipo": "dosambientes"
   },
   {
@@ -139,7 +139,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf205.png",
+    "img1": "images/planosApartamentos/uf205.png",
     "tipo": "dosambientes"
   },
   {
@@ -150,7 +150,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf206.png",
+    "img1": "images/planosApartamentos/uf206.png",
     "tipo": "monoambiente"
   },
   {
@@ -161,7 +161,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf207.png",
+    "img1": "images/planosApartamentos/uf207.png",
     "tipo": "monoambiente"
   },
   {
@@ -172,7 +172,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf208.png",
+    "img1": "images/planosApartamentos/uf208.png",
     "tipo": "dosambientes"
   },
   {
@@ -183,7 +183,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf301-901.png",
+    "img1": "images/planosApartamentos/uf301-901.png",
     "tipo": "dosambientes"
   },
   {
@@ -194,7 +194,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf302-902.png",
+    "img1": "images/planosApartamentos/uf302-902.png",
     "tipo": "monoambiente"
   },
   {
@@ -205,7 +205,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf303-903.png",
+    "img1": "images/planosApartamentos/uf303-903.png",
     "tipo": "monoambiente"
   },
   {
@@ -216,7 +216,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf304-904.png",
+    "img1": "images/planosApartamentos/uf304-904.png",
     "tipo": "dosambientes"
   },
   {
@@ -227,7 +227,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf305-905.png",
+    "img1": "images/planosApartamentos/uf305-905.png",
     "tipo": "dosambientes"
   },
   {
@@ -238,7 +238,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf306-906.png",
+    "img1": "images/planosApartamentos/uf306-906.png",
     "tipo": "monoambiente"
   },
   {
@@ -249,7 +249,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf307-907.png",
+    "img1": "images/planosApartamentos/uf307-907.png",
     "tipo": "monoambiente"
   },
   {
@@ -260,7 +260,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf308-908.png",
+    "img1": "images/planosApartamentos/uf308-908.png",
     "tipo": "dosambientes"
   },
   {
@@ -271,7 +271,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf101-401-801.png",
+    "img1": "images/planosApartamentos/uf101-401-801.png",
     "tipo": "dosambientes"
   },
   {
@@ -282,7 +282,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf102-402-802.png",
+    "img1": "images/planosApartamentos/uf102-402-802.png",
     "tipo": "monoambiente"
   },
   {
@@ -293,7 +293,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf103-403-803.png",
+    "img1": "images/planosApartamentos/uf103-403-803.png",
     "tipo": "monoambiente"
   },
   {
@@ -304,7 +304,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf104-404-804.png",
+    "img1": "images/planosApartamentos/uf104-404-804.png",
     "tipo": "dosambientes"
   },
   {
@@ -315,7 +315,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf105-405-805.png",
+    "img1": "images/planosApartamentos/uf105-405-805.png",
     "tipo": "dosambientes"
   },
   {
@@ -326,7 +326,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf106-406-806.png",
+    "img1": "images/planosApartamentos/uf106-406-806.png",
     "tipo": "monoambiente"
   },
   {
@@ -337,7 +337,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf107-407-807.png",
+    "img1": "images/planosApartamentos/uf107-407-807.png",
     "tipo": "monoambiente"
   },
   {
@@ -348,7 +348,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf108-408-808.png",
+    "img1": "images/planosApartamentos/uf108-408-808.png",
     "tipo": "dosambientes"
   },
   {
@@ -359,7 +359,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf501-701.png",
+    "img1": "images/planosApartamentos/uf501-701.png",
     "tipo": "dosambientes"
   },
   {
@@ -370,7 +370,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf502-702.png",
+    "img1": "images/planosApartamentos/uf502-702.png",
     "tipo": "monoambiente"
   },
   {
@@ -381,7 +381,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf503-703.png",
+    "img1": "images/planosApartamentos/uf503-703.png",
     "tipo": "monoambiente"
   },
   {
@@ -392,7 +392,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf504-704.png",
+    "img1": "images/planosApartamentos/uf504-704.png",
     "tipo": "monoambiente"
   },
   {
@@ -403,7 +403,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf506-706.png",
+    "img1": "images/planosApartamentos/uf506-706.png",
     "tipo": "dosambientes"
   },
   {
@@ -414,7 +414,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf506-706.png",
+    "img1": "images/planosApartamentos/uf506-706.png",
     "tipo": "monoambiente"
   },
   {
@@ -425,7 +425,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf507-707.png",
+    "img1": "images/planosApartamentos/uf507-707.png",
     "tipo": "monoambiente"
   },
   {
@@ -436,7 +436,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf508-708.png",
+    "img1": "images/planosApartamentos/uf508-708.png",
     "tipo": "dosambientes"
   },
   {
@@ -447,7 +447,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf601.png",
+    "img1": "images/planosApartamentos/uf601.png",
     "tipo": "dosambientes"
   },
   {
@@ -458,7 +458,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf602.png",
+    "img1": "images/planosApartamentos/uf602.png",
     "tipo": "monoambiente"
   },
   {
@@ -469,7 +469,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf603.png",
+    "img1": "images/planosApartamentos/uf603.png",
     "tipo": "monoambiente"
   },
   {
@@ -480,7 +480,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf604.png",
+    "img1": "images/planosApartamentos/uf604.png",
     "tipo": "dosambientes"
   },
   {
@@ -491,7 +491,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf605.png",
+    "img1": "images/planosApartamentos/uf605.png",
     "tipo": "dosambientes"
   },
   {
@@ -502,7 +502,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf606.png",
+    "img1": "images/planosApartamentos/uf606.png",
     "tipo": "monoambiente"
   },
   {
@@ -513,7 +513,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf607.png",
+    "img1": "images/planosApartamentos/uf607.png",
     "tipo": "monoambiente"
   },
   {
@@ -524,7 +524,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf608.png",
+    "img1": "images/planosApartamentos/uf608.png",
     "tipo": "dosambientes"
   },
   {
@@ -535,7 +535,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf501-701.png",
+    "img1": "images/planosApartamentos/uf501-701.png",
     "tipo": "dosambientes"
   },
   {
@@ -546,7 +546,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf502-702.png",
+    "img1": "images/planosApartamentos/uf502-702.png",
     "tipo": "monoambiente"
   },
   {
@@ -557,7 +557,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf503-703.png",
+    "img1": "images/planosApartamentos/uf503-703.png",
     "tipo": "monoambiente"
   },
   {
@@ -568,7 +568,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf504-704.png",
+    "img1": "images/planosApartamentos/uf504-704.png",
     "tipo": "dosambientes"
   },
   {
@@ -579,7 +579,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf505-705.png",
+    "img1": "images/planosApartamentos/uf505-705.png",
     "tipo": "dosambientes"
   },
   {
@@ -590,7 +590,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf506-706.png",
+    "img1": "images/planosApartamentos/uf506-706.png",
     "tipo": "monoambiente"
   },
   {
@@ -601,7 +601,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf507-707.png",
+    "img1": "images/planosApartamentos/uf507-707.png",
     "tipo": "monoambiente"
   },
   {
@@ -612,7 +612,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf508-708.png",
+    "img1": "images/planosApartamentos/uf508-708.png",
     "tipo": "dosambientes"
   },
   {
@@ -623,7 +623,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf101-401-801.png",
+    "img1": "images/planosApartamentos/uf101-401-801.png",
     "tipo": "dosambientes"
   },
   {
@@ -634,7 +634,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf102-402-802.png",
+    "img1": "images/planosApartamentos/uf102-402-802.png",
     "tipo": "monoambiente"
   },
   {
@@ -645,7 +645,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf103-403-803.png",
+    "img1": "images/planosApartamentos/uf103-403-803.png",
     "tipo": "dosambientes"
   },
   {
@@ -656,7 +656,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf104-404-804.png",
+    "img1": "images/planosApartamentos/uf104-404-804.png",
     "tipo": "dosambientes"
   },
   {
@@ -667,7 +667,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf105-405-805.png",
+    "img1": "images/planosApartamentos/uf105-405-805.png",
     "tipo": "dosambientes"
   },
   {
@@ -678,7 +678,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf106-406-806.png",
+    "img1": "images/planosApartamentos/uf106-406-806.png",
     "tipo": "monoambiente"
   },
   {
@@ -689,7 +689,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf107-407-807.png",
+    "img1": "images/planosApartamentos/uf107-407-807.png",
     "tipo": "monoambiente"
   },
   {
@@ -700,7 +700,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf108-408-808.png",
+    "img1": "images/planosApartamentos/uf108-408-808.png",
     "tipo": "dosambientes"
   },
   {
@@ -711,7 +711,7 @@ const apartments = [
     "dormitorios": 1.5,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf301-901.png",
+    "img1": "images/planosApartamentos/uf301-901.png",
     "tipo": "dosambientes"
   },
   {
@@ -722,7 +722,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf302-902.png",
+    "img1": "images/planosApartamentos/uf302-902.png",
     "tipo": "monoambiente"
   },
   {
@@ -733,7 +733,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf303-903.png",
+    "img1": "images/planosApartamentos/uf303-903.png",
     "tipo": "monoambiente"
   },
   {
@@ -744,7 +744,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf304-904.png",
+    "img1": "images/planosApartamentos/uf304-904.png",
     "tipo": "dosambientes"
   },
   {
@@ -755,7 +755,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf305-905.png",
+    "img1": "images/planosApartamentos/uf305-905.png",
     "tipo": "dosambientes"
   },
   {
@@ -766,7 +766,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf306-906.png",
+    "img1": "images/planosApartamentos/uf306-906.png",
     "tipo": "monoambiente"
   },
   {
@@ -777,7 +777,7 @@ const apartments = [
     "dormitorios": 0,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf307-907.png",
+    "img1": "images/planosApartamentos/uf307-907.png",
     "tipo": "monoambiente"
   },
   {
@@ -788,7 +788,7 @@ const apartments = [
     "dormitorios": 1,
     "amenities": ["laundry", "garage"],
     "pdf": "https:linkpdf",
-    "img1": "public\images\planosApartamentos\uf308-908.png",
+    "img1": "images/planosApartamentos/uf308-908.png",
     "tipo": "dosambientes"
   },
   /*
