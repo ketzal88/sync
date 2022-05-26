@@ -328,7 +328,7 @@ export default function ApartmentsPage() {
                         color: 'white'
                       }}
                     >
-                      {apartment.dormitorios} {dormitoriosText(apartment.dormitorios)}
+                      {apartment.dormitorios === 0 ? TIPOS_OPTIONS[0].label : apartment.dormitorios} {dormitoriosText(apartment.dormitorios)}
                     </Typography>
                   </Box>
                   <Grid container item sx={{marginTop: '20px'}} flexDirection="row">
