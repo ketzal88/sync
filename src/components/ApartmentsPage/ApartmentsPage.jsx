@@ -254,7 +254,7 @@ export default function ApartmentsPage() {
         <Grid item>
           {apartments.map(apartment => (
             <Grid
-              key={apartment.id}
+              key={apartment.name}
               container
               item
               className="apartment-card-btn"
@@ -272,7 +272,7 @@ export default function ApartmentsPage() {
                   width: '100%',
                   height: '100%',
                 }}>
-                  <img src={apartment.img1} alt={`apartment-${apartment.id}`} height="100%" width="100%" />
+                  <img src={apartment.img1} alt={`apartment-${apartment.name}`} height="100%" width="100%" />
                 </Box>
               </Grid>
               <Grid
@@ -295,7 +295,7 @@ export default function ApartmentsPage() {
                         color: 'white'
                       }}
                     >
-                      {apartment.id}
+                      {apartment.name}
                     </Typography>
                   </Box>
                   <Box sx={{display: 'flex'}}>
