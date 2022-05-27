@@ -7,32 +7,44 @@ export const useHeaderStyles = makeStyles((theme) => {
       display: "flex",
       left: "0",
       right: "0",
-      [theme.breakpoints.down("lg")]: {
-        justifyContent: "space-between",
-        paddingLeft: "80px",
-        paddingRight: "112px",
-        paddingTop: "72px",
+      zindex: "10",
+      justifyContent: "space-between",
+      [theme.breakpoints.down("md")]: {
+        paddingInline: "38px",
+        paddingTop: "0px",
       },
-      [theme.breakpoints.up("lg")]: {
-        justifyContent: "space-between",
+      [theme.breakpoints.up("md")]: {
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "72px",
+        paddingTop: "86px",
       },
       [theme.breakpoints.up("xl")]: {
         paddingLeft: "91px",
         paddingRight: "111px",
-        paddingTop: "72px",
+      },
+    },
+    drawerBox: {
+      paddingTop: "50px",
+      [theme.breakpoints.up("md")]: {
+        display: "none",
       },
     },
     logo: {
+      marginTop: "0px",
       [theme.breakpoints.down("lg")]: {
         width: "132px",
         height: "136px",
       },
       [theme.breakpoints.up("lg")]: {
+        marginTop: "-30px",
         width: "132px",
         height: "136px",
+      },
+    },
+    linksContainer: {
+      marginTop: "23px",
+      [theme.breakpoints.down("md")]: {
+        display: "none",
       },
     },
     navLink: {
@@ -65,13 +77,14 @@ export const useHeaderStyles = makeStyles((theme) => {
       display: "flex",
       alignItems: "flex-end",
       justifyContent: "center",
-      [theme.breakpoints.down("lg")]: {
+      backgroundColor: "transparent",
+      [theme.breakpoints.up("md")]: {
         width: "102px",
         height: "167px",
         backgroundColor: "#0A1217",
         border: "1px solid #707070",
         borderRadius: "0px 0px 23px 23px;",
-        marginTop: "-72px",
+        marginTop: "-86px",
       },
       [theme.breakpoints.up("lg")]: {
         width: "114px",
@@ -79,10 +92,12 @@ export const useHeaderStyles = makeStyles((theme) => {
         backgroundColor: "#0A1217",
         border: "1px solid #707070",
         borderRadius: "0px 0px 23px 23px;",
-        marginTop: "-72px",
       },
     },
     imgStyles: {
+      width: "24px",
+      height: "24px",
+      padding: "12px",
       [theme.breakpoints.down("lg")]: {
         marginBottom: "18px",
         backgroundColor: "white",

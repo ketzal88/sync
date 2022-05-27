@@ -9,6 +9,7 @@ const InfoProjectSection = () => {
       sx={{
         backgroundColor: (theme) => theme.palette.primary.syncBlue,
         marginTop: "-1px",
+        display: { xs: "none", md: "flex" },
       }}
       direction="row"
       justifyContent="center"

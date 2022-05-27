@@ -52,7 +52,11 @@ const articles = [
 const PrensaSection = () => {
   const classes = usePrensaSectionStyles();
   return (
-    <Stack direction="row" justifyContent="center">
+    <Stack
+      direction="row"
+      justifyContent="center"
+      sx={{ display: { xs: "none" } }}
+    >
       <Box className={classes.wrapperSection}>
         <Typography variant="h2" className={classes.titleSection}>
           Prensa

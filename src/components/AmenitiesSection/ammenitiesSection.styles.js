@@ -5,7 +5,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     wrapperSection: {
       maxWidth: "1920px",
       width: "100%",
-      [theme.breakpoints.down("lg")]: {
+      [theme.breakpoints.up("md")]: {
         height: "680px",
       },
       [theme.breakpoints.up("lg")]: {
@@ -38,6 +38,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       },
     },
     titleSection1: {
+      fontSize: "34px !important",
       [theme.breakpoints.up("md")]: {
         fontSize: "48px !important",
       },
@@ -47,7 +48,9 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     },
     subTitleSection: {
       fontWeight: "bold !important",
-      [theme.breakpoints.down("lg")]: {
+      marginTop: "40px !important",
+      fontSize: "24px !important",
+      [theme.breakpoints.up("md")]: {
         fontSize: "34px !important",
         marginTop: "97px !important",
       },
@@ -64,10 +67,15 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       overflow: "hidden",
       color: "white",
       display: "flex",
+      flexWrap: "wrap",
+      [theme.breakpoints.up("md")]: {
+        flexWrap: "nowrap",
+      },
     },
     textWrapper: {
       width: "100%",
-      [theme.breakpoints.down("lg")]: {
+      padding: "43px 38px 52px",
+      [theme.breakpoints.up("md")]: {
         padding: "83px 180px 80px 92px",
       },
       [theme.breakpoints.up("lg")]: {
@@ -83,8 +91,10 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       fontWeight: "normal !important",
       display: "-webkit-box !important",
       "-webkit-box-orient": "vertical !important",
+      fontSize: "17px !important",
+      marginTop: "24px !important",
+      marginBottom: "58px !important",
       [theme.breakpoints.up("md")]: {
-        marginTop: "24px !important",
         fontSize: "20px !important",
         marginBottom: "92px !important",
         "-webkit-line-clamp": "6 !important",
@@ -104,9 +114,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       },
     },
     carrouselNumber: {
-      [theme.breakpoints.up("md")]: {
-        fontSize: "24px !important",
-      },
+      fontSize: "24px !important",
       [theme.breakpoints.up("xl")]: {
         fontSize: "30px !important",
       },
@@ -115,7 +123,9 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       fontWeight: "bold !important",
     },
     iconContainer: {
+      order: "2",
       [theme.breakpoints.up("md")]: {
+        order: "1",
         width: "72px",
         height: "72px",
       },
@@ -126,12 +136,15 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     },
     imgSection: {
       width: "100%",
+      order: "-1",
+      height: "391px",
       objectFit: "cover",
       [theme.breakpoints.up("md")]: {
+        order: "1",
         maxWidth: "432px",
         height: "772px",
       },
-      [theme.breakpoints.up("md")]: {
+      [theme.breakpoints.up("lg")]: {
         maxWidth: "774px",
       },
       [theme.breakpoints.up("xl")]: {

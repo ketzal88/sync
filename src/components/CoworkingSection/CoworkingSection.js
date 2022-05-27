@@ -4,7 +4,11 @@ import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
   return (
-    <Stack direction="column" alignItems="center">
+    <Stack
+      direction="column"
+      alignItems="center"
+      sx={{ display: { xs: "none", md: "flex" } }}
+    >
       <Stack
         direction="column"
         justifyContent="center"

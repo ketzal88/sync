@@ -1,8 +1,37 @@
+import { useEffect, useRef, useState } from "react";
 import { useApartamentsStyles } from "./apartamentos.styles";
 import { Box, Grid, Stack, Typography } from "@mui/material";
+import paneo from "../../assets/paneo.mp4";
 
 const ApartamentosSection = () => {
   const classes = useApartamentsStyles();
+  const videoRef = useRef(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  const callback = function (entries) {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      setAutoPlay(true);
+      videoRef?.current?.play();
+    } else {
+      setAutoPlay(false);
+      videoRef?.current?.pause();
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+    observer.observe(videoRef.current);
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, [videoRef]);
+
   return (
     <Stack direction="row" justifyContent="center">
       <Box className={classes.container}>
@@ -15,9 +44,14 @@ const ApartamentosSection = () => {
           alignItems="center"
           className="monoambiente-info"
         >
-          <Box className={classes.imgContainer}>
-            Video que inicia cuando está en el viewport
-          </Box>
+          <video
+            ref={videoRef}
+            className={classes.imgContainer}
+            src={paneo}
+            controls={true}
+            autoPlay={autoPlay}
+            loop={true}
+          />
           <Typography variant="h2" className={classes.subTitle}>
             Monoambiente
           </Typography>

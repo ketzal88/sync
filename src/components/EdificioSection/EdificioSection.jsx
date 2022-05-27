@@ -6,7 +6,11 @@ import { Fragment } from "react";
 const EdificioSection = () => {
   const classes = useEdificioStyles();
   return (
-    <Stack direction="row" justifyContent="center">
+    <Stack
+      direction="row"
+      justifyContent="center"
+      sx={{ display: { xs: "none", md: "flex" } }}
+    >
       <Box className={classes.container}>
         <Stack direction="row" justifyContent="flex-end">
           <Box className={classes.secondWrapper}>

@@ -4,6 +4,8 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   container: {
     maxWidth: "1920px",
     width: "100%",
+    paddingBottom: "72px !important",
+    marginBottom: "72px !important",
     [theme.breakpoints.down("lg")]: {
       paddingTop: "50px",
       height: "852px",
@@ -33,9 +35,11 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   imgContainer: {
-    backgroundColor: theme.palette.primary.syncBlue,
+    objectFit: "cover",
+    width: "100%",
+    height: "527px",
     color: "white",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.up("md")]: {
       width: "696px",
       height: "391.5px",
     },
@@ -49,6 +53,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   subTitle: {
+    marginTop: "40px !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "34px !important",
       marginTop: "28px !important",
@@ -76,18 +81,17 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       marginTop: "15px !important",
     },
   },
-
   button: {
     backgroundColor: theme.palette.primary.syncBlue,
     color: "#f1804f",
+    padding: "32px 116px",
+    marginTop: "72px",
+    borderRadius: "46px",
+    fontSize: "17px !important",
     [theme.breakpoints.up("md")]: {
       marginTop: "55px",
-      borderRadius: "46px",
-      fontSize: "17px !important",
-      padding: "32px 116px",
     },
     [theme.breakpoints.up("xl")]: {
-      marginTop: "55px",
       fontSize: "22px !important",
       padding: "26px 95px",
     },

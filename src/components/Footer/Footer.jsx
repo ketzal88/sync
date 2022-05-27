@@ -11,7 +11,10 @@ const Footer = () => {
     <Stack
       direction="row"
       justifyContent="center"
-      sx={{ backgroundColor: (theme) => theme.palette.primary.syncBlue }}
+      sx={{
+        backgroundColor: (theme) => theme.palette.primary.syncBlue,
+        display: { xs: "none", md: "flex" },
+      }}
     >
       <Stack
         component="footer"

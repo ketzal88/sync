@@ -7,6 +7,14 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       backgroundImage: `url(${imageLanding})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
+      height: "930px",
+      [theme.breakpoints.down("sm")]: {
+        backgroundPosition: "36% 0px",
+        paddingLeft: "38px !important",
+      },
+      [theme.breakpoints.up("md")]: {
+        backgroundPosition: "center",
+      },
       [theme.breakpoints.down("lg")]: {
         minHeight: "745px",
         paddingLeft: "98px",
@@ -27,29 +35,42 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       color: "white",
     },
     location: {
-      [theme.breakpoints.down("lg")]: {
-        fontSize: "24px !important",
-        marginBottom: "12px !important",
-      },
-      [theme.breakpoints.up("lg")]: {
-        fontSize: "24px !important",
-        marginBottom: "12px !important",
-      },
+      fontSize: "24px !important",
+      marginBottom: "12px !important",
       [theme.breakpoints.up("xl")]: {
         fontSize: "30px !important",
         marginBottom: "10px !important",
       },
     },
-    mainTitle: {
-      [theme.breakpoints.up("md")]: {
-        marginBottom: "83px !important",
-        fontSize: "48px !important",
+    mainTitle: () => ({
+      fontSize: "48px !important",
+      maxWidth: "min-content",
+      marginBottom: "162px !important",
+      "& :nth-child(2)": {
+        marginLeft: "10px",
       },
-    },
+      [theme.breakpoints.up("md")]: {
+        maxWidth: "100%",
+        marginBottom: "83px !important",
+        "& :nth-child(2)": {
+          marginLeft: "0px",
+          "&:before": {
+            color: "blue !important",
+            content: "'\\a'",
+            whiteSpace: "pre",
+          },
+        },
+      },
+    }),
     buttonWrapper: {
-      [theme.breakpoints.down("lg")]: {
-        marginTop: "64px",
-        marginBottom: "244px",
+      paddingRight: "38px",
+      display: "flex",
+      flexWrap: "wrap",
+      marginTop: "64px",
+      marginBottom: "244px",
+      [theme.breakpoints.up("md")]: {
+        flexWrap: "nowrap",
+        paddingRight: "0px",
       },
       [theme.breakpoints.up("lg")]: {
         marginTop: "64px",
@@ -57,28 +78,29 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       },
     },
     apartamentsButton: {
+      width: "100%",
       border: 0,
       backgroundColor: theme.palette.primary.syncBlue,
       color: "white",
-      "&:active": {
+      marginBottom: "40px",
+      "&:active, &:hover": {
         boxShadow: "none",
         backgroundColor: theme.palette.primary.syncBlue,
         borderColor: "none",
       },
-      "&:hover": {
-        backgroundColor: theme.palette.primary.syncBlue,
-        borderColor: "none",
-        boxShadow: "none",
-      },
-      [theme.breakpoints.down("lg")]: {
-        borderRadius: "46px",
-        fontSize: "17px",
-        fontWeight: "bold",
-        padding: "32px 46px",
+      marginRight: "0px",
+      borderRadius: "46px",
+      fontSize: "17px",
+      fontWeight: "bold",
+      padding: "32px 46px",
+      [theme.breakpoints.up("md")]: {
         marginRight: "20px",
+        width: "50%",
+        marginBottom: "0px",
       },
       [theme.breakpoints.up("lg")]: {
         borderRadius: "46px",
+        marginBottom: "0px",
         fontSize: "17px",
         fontWeight: "bold",
         padding: "32px 46px",
@@ -93,24 +115,22 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       },
     },
     recorridoButton: {
-      "&:active": {
+      width: "100%",
+      whiteSpace: "nowrap",
+      "&:active, &:hover": {
         boxShadow: "none",
         backgroundColor: "transparent",
         borderColor: "none",
-      },
-      "&:hover": {
-        backgroundColor: "transparent",
-        borderColor: "none",
-        boxShadow: "none",
       },
       backgroundColor: "transparent",
       border: "1px solid white",
       color: "white",
       borderRadius: "46px",
-      [theme.breakpoints.down("lg")]: {
-        fontSize: "17px",
-        fontWeight: "bold",
-        padding: "32px 46px",
+      fontSize: "17px",
+      fontWeight: "bold",
+      padding: "32px 46px",
+      [theme.breakpoints.up("md")]: {
+        width: "50%",
       },
       [theme.breakpoints.up("lg")]: {
         fontSize: "17px",

@@ -13,13 +13,14 @@ const LandingSection = () => {
         justifyContent: "center",
       }}
     >
-      <Grid container spacing={0} className={classes.wrapper}>
+      <Grid container className={classes.wrapper}>
         <Grid item className={classes.textWrapper}>
           <Typography className={classes.location} variant="h3">
             Montevideo, Uruguay
           </Typography>
           <Typography className={classes.mainTitle} variant="h1">
-            Diseñados para <br /> una nueva era
+            <span>Diseñados para</span>
+            <span>una nueva era</span>
           </Typography>
           <Grid item className={classes.buttonWrapper}>
             <button
