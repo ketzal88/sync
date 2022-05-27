@@ -1,6 +1,10 @@
 import { makeStyles } from "@mui/styles";
+import { Outlet, useLocation } from "react-router-dom";
 
 export const useHeaderStyles = makeStyles((theme) => {
+  const location = useLocation();
+  console.log("aca: ", location.pathname);
+
   return {
     headerWrapper: {
       top: 0,

@@ -4,6 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ScheduleInterviewModal from "./ApartmentModal/ApartmentModal";
 import { getApartments } from "../../data";
 import { dormitoriosText, formatSuperficie, pisoText } from "../../utils/apartmentsUtils";
+import { useApartmentsPageStyles } from "./apartmentsPage.styles";
 
 const PISOS_OPTIONS = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -30,6 +31,7 @@ export default function ApartmentsPage() {
   const [currentApartment, setCurrentApartment] = useState({})
   const [open, setOpen] = useState(false)
   const [apartments, setApartments] = useState(DEFAULT_APARTMENTS || [])
+  const classes = useApartmentsPageStyles();
 
   const closeModal = () => {
     setOpen(false)
@@ -82,13 +84,10 @@ export default function ApartmentsPage() {
   }
 
   return (
-    <Grid container item xl={12} sx={{
-      px: '100px',
-      mt: '60px',
-    }}>
+    <Grid container item className={classes.wrapper}>
       <Grid id="title-and-filters-container" container item flexDirection="row" xl={12} lg={12} sx={{marginBottom: '200px'}}>
         <Grid item xl={12} lg={12} sx={{width: '100%', marginBottom: '46px'}}>
-          <Typography sx={{fontSize: 65, letterSpacing: 0}}>Apartamentos</Typography>
+          <Typography variant="h1" className={classes.apartamentosTitle}>Apartamentos</Typography>
         </Grid>
         <Grid container item sx={{justifyContent: 'flex-start'}}>
           <Grid container item sx={{width: '25%', marginRight: '176px'}}>
@@ -251,7 +250,7 @@ export default function ApartmentsPage() {
             {apartments.length} {searchResultText()}
           </Typography>
         </Box>
-        <Grid item>
+        <Grid item className={classes.apartmentsContainer}>
           {apartments.map(apartment => (
             <Grid
               key={apartment.name}
