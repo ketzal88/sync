@@ -1,9 +1,12 @@
-import { Box, Stack, Typography } from "@mui/material";
-import { useFooterStyles } from "./Footer.styles";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
 import linkedin from "../../assets/images/linkedin.svg";
 import youtube from "../../assets/images/youtube.svg";
+import { useFooterStyles } from "./Footer.styles";
+import logo from "../../assets/images/logoFooter.svg";
 
 const Footer = () => {
   const classes = useFooterStyles();
@@ -13,18 +16,23 @@ const Footer = () => {
       justifyContent="center"
       sx={{
         backgroundColor: (theme) => theme.palette.primary.syncBlue,
-        display: { xs: "none", md: "flex" },
       }}
     >
       <Stack
         component="footer"
-        direction="row"
-        justifyContent="space-between"
+        direction={{ xs: "column", md: "row" }}
         className={classes.footerContainer}
       >
-        <Box className="logo"></Box>
-        <Stack direction="row" gap="153px" justifyContent="space-between">
-          <Box className="contacto">
+        <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          justifyContent={{ xs: "center", lg: "space-between" }}
+          alignItems={{ xs: "center", lg: "space-between" }}
+          flexWrap="wrap"
+          rowGap={{ xs: "72px", md: "0px" }}
+          columnGap={{ md: "102px" }}
+        >
+          <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
             </Typography>
@@ -38,7 +46,7 @@ const Footer = () => {
               USA: (+1) 305 567 3373
             </Typography>
           </Box>
-          <Box className="email">
+          <Box className={classes.email}>
             <Typography variant="h5" className={classes.subTitle}>
               Email
             </Typography>
