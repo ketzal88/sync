@@ -88,7 +88,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: "#F1804F",
+    color: theme.palette.primary.syncOrange,
     fontSize: "22px",
     fontWeight: "bold",
     padding: "29px 62px",

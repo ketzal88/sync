@@ -1,13 +1,11 @@
-import {
-  Box,
-  FormControl,
-  FormControlLabel,
-  Input,
-  InputLabel,
-  Radio,
-  RadioGroup,
-  Stack,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Input from "@mui/material/Input";
+import InputLabel from "@mui/material/InputLabel";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import Stack from "@mui/material/Stack";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { usePrensaSectionStyles } from "./EntrevistaSection.style";
 const FormEntrevista = () => {
@@ -100,7 +98,10 @@ const FormEntrevista = () => {
         </InputLabel>
         <Input classes={{ underline: classes.underlineInput }} />
       </FormControl>
-      <Box className={classes.formControl} />
+      <Box
+        className={classes.formControl}
+        sx={{ display: { xs: "none", md: "flex" } }}
+      />
       <Box className={classes.formControl}>
         <RadioGroup>
           <FormControlLabel
@@ -114,7 +115,6 @@ const FormEntrevista = () => {
           ENVIAR <ArrowForwardIosIcon className={classes.carrotButton} />
         </button>
       </Box>
-      {/* </Box> */}
     </Box>
   );
 };

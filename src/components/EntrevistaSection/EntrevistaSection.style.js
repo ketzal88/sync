@@ -9,25 +9,21 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       minHeight: "1006px",
     },
-    // [theme.breakpoints.up("lg")]: {
-    //   height: "1006px",
-    // },
     [theme.breakpoints.up("xl")]: {
-      MINheight: "1151px",
+      minHeight: "1151px",
     },
   },
   titleSection: {
+    fontSize: "48px !important",
+    paddingLeft: "33px",
+    marginTop: "62px !important",
     [theme.breakpoints.up("md")]: {
       marginLeft: "93px !important",
-      fontSize: "48px !important",
-      // marginBottom: "72px !important",
     },
     [theme.breakpoints.up("lg")]: {
-      // paddingTop: "88px !important",
       marginBottom: "72px !important",
     },
     [theme.breakpoints.up("xl")]: {
-      // paddingTop: "102px !important",
       marginLeft: "100px !important",
       fontSize: "60px !important",
       marginBottom: "80px !important",
@@ -37,10 +33,14 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignContent: "flex-start",
-    marginTop: "92px",
+    justifyContent: "center",
+    order: "-1",
+    marginTop: "75px",
+    rowGap: "58px",
     [theme.breakpoints.up("md")]: {
+      marginTop: "92px",
+      order: "1",
       columnGap: "26px",
-      rowGap: "58px",
       paddingRight: "91px",
       marginLeft: "-50px",
     },
@@ -90,15 +90,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     marginLeft: "-15px !important",
     fontSize: "30px !important",
     color: "#707070 !important",
-    "&:active": {
-      fontSize: "30px !important",
-      color: "#707070 !important",
-    },
-    "&:after": {
-      fontSize: "30px !important",
-      color: "#707070 !important",
-    },
-    "&:focus": {
+    "&:after, &:active, &:focus": {
       fontSize: "30px !important",
       color: "#707070 !important",
     },
@@ -106,23 +98,14 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   underlineInput: {
     borderBottom: "4px solid #E3855A",
     marginTop: "44px !important",
-    "&:after": {
-      borderBottom: "4px solid #E3855A !important",
-    },
-    "&:hover": {
-      borderBottom: "4px solid #E3855A !important",
-    },
-    "&:active": {
-      borderBottom: "4px solid #E3855A !important",
-    },
-    "&:focus": {
+    "&:after, &:hover, &:active, &:focus": {
       borderBottom: "4px solid #E3855A !important",
     },
   },
   sellerImgContainer: {
     position: "relative",
     marginBottom: "-1px",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.up("md")]: {
       marginTop: "388px",
       height: "506px",
     },
@@ -152,7 +135,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   sellerName: {
-    color: "#F1804F",
+    color: theme.palette.primary.syncOrange,
     fontWeight: "bold !important",
     marginBottom: "0px !important",
     [theme.breakpoints.down("lg")]: {
@@ -190,27 +173,31 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   imgSeller: {
     objectFit: "contain",
-    [theme.breakpoints.down("lg")]: {
+    height: "716px",
+    marginTop: "90px",
+    transform: "translateX(-20%) scale(.8)",
+    [theme.breakpoints.up("md")]: {
       height: "506px",
       width: "271px",
-      transform: "translateX(-10%) translateY(-8%)",
+      transform: "translateX(-10%) translateY(-13%)",
     },
     [theme.breakpoints.up("lg")]: {
       height: "676px",
       width: "457px",
+      marginTop: "0px",
       transform: "translateX(-13%) translateY(5%) scale(1.2)",
     },
     [theme.breakpoints.up("xl")]: {
       height: "676px",
       width: "457px",
-      transform: "translateX(-15%) translateY(8%) scale(1.2)",
+      transform: "translateX(-10%) translateY(11.3%) scale(1.2)",
     },
   },
   radioButton: {
     "& svg": {
       width: "48px",
       height: "48px",
-      color: "#F1804F",
+      color: theme.palette.primary.syncOrange,
       borderRadius: "50%",
       "&:active": {
         borderRadius: "50%",
@@ -229,17 +216,25 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   buttonSubmit: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: "#F1804F",
+    color: theme.palette.primary.syncOrange,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "nowrap",
     borderRadius: "46px",
     fontWeight: "bold",
-    [theme.breakpoints.up("md")]: {
+    padding: "33px 0px 33px 0px",
+    width: "100%",
+    fontSize: "17px",
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "336px",
+    },
+    [theme.breakpoints.up("lg")]: {
       padding: "29px 0px 29px 134px",
       fontSize: "17px",
       marginTop: "86px",
+      maxWidth: "372px",
     },
     [theme.breakpoints.up("xl")]: {
       fontSize: "22px",
@@ -250,7 +245,6 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     color: "white",
     [theme.breakpoints.up("md")]: {
       marginLeft: "97px",
-      paddingRight: "37px",
     },
     [theme.breakpoints.up("xl")]: {
       marginLeft: "88px",

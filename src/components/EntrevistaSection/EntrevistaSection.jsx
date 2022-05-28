@@ -23,16 +23,12 @@ const sellerChoosed = Math.round(Math.random());
 const EntrevistaSection = () => {
   const classes = usePrensaSectionStyles();
   return (
-    <Stack
-      direction="row"
-      justifyContent="center"
-      sx={{ display: { xs: "none", md: "flex" } }}
-    >
+    <Stack direction="row" justifyContent="center">
       <Box className={classes.wrapperSection}>
         <Typography variant="h2" className={classes.titleSection}>
           Agendemos una <br /> entrevista
         </Typography>
-        <Stack direction="row">
+        <Stack direction={{ xs: "column", md: "row" }}>
           <Box className={classes.sellerImgContainer}>
             <img
               src={images[sellerChoosed].img}

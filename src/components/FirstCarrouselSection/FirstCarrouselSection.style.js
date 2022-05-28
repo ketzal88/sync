@@ -23,9 +23,8 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       objectFit: "cover",
       objectPosition: "0px -23px",
       height: "391px",
-      width: "422px",
+      width: "100%",
       [theme.breakpoints.up("sm")]: {
-        width: "100%",
         objectPosition: "center",
       },
       [theme.breakpoints.up("md")]: {
