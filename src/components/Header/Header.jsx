@@ -40,7 +40,7 @@ const Header = () => {
             aria-label="open drawer"
             onClick={() => setState(true)}
             edge="start"
-            sx={{ mr: 2, ...(state && { display: "none" }) }}
+            sx={{ mr: 2 }}
           >
             <MenuIcon
               sx={{
