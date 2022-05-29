@@ -85,11 +85,11 @@ export default function ApartmentsPage() {
 
   return (
     <Grid container item className={classes.wrapper}>
-      <Grid id="title-and-filters-container" container item flexDirection="row" xl={12} lg={12} sx={{marginBottom: '200px'}}>
-        <Grid item xl={12} lg={12} sx={{width: '100%', marginBottom: '46px'}}>
+      <Grid id="title-and-filters-container" container>
+        <Grid item xl={12} lg={12} className={classes.title}>
           <Typography variant="h1" className={classes.apartamentosTitle}>Apartamentos</Typography>
         </Grid>
-        <Grid container item sx={{justifyContent: 'flex-start'}}>
+        <Grid className={classes.filtersContainer} container item>
           <Grid container item sx={{width: '25%', marginRight: '176px'}}>
             <TextField
               id="pisos-select"

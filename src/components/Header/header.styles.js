@@ -10,20 +10,15 @@ export const useHeaderStyles = makeStyles((theme) => {
       left: "50%",
       transform: "translateX(-50%)",
     },
-    textWrapper: (props) => ({
-      alignItems: props.pathname === "/apartments" ? "center" : "none",
-      position: props.pathname === "/apartments" ? "relative" : "absolute",
-      backgroundColor:
-        props.pathname === "/apartments"
-          ? theme.palette.primary.syncBlue
-          : "transparent",
+    textWrapper: {
+      position: "absolute",
       display: "flex",
       left: "0",
       right: "0",
       zindex: "10",
       justifyContent: "space-between",
-      // backgroundColor: (props) =>
-      //   props ? theme.palette.primary.syncBlue : "transparent",
+      backgroundColor: (props) =>
+        props ? theme.palette.primary.syncBlue : "transparent",
       transition: "background-color 0.5s ease-in-out",
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",
@@ -38,7 +33,7 @@ export const useHeaderStyles = makeStyles((theme) => {
         paddingLeft: "91px",
         paddingRight: "111px",
       },
-    }),
+    },
     drawerBox: {
       paddingTop: "50px",
       [theme.breakpoints.up("md")]: {
