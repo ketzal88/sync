@@ -4,19 +4,17 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   container: {
     maxWidth: "1920px",
     width: "100%",
-    paddingBottom: "72px !important",
-    marginBottom: "72px !important",
     [theme.breakpoints.down("lg")]: {
       paddingTop: "50px",
       height: "852px",
     },
     [theme.breakpoints.up("lg")]: {
       paddingTop: "72px",
-      height: "1188px",
+      height: "1072px",
     },
     [theme.breakpoints.up("xl")]: {
       paddingTop: "40px",
-      height: "1444px",
+      height: "1262px",
     },
   },
   sectionTitle: {

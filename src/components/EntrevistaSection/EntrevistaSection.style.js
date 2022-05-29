@@ -68,6 +68,19 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       width: "534px",
     },
   },
+  selectInput: {
+    marginTop: "44px !important",
+    height: "79px",
+    "& .MuiSelect-select": {
+      borderBottom: "4px solid #E3855A",
+      "&:before": {
+        borderBottom: "4px solid #E3855A",
+      },
+      "&:after, &:hover, &:active, &:focus": {
+        borderBottom: "4px solid #E3855A",
+      },
+    },
+  },
   codAreaForm: {
     [theme.breakpoints.down("lg")]: {
       width: "118px",

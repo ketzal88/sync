@@ -23,7 +23,7 @@ const sellerChoosed = Math.round(Math.random());
 const EntrevistaSection = () => {
   const classes = usePrensaSectionStyles();
   return (
-    <Stack direction="row" justifyContent="center">
+    <Stack direction="row" justifyContent="center" sx={{ overflow: "hidden" }}>
       <Box className={classes.wrapperSection}>
         <Typography variant="h2" className={classes.titleSection}>
           Agendemos una <br /> entrevista

@@ -4,6 +4,8 @@ import imageLanding from "../../assets/images/landing-image.jpg";
 export const useLadingSectionStyles = makeStyles((theme) => {
   return {
     wrapper: {
+      background:
+        "transparent linear-gradient(0deg, #EAC752 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box",
       backgroundImage: `url(${imageLanding})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -50,8 +52,9 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         marginLeft: "10px",
       },
       [theme.breakpoints.up("md")]: {
+        fontSize: "60px !important",
         maxWidth: "100%",
-        marginBottom: "83px !important",
+        marginBottom: "64px !important",
         "& :nth-child(2)": {
           marginLeft: "0px",
           "&:before": {

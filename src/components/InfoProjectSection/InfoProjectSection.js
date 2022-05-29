@@ -23,10 +23,10 @@ const InfoProjectSection = () => {
           <img className={classes.imageBox} src={domotica} alt="domótica" />
         </Box>
         <Box className={classes.textBox}>
-          <Typography variant="h4" className={classes.subTitleSection}>
+          <Typography className={classes.subTitleSection}>
             Más conectados <br /> que nunca
           </Typography>
-          <Typography paragraph className={classes.text}>
+          <Typography className={classes.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
             malesuada pellentesque elit eget gravida cum sociis natoque

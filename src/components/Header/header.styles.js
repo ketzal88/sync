@@ -48,6 +48,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
     },
     navLink: {
+      textShadow: "0px 3px 6px #00000060",
       [theme.breakpoints.down("lg")]: {
         marginTop: "12px",
         paddingRight: "24px",
@@ -70,7 +71,7 @@ export const useHeaderStyles = makeStyles((theme) => {
         display: "none",
       },
       [theme.breakpoints.up("lg")]: {
-        display: "none",
+        display: "flex",
       },
     },
     imgContainer: {
@@ -78,6 +79,7 @@ export const useHeaderStyles = makeStyles((theme) => {
       alignItems: "flex-end",
       justifyContent: "center",
       backgroundColor: "transparent",
+      height: "115px",
       [theme.breakpoints.up("md")]: {
         width: "102px",
         height: "167px",
