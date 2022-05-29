@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -19,7 +20,12 @@ const Links = ({ classes }) =>
 const Header = ({ headerRef }) => {
   const [state, setState] = useState(false);
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
-  const classes = useHeaderStyles(!isOverLandingSection);
+  const [pathname, setPathname] = useState("");
+  const location = useLocation();
+  const classes = useHeaderStyles({
+    isOverLandingSection: !isOverLandingSection,
+    pathname,
+  });
 
   const toggleDrawer = (open) => (e) => {
     if (e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) return;
@@ -33,6 +39,10 @@ const Header = ({ headerRef }) => {
       else setIsOverLandingSection(true);
     });
   });
+
+  useEffect(() => {
+    setPathname(location.pathname);
+  }, [location]);
 
   return (
     <Box className={classes.headerWrapper} sx={{ zIndex: 2 }}>
