@@ -6,7 +6,19 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       width: '100%'
     },
     apartamentosTitle: {
-      color: theme.palette.primary.syncBlue
+      color: theme.palette.primary.syncBlue,
+      [theme.breakpoints.up("md")]: {
+        fontSize: "65px !important",
+      },
+    },
+    filtersContainer: {
+      justifyContent: "flex-start",
+      marginBottom: "80px !important",
+      marginTop: "20px !important"
+    },
+    titleContainer: {
+      marginBottom: "46px",
+      width: "100%",
     },
     wrapper: {
       alignItems: 'center',

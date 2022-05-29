@@ -5,7 +5,7 @@ export const navLinks = [
   },
   {
     label: "EDIFICIO",
-    link: "/apartments",
+    link: "/",
   },
   {
     label: "APARTAMENTOS",
@@ -13,10 +13,10 @@ export const navLinks = [
   },
   {
     label: "WORK & LIVE",
-    link: "/apartments",
+    link: "/",
   },
   {
     label: "CONTACTO",
-    link: "/apartments",
+    link: "/",
   },
 ];

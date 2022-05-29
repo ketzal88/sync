@@ -14,7 +14,6 @@ const Header = () => {
   
   useEffect(() => {
     setPathname(location.pathname);
-    console.log("aca: ", location);
   }, [location]);
   
   const classes = useHeaderStyles({pathname: pathname});

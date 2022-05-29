@@ -12,9 +12,9 @@ export const useHeaderStyles = makeStyles(theme => {
       transform: "translateX(-50%)",
     },
     textWrapper: props => ({
-      alignItems: props.pathname == "/apartments" ? "center" : "none",
-      position: props.pathname == "/apartments" ? "relative" : "absolute",
-      backgroundColor: props.pathname == "/apartments" ? theme.palette.primary.syncBlue : "transparent",
+      alignItems: props.pathname === "/apartments" ? "center" : "",
+      position: props.pathname === "/apartments" ? "relative" : "absolute",
+      backgroundColor: props.pathname === "/apartments" ? theme.palette.primary.syncBlue : "transparent",
       display: "flex",
       left: "0",
       right: "0",
@@ -22,30 +22,30 @@ export const useHeaderStyles = makeStyles(theme => {
         justifyContent: "space-between",
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+        paddingTop: props.pathname === "/apartments" ? "0" : "72px",
       }),
       [theme.breakpoints.up("lg")]: props => ({
         justifyContent: "space-between",
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+        paddingTop: props.pathname === "/apartments" ? "0" : "72px",
       }),
       [theme.breakpoints.up("xl")]: props => ({
         paddingLeft: "91px",
         paddingRight: "111px",
-        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+        paddingTop: props.pathname === "/apartments" ? "0" : "72px",
       }),
     }),
-    logo: props => ({
+    logo: {
       [theme.breakpoints.down("lg")]: props => ({
         width: "132px",
-        height: props.pathname == "/apartments" ? "162px" : "136px",
+        height: props.pathname === "/apartments" ? "162px" : "136px",
       }),
       [theme.breakpoints.up("lg")]: props => ({
         width: "132px",
-        height: props.pathname == "/apartments" ? "162px" : "136px",
+        height: props.pathname === "/apartments" ? "162px" : "136px",
       }),
-    }),
+    },
     navLink: {
       [theme.breakpoints.down("lg")]: {
         marginTop: "12px",
