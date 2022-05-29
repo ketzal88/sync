@@ -2,11 +2,23 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import { navLinks } from "./headerLinksList";
 import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
+import { makeStyles } from "@mui/styles";
 import { useHeaderStyles } from "./header.styles";
 import logoSync from "../../assets/images/logo_sync.svg";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  const classes = useHeaderStyles();
+  const [pathname, setPathname] = useState("");
+  let location = useLocation();
+  
+  useEffect(() => {
+    setPathname(location.pathname);
+    console.log("aca: ", location);
+  }, [location]);
+  
+  const classes = useHeaderStyles({pathname: pathname});
+
   return (
     <Box className={classes.headerWrapper}
     >

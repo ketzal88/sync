@@ -1,9 +1,8 @@
 import { makeStyles } from "@mui/styles";
-import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export const useHeaderStyles = makeStyles((theme) => {
-  const location = useLocation();
-  console.log("aca: ", location.pathname);
+export const useHeaderStyles = makeStyles(theme => {
   
   return {
     headerWrapper: {
@@ -12,39 +11,41 @@ export const useHeaderStyles = makeStyles((theme) => {
       left: "50%",
       transform: "translateX(-50%)",
     },
-    textWrapper: {
-      position: "absolute",
+    textWrapper: props => ({
+      alignItems: props.pathname == "/apartments" ? "center" : "none",
+      position: props.pathname == "/apartments" ? "relative" : "absolute",
+      backgroundColor: props.pathname == "/apartments" ? theme.palette.primary.syncBlue : "transparent",
       display: "flex",
       left: "0",
       right: "0",
-      [theme.breakpoints.down("lg")]: {
+      [theme.breakpoints.down("lg")]: props => ({
         justifyContent: "space-between",
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "72px",
-      },
-      [theme.breakpoints.up("lg")]: {
+        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+      }),
+      [theme.breakpoints.up("lg")]: props => ({
         justifyContent: "space-between",
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "72px",
-      },
-      [theme.breakpoints.up("xl")]: {
+        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+      }),
+      [theme.breakpoints.up("xl")]: props => ({
         paddingLeft: "91px",
         paddingRight: "111px",
-        paddingTop: "72px",
-      },
-    },
-    logo: {
-      [theme.breakpoints.down("lg")]: {
+        paddingTop: props.pathname == "/apartments" ? "0" : "72px",
+      }),
+    }),
+    logo: props => ({
+      [theme.breakpoints.down("lg")]: props => ({
         width: "132px",
-        height: "136px",
-      },
-      [theme.breakpoints.up("lg")]: {
+        height: props.pathname == "/apartments" ? "162px" : "136px",
+      }),
+      [theme.breakpoints.up("lg")]: props => ({
         width: "132px",
-        height: "136px",
-      },
-    },
+        height: props.pathname == "/apartments" ? "162px" : "136px",
+      }),
+    }),
     navLink: {
       [theme.breakpoints.down("lg")]: {
         marginTop: "12px",
