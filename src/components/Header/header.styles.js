@@ -4,21 +4,30 @@ export const useHeaderStyles = makeStyles((theme) => {
   return {
     headerWrapper: {
       top: 0,
-      position: "fixed",
-      maxWidth: "1920px",
+      position: ({ pathname }) => (pathname === "/" ? "fixed" : "relative"),
+      backgroundColor: ({ pathname }) =>
+        pathname === "/" ? "transparent" : theme.palette.primary.syncBlue,
+      maxWidth: ({ pathname }) => (pathname === "/" ? "1920px" : "100%"),
       width: "100%",
       left: "50%",
       transform: "translateX(-50%)",
+      display: "flex",
+      justifyContent: "center",
     },
     textWrapper: {
-      position: "absolute",
+      position: ({ pathname }) => (pathname === "/" ? "absolute" : "relative"),
+      maxWidth: ({ pathname }) => (pathname === "/" ? "100%" : "1920px"),
+      width: ({ pathname }) => (pathname === "/" ? "auto" : "100%"),
       display: "flex",
-      left: "0",
+      left: "-1px",
       right: "0",
       zindex: "10",
       justifyContent: "space-between",
-      backgroundColor: (props) =>
-        props ? theme.palette.primary.syncBlue : "transparent",
+      backgroundColor: ({ pathname, isOverLandingSection }) => {
+        if (pathname !== "/") return theme.palette.primary.syncBlue;
+        if (isOverLandingSection) return "transparent";
+        else return theme.palette.primary.syncBlue;
+      },
       transition: "background-color 0.5s ease-in-out",
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",

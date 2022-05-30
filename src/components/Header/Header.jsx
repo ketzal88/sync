@@ -18,18 +18,17 @@ const Links = ({ classes }) =>
   ));
 
 const Header = ({ headerRef }) => {
-  const [state, setState] = useState(false);
+  const [drawerStatus, setDrawerStatus] = useState(false);
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
-  const [pathname, setPathname] = useState("");
-  const location = useLocation();
+  const { pathname } = useLocation();
   const classes = useHeaderStyles({
-    isOverLandingSection: !isOverLandingSection,
+    isOverLandingSection,
     pathname,
   });
 
   const toggleDrawer = (open) => (e) => {
     if (e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) return;
-    setState(open);
+    setDrawerStatus(open);
   };
 
   useEffect(() => {
@@ -40,17 +39,13 @@ const Header = ({ headerRef }) => {
     });
   });
 
-  useEffect(() => {
-    setPathname(location.pathname);
-  }, [location]);
-
   return (
     <Box className={classes.headerWrapper} sx={{ zIndex: 2 }}>
       <Box className={classes.textWrapper}>
         <Box className={classes.drawerBox}>
           <IconButton
             aria-label="open drawer"
-            onClick={() => setState(true)}
+            onClick={() => setDrawerStatus(true)}
             edge="start"
             sx={{ mr: 2 }}
           >
@@ -62,7 +57,7 @@ const Header = ({ headerRef }) => {
           </IconButton>
           <Drawer
             anchor="left"
-            open={state}
+            open={drawerStatus}
             onClose={toggleDrawer(false)}
             sx={{
               "& .MuiPaper-root": {
