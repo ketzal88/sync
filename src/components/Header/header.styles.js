@@ -2,6 +2,14 @@ import { makeStyles } from "@mui/styles";
 
 export const useHeaderStyles = makeStyles((theme) => {
   return {
+    headerWrapper: {
+      top: 0,
+      position: "fixed",
+      maxWidth: "1920px",
+      width: "100%",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
     textWrapper: {
       position: "absolute",
       display: "flex",
@@ -9,6 +17,9 @@ export const useHeaderStyles = makeStyles((theme) => {
       right: "0",
       zindex: "10",
       justifyContent: "space-between",
+      backgroundColor: (props) =>
+        props ? theme.palette.primary.syncBlue : "transparent",
+      transition: "background-color 0.5s ease-in-out",
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",
         paddingTop: "0px",

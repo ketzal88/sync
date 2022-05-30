@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -16,24 +16,27 @@ const Links = ({ classes }) =>
     </Link>
   ));
 
-const Header = () => {
-  const classes = useHeaderStyles();
+const Header = ({ headerRef }) => {
   const [state, setState] = useState(false);
+  const [isOverLandingSection, setIsOverLandingSection] = useState(true);
+  const classes = useHeaderStyles(!isOverLandingSection);
+  const menuRef = useRef(null);
 
   const toggleDrawer = (open) => (e) => {
     if (e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) return;
     setState(open);
   };
 
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY + 70 > headerRef.current.clientHeight)
+        setIsOverLandingSection(false);
+      else setIsOverLandingSection(true);
+    });
+  });
+
   return (
-    <Box
-      sx={{
-        position: "relative",
-        maxWidth: "1920px",
-        left: "50%",
-        transform: "translateX(-50%)",
-      }}
-    >
+    <Box className={classes.headerWrapper} ref={menuRef}>
       <Box className={classes.textWrapper}>
         <Box className={classes.drawerBox}>
           <IconButton

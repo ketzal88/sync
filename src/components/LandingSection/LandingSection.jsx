@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useLadingSectionStyles } from "./landingSection.styles";
 
-const LandingSection = () => {
+const LandingSection = ({ headerRef }) => {
   const navigate = useNavigate();
   const classes = useLadingSectionStyles();
   return (
@@ -13,7 +13,7 @@ const LandingSection = () => {
         justifyContent: "center",
       }}
     >
-      <Grid container className={classes.wrapper}>
+      <Grid container className={classes.wrapper} ref={headerRef}>
         <Grid item className={classes.textWrapper}>
           <Typography className={classes.location} variant="h3">
             Montevideo, Uruguay

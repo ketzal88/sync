@@ -10,10 +10,10 @@ import FirstCarrouselSection from "../components/FirstCarrouselSection/FirstCarr
 import InfoProjectSection from "../components/InfoProjectSection/InfoProjectSection";
 import CoworkingSection from "../components/CoworkingSection/CoworkingSection";
 
-export default function Home() {
+export default function Home({ headerRef }) {
   return (
     <>
-      <LandingSection />
+      <LandingSection headerRef={headerRef} />
       <EdificioSection />
       <FirstCarrouselSection />
       <InfoProjectSection />
