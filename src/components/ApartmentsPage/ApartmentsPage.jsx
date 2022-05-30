@@ -114,7 +114,7 @@ export default function ApartmentsPage() {
             </Typography>
           </Grid>
           <Grid className={classes.filtersContainer} container item>
-            <Grid container item sx={{ width: "25%", marginRight: "176px" }}>
+            <Grid container item className={classes.pisosFilter}>
               <TextField
                 id="pisos-select"
                 select
@@ -194,7 +194,7 @@ export default function ApartmentsPage() {
                 ))}
               </TextField>
             </Grid>
-            <Grid container item sx={{ width: "25%" }}>
+            <Grid container item className={classes.tiposFilter}>
               <TextField
                 id="tipos-select"
                 select
@@ -294,22 +294,11 @@ export default function ApartmentsPage() {
                 key={apartment.name}
                 container
                 item
-                className="apartment-card-btn"
-                sx={{
-                  width: "100%",
-                  padding: 6,
-                  backgroundColor: "#132127",
-                  borderRadius: "40px",
-                  marginBottom: "43px",
-                  textTransform: "none",
-                }}
+                className={classes.apartmentCard}
               >
-                <Grid item sx={{ width: "33.33%" }}>
+                <Grid item className={classes.apartmentImageContainer}>
                   <Box
-                    sx={{
-                      width: "100%",
-                      height: "100%",
-                    }}
+                    className={classes.apartmentImage}
                   >
                     <img
                       src={apartment.img1}
@@ -325,29 +314,19 @@ export default function ApartmentsPage() {
                   pl={"56px"}
                   flexDirection="column"
                   flexWrap="unset"
-                  sx={{
-                    width: "41.66%",
-                    justifyContent: "space-between",
-                  }}
+                  className={classes.cardBody}
                 >
                   <Grid item xl={12}>
                     <Box sx={{ display: "flex" }}>
                       <Typography
-                        sx={{
-                          fontSize: 50,
-                          fontWeight: "900",
-                          color: "white",
-                        }}
+                        className={classes.apartmentName}
                       >
                         {apartment.name}
                       </Typography>
                     </Box>
                     <Box sx={{ display: "flex" }}>
                       <Typography
-                        sx={{
-                          fontSize: 28,
-                          color: "white",
-                        }}
+                        className={classes.apartmentSize  }
                       >
                         {formatSuperficie(apartment.superficie)}M<sup>2</sup>
                       </Typography>
@@ -363,23 +342,17 @@ export default function ApartmentsPage() {
                     textAlign="left"
                   />
                   <Grid item xl={12}>
-                    <Box sx={{ display: "flex" }}>
+                    <Box className={classes.filterBox}>
                       <Typography
-                        sx={{
-                          fontSize: 28,
-                          color: "white",
-                        }}
+                        className={classes.pisoText}
                       >
                         {apartment.piso}
                         {pisoText(apartment.piso)} piso
                       </Typography>
                     </Box>
-                    <Box sx={{ display: "flex" }}>
+                    <Box className={classes.filterBox}>
                       <Typography
-                        sx={{
-                          fontSize: 28,
-                          color: "white",
-                        }}
+                        className={classes.dormitoriosText}
                       >
                         {apartment.dormitorios === 0
                           ? TIPOS_OPTIONS[0].label
@@ -424,40 +397,26 @@ export default function ApartmentsPage() {
                 </Grid>
                 <Grid
                   container
-                  item
+                  alignItems="flex-end"
+                  justifyContent="center"
                   flexDirection="column"
-                  sx={{ width: "25%" }}
+                  className={classes.buttonsContainer}
                 >
                   <Grid
                     container
-                    item
-                    sx={{
-                      flex: 1,
-                      alignItems: "flex-end",
-                      marginBottom: "30px",
-                    }}
+                    className={classes.buttons}
                   >
                     <Button
                       fullWidth
                       variant="outlined"
-                      sx={{
-                        height: "83px",
-                        borderRadius: "46px",
-                        borderColor: "#F1804F",
-                        py: "28px",
-                      }}
+                      className={classes.descargarButton}
                       component={"a"}
                       target="_blank"
                       href="https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf"
                       download
                     >
                       <Typography
-                        sx={{
-                          fontSize: 21,
-                          color: "white",
-                          fontWeight: "bold",
-                          letterSpacing: -0.9,
-                        }}
+                        className={classes.descargarText}
                       >
                         Descargar PDF
                       </Typography>
@@ -465,30 +424,15 @@ export default function ApartmentsPage() {
                   </Grid>
                   <Grid
                     container
-                    item
-                    sx={{
-                      flex: 1,
-                      alignItems: "flex-start",
-                    }}
                   >
                     <Button
                       variant="contained"
                       fullWidth
                       onClick={() => handleScheduleInterview(apartment)}
-                      sx={{
-                        height: "83px",
-                        borderRadius: "46px",
-                        backgroundColor: "#F1804F",
-                        py: "28px",
-                      }}
+                      className={classes.agendaButton}
                     >
                       <Typography
-                        sx={{
-                          fontSize: 21,
-                          color: "white",
-                          fontWeight: "bold",
-                          letterSpacing: -0.9,
-                        }}
+                        className={classes.agendaText}
                       >
                         Agenda una entrevista
                       </Typography>
