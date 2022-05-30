@@ -82,6 +82,7 @@ const FormEntrevista = () => {
           Nombre
         </InputLabel>
         <Input
+          className={classes.inputForm}
           onChange={handleChange}
           classes={{ underline: classes.underlineInput }}
         />
@@ -90,13 +91,19 @@ const FormEntrevista = () => {
         <InputLabel shrink className={classes.inputLabel} required>
           Apellido
         </InputLabel>
-        <Input classes={{ underline: classes.underlineInput }} />
+        <Input
+          className={classes.inputForm}
+          classes={{ underline: classes.underlineInput }}
+        />
       </FormControl>
       <FormControl className={classes.formControl}>
         <InputLabel shrink className={classes.inputLabel} required>
           Email
         </InputLabel>
-        <Input classes={{ underline: classes.underlineInput }} />
+        <Input
+          className={classes.inputForm}
+          classes={{ underline: classes.underlineInput }}
+        />
       </FormControl>
       <Stack
         direction="row"
@@ -107,13 +114,19 @@ const FormEntrevista = () => {
           <InputLabel shrink className={classes.inputLabel} required>
             Cod. Área
           </InputLabel>
-          <Input classes={{ underline: classes.underlineInput }} />
+          <Input
+            className={classes.inputForm}
+            classes={{ underline: classes.underlineInput }}
+          />
         </FormControl>
         <FormControl className={classes.phoneNumberInput}>
           <InputLabel shrink className={classes.inputLabel} required>
             Teléfono
           </InputLabel>
-          <Input classes={{ underline: classes.underlineInput }} />
+          <Input
+            className={classes.inputForm}
+            classes={{ underline: classes.underlineInput }}
+          />
         </FormControl>
       </Stack>
       <FormControl variant="standard" className={classes.formControl}>
@@ -131,6 +144,19 @@ const FormEntrevista = () => {
           classes={{ underline: classes.underlineInput }}
           value={data["00Nj0000008ze1B"]}
           onChange={handleChange}
+          sx={{
+            "&.MuiInput-root": () => ({
+              "&:before, &:after": {
+                borderBottom: "none",
+              },
+              "&:hover, &:active, &:focus": {
+                borderBottom: "none",
+                "&:before, &:after": {
+                  borderBottom: "none",
+                },
+              },
+            }),
+          }}
         >
           {countryOptions.map(({ value, label }, index) => (
             <MenuItem key={index} value={value}>
@@ -143,7 +169,10 @@ const FormEntrevista = () => {
         <InputLabel shrink className={classes.inputLabel} required>
           Consulta
         </InputLabel>
-        <Input classes={{ underline: classes.underlineInput }} />
+        <Input
+          className={classes.inputForm}
+          classes={{ underline: classes.underlineInput }}
+        />
       </FormControl>
       <Box
         className={classes.formControl}

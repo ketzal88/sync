@@ -108,12 +108,31 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
       color: "#707070 !important",
     },
   },
+  inputForm: {
+    "&.MuiInput-root": {
+      "&:hover": {
+        borderBottom: "4px solid #E3855A !important",
+        "&:not(.Mui-disabled):before": {
+          borderBottom: "none",
+        },
+      },
+      "&:before, &:after": {
+        borderBottom: "none",
+        "&:hover, &:active, &:focus": {
+          borderBottom: "none",
+        },
+      },
+      "&:hover, &:active, &:focus": {
+        borderBottom: "none",
+        "&:before, &:after": {
+          borderBottom: "none",
+        },
+      },
+    },
+  },
   underlineInput: {
     borderBottom: "4px solid #E3855A",
     marginTop: "44px !important",
-    "&:after, &:hover, &:active, &:focus": {
-      borderBottom: "4px solid #E3855A !important",
-    },
   },
   sellerImgContainer: {
     position: "relative",

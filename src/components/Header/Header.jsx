@@ -20,7 +20,6 @@ const Header = ({ headerRef }) => {
   const [state, setState] = useState(false);
   const [isOverLandingSection, setIsOverLandingSection] = useState(true);
   const classes = useHeaderStyles(!isOverLandingSection);
-  const menuRef = useRef(null);
 
   const toggleDrawer = (open) => (e) => {
     if (e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) return;
@@ -36,7 +35,7 @@ const Header = ({ headerRef }) => {
   });
 
   return (
-    <Box className={classes.headerWrapper} ref={menuRef}>
+    <Box className={classes.headerWrapper} sx={{ zIndex: 2 }}>
       <Box className={classes.textWrapper}>
         <Box className={classes.drawerBox}>
           <IconButton

@@ -18,7 +18,8 @@ const images = [
   },
 ];
 
-const sellerChoosed = Math.round(Math.random());
+const sellerChoosed = 1;
+// Math.round(Math.random());
 
 const EntrevistaSection = () => {
   const classes = usePrensaSectionStyles();
