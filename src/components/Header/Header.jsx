@@ -75,7 +75,10 @@ const Header = ({ headerRef }) => {
           >
             VITRIUM CAPITAL
           </Link>
-          <Box className={classes.imgContainer}>
+          <Box
+            className={classes.imgContainer}
+            sx={{ display: isOverLandingSection ? "flex" : "none" }}
+          >
             <img
               src={entrevistaRapida}
               alt="Entrevista Rápida"
