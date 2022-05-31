@@ -1,10 +1,14 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, CardMedia, Grid, Stack, Typography } from "@mui/material";
 import ArrowButton from "../ArrowButton/ArrowButton";
 import { useAmennitiesSectionStyles } from "./ammenitiesSection.styles";
-import galeria from "../../assets/images/imagen-galeria.jpg";
+import { amenitiesItemsList } from "./amenitiesItemsList";
+import { useState } from "react";
 
 const AmenitiesSection = () => {
   const classes = useAmennitiesSectionStyles();
+  const [selectedElement, setSelectedElement] = useState(0);
+  const { title, subTitle, text, image } = amenitiesItemsList[selectedElement];
+
   return (
     <Stack
       direction="column"
@@ -27,17 +31,13 @@ const AmenitiesSection = () => {
           <Grid className={classes.amenitiesGallery}>
             <Box className={classes.textWrapper}>
               <Typography variant="h2" className={classes.titleSection1}>
-                Amenities
+                {title}
               </Typography>
               <Typography variant="h3" className={classes.subTitleSection}>
-                Gimnasio
+                {subTitle}
               </Typography>
               <Typography paragraph className={classes.textSection}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus, architecto corporis culpa obcaecati sit beatae aut
-                corrupti qui eligendi tempore, hic magni vel molestiae expedita
-                alias fuga ratione porro eius. Impedit quod soluta, commodi
-                facere asperiores non quis possimus ullam.
+                {text}
               </Typography>
               <Stack
                 sx={{ paddingTop: "auto" }}
@@ -46,20 +46,32 @@ const AmenitiesSection = () => {
                 justifyContent="space-between"
               >
                 <Box className={classes.iconContainer}>
-                  <ArrowButton />
+                  <ArrowButton
+                    buttonAction={() => {
+                      if (selectedElement === 4) return setSelectedElement(0);
+                      setSelectedElement(selectedElement + 1);
+                    }}
+                  />
                 </Box>
                 <Typography className={classes.carrouselNumber}>
                   <Typography
                     component="span"
                     className={`${classes.carrouselNumber} ${classes.selectedSlide}`}
                   >
-                    01/
+                    {(selectedElement + 1).toString().padStart(2, "0")}/
                   </Typography>
-                  05
+                  {amenitiesItemsList.length.toString().padStart(2, "0")}
                 </Typography>
               </Stack>
             </Box>
-            <img className={classes.imgSection} src={galeria} alt="galeria" />
+            {/* <img className={classes.imgSection} src={galeria} alt="galeria" /> */}
+            <CardMedia
+              component="img"
+              image={image}
+              alt={subTitle}
+              className={classes.imgSection}
+              // sx={imgStyles[selectedElement]}
+            />
           </Grid>
         </Stack>
       </Box>

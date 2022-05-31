@@ -125,7 +125,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
     iconContainer: {
       order: "2",
       [theme.breakpoints.up("md")]: {
-        order: "1",
+        order: "-1",
         width: "72px",
         height: "72px",
       },

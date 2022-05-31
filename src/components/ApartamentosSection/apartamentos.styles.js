@@ -4,7 +4,10 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   container: {
     maxWidth: "1920px",
     width: "100%",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.up("sm")]: {
+      height: "998px",
+    },
+    [theme.breakpoints.up("md")]: {
       paddingTop: "50px",
       height: "852px",
     },
@@ -13,15 +16,17 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       height: "1072px",
     },
     [theme.breakpoints.up("xl")]: {
-      paddingTop: "40px",
+      paddingBlock: "40px",
       height: "1262px",
     },
   },
   sectionTitle: {
-    [theme.breakpoints.down("lg")]: {
-      paddingLeft: "92px",
-      paddingBottom: "42px",
-      fontSize: "34px !important",
+    paddingTop: "72px !important",
+    fontSize: "34px !important",
+    paddingBottom: "42px",
+    paddingLeft: "92px",
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "50px !important",
     },
     [theme.breakpoints.up("lg")]: {
       paddingLeft: "100px",
@@ -83,13 +88,14 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.syncBlue,
     color: theme.palette.primary.syncOrange,
     padding: "32px 116px",
-    marginTop: "72px",
+    marginTop: "40px",
     borderRadius: "46px",
     fontSize: "17px !important",
     [theme.breakpoints.up("md")]: {
-      marginTop: "55px",
+      marginTop: "28px",
     },
     [theme.breakpoints.up("xl")]: {
+      marginTop: "25px",
       fontSize: "22px !important",
       padding: "26px 95px",
     },
