@@ -110,6 +110,14 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         width: "100% !important"
       }
     },
+    codAreaField: {
+      width: '30% !important', 
+      marginRight: '39px !important',
+      [theme.breakpoints.down("sm")]: {
+        marginRight: "20px !important",
+        width: "50% !important",
+      }
+    },
     descargarButton: {
       height: "83px !important",
       borderRadius: "46px !important",
@@ -160,6 +168,87 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
         justifyContent: "space-between !important"
       }
     },
+    modalApartmentImage: {
+      width: "33.33% !important",
+      [theme.breakpoints.up("sm")]: {
+        display: "block",
+      },
+      [theme.breakpoints.down("sm")]: {
+        display: "none !important"
+      }
+    },
+    modalApartmentName: {
+      fontSize: '78px !important', 
+      color: 'white !important', 
+      fontWeight: '900 !important', 
+      lineHeight: '86px !important', 
+      fontStyle: 'normal !important',
+      [theme.breakpoints.down("sm")]: {
+        "text-align": "center !important"
+      }
+    },
+    modalApartmentImageMobile: {
+      width: "100% !important",
+      [theme.breakpoints.up("sm")]: {
+        display: "none !important"
+      },
+      [theme.breakpoints.down("sm")]: {
+        display: "block"
+      }
+    },
+    modalBody: {
+      width: "100% !important", 
+      p: "0 important!", 
+      marginBottom: "25px !important",
+      [theme.breakpoints.down("sm")]: {
+        alignItems: "center",
+        flexDirection: "column !important"
+      }
+    },
+    modalFields: {
+      width: "33.33% !important", 
+      paddingLeft: "30px !important", 
+      paddingRight: "40px !important",
+      [theme.breakpoints.down("sm")]: {
+        width: "100% !important",
+        paddingRight: "0 !important",
+        paddingLeft: "0 !important"
+      }
+    },
+    modalPisoText: {
+      fontSize: "28px !important", 
+      color: "white !important", 
+      fontWeight: "600 !important",
+      [theme.breakpoints.down("sm")]: {
+        "text-align": "center"
+      }
+    },
+    modalSizeText: {
+      fontSize: "32px !important", 
+      color: "white !important", 
+      lineHeight: "43px !important", 
+      fontWeight: "600 !important"
+    },
+    modalTermsAndConditions: {
+      color: "white !important",
+      paddingLeft: "12px !important", 
+      [theme.breakpoints.down("sm")]: {
+        display: "none !important"
+      }
+    },
+    modalTermsAndConditionsMobile: {
+      color: "white !important",
+      paddingLeft: "12px !important",
+      marginBottom: "10px !important",
+      [theme.breakpoints.up("sm")]: {
+        display: "none !important"
+      }
+    },
+    modalWrapper: {
+      backgroundColor: "#132127 !important",
+      padding: "43px !important",
+      borderRadius: "0px",
+    },
     titleContainer: {
       marginBottom: "46px",
       width: "100%",
@@ -178,6 +267,11 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         marginRight: "0 !important",
         width: "45% !important"
+      }
+    },
+    telefonoField: {
+      [theme.breakpoints.down("sm")]: {
+        width: "50% !important"
       }
     },
     tiposFilter: {

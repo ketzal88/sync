@@ -8,7 +8,7 @@ import { dormitoriosText, formatSuperficie, pisoText } from '../../../utils/apar
 import CustomTextField from '../../CustomTextField/CustomTextField'
 import { useTheme } from '@mui/styles';
 
-const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment = {}}) => {
+const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment = {}, classes}) => {
     const theme = useTheme()
     const [formValues, setFormValues] = useState({
       name: '',
@@ -38,10 +38,10 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
         onClose={handleClose}
         PaperProps={{
           sx: {
-            backgroundColor: '#132127',
+            backgroundColor: 'rgba(19, 33, 39, 0.9)',
             padding: '43px',
             borderRadius: '0px',
-            width: 1530,
+            maxWidth: 1500,
             height: 1140,
           }
         }}
@@ -53,15 +53,20 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
             </IconButton>
           </Grid>
           <Grid container item sx={{width: '100%', alignItems: 'center', flexDirection: 'column', p: 0, marginBottom: '50px'}}>
+            <Grid container item className={classes.modalApartmentImageMobile}>
+              <Box>
+                <img src={apartment.img1} alt={`apartment-${apartment.id}`} height="100%" width="100%" />
+              </Box>
+            </Grid>
             <Box>
-              <Typography sx={{fontSize: '78px', color: 'white', fontWeight: '900', lineHeight: '86px', fontStyle: 'normal'}}>{apartment.id}</Typography>
+              <Typography className={classes.modalApartmentName}>{apartment.name}</Typography>
             </Box>
             <Box>
-              <Typography sx={{fontSize: '32px', color: 'white', lineHeight: '43px', fontWeight: '600'}}>{formatSuperficie(apartment.superficie)} M<sup>2</sup></Typography>
+              <Typography className={classes.modalSizeText}>{formatSuperficie(apartment.superficie)} M<sup>2</sup></Typography>
             </Box>
             <Divider sx={{border: '4px solid #F1804F', width: '17%', marginBottom: '31px', marginTop: '20px'}} />
             <Box>
-              <Typography sx={{fontSize: '28px', color: 'white', fontWeight: '600'}}>
+              <Typography className={classes.modalPisoText}>
                 {apartment.piso}{pisoText(apartment.piso)} piso | {apartment.dormitorios} {dormitoriosText(apartment.dormitorios)}
               </Typography>
             </Box>
@@ -94,13 +99,13 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
               />
             </Box>
           </Grid>
-          <Grid container item sx={{width: '100%', flexDirection: 'row', p: 0, marginBottom: '25px'}}>
-            <Grid container item sx={{width: '33.33%'}}>
+          <Grid container className={classes.modalBody}>
+            <Grid container item className={classes.modalApartmentImage}>
               <Box sx={{width: 477, height: 365}}>
                 <img src={apartment.img1} alt={`apartment-${apartment.id}`} height="100%" width="100%" />
               </Box>
             </Grid>
-            <Grid container item sx={{width: '33.33%', pl: '30px', pr: '40px'}}>
+            <Grid container item className={classes.modalFields}>
               <Box>
                 <CustomTextField
                   isRequired
@@ -155,14 +160,11 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
                   }
                   label="Acepto los términos y condiciones"
                   labelPlacement="end"
-                  sx={{
-                    color: 'white',
-                    pl: '12px'
-                  }}
+                  className={classes.modalTermsAndConditions}
                 />
               </Box>
             </Grid>
-            <Grid container item sx={{width: '33.33%', pl: '30px', pr: '40px'}}>
+            <Grid container item className={classes.modalFields}>
               <Box sx={{width: '100%'}}>
                 <CustomTextField
                   isRequired
@@ -177,7 +179,7 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
                   }}
                 />
                 <Box sx={{display: 'flex', flexDirection: 'row', width: '100%'}}>
-                  <Box sx={{width: '30%', marginRight: '39px',}}>
+                  <Box className={classes.codAreaField}>
                     <CustomTextField
                       isRequired
                       label="Cod. área"
@@ -191,7 +193,7 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
                       }}
                     />
                   </Box>
-                  <Box>
+                  <Box className={classes.telefonoField}>
                     <CustomTextField
                       isRequired
                       label="Teléfono"
@@ -232,6 +234,25 @@ const ScheduleInterviewModal = ({open = false, handleClose = () => {}, apartment
               </Box>
             </Grid>
           </Grid>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={formValues.tyc}
+                onChange={(e) => handleFormFieldsChange(e, 'tyc')}
+                icon={<RadioButtonUncheckedIcon />}
+                checkedIcon={<CheckCircleIcon />}
+                sx={{
+                  color: theme.palette.primary.syncOrange,
+                  '&.Mui-checked': {
+                    color: theme.palette.primary.syncOrange,
+                  },
+                }}
+              />
+            }
+            label="Acepto los términos y condiciones"
+            labelPlacement="end"
+            className={classes.modalTermsAndConditionsMobile}
+          />
           <Grid container item sx={{width: '100%', justifyContent: 'center'}}>
             <Button
               id="submit-button"

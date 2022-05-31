@@ -447,6 +447,7 @@ export default function ApartmentsPage() {
           open={open}
           handleClose={closeModal}
           apartment={currentApartment}
+          classes={classes}
         />
       </Grid>
     </Stack>
