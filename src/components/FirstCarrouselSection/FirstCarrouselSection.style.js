@@ -19,24 +19,27 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
         height: "1080px",
       },
     },
-    imageBox: {
+    imageSection: {
       objectFit: "cover",
-      objectPosition: "0px -23px",
-      height: "391px",
+      height: "100%",
       width: "100%",
-      [theme.breakpoints.up("sm")]: {
-        objectPosition: "center",
-      },
-      [theme.breakpoints.up("md")]: {
-        width: "746px",
-        height: "100%",
-      },
+    },
+    carrouselNumber: {
+      color: "white",
+      bottom: 0,
+      right: 0,
+      fontSize: "24px !important",
+      transform: "translate(-70px, -62px)",
       [theme.breakpoints.up("lg")]: {
-        objectPosition: "0px 0px",
+        fontSize: "40px !important",
       },
       [theme.breakpoints.up("xl")]: {
-        width: "1180px",
+        transform: "translate(-70px, -62px)",
+        fontSize: "30px !important",
       },
+    },
+    selectedSlide: {
+      fontWeight: "bold !important",
     },
     textBox: {
       color: "white",
