@@ -31,11 +31,11 @@ const LandingSection = () => {
       <Grid container className={classes.wrapper} id="landingSection">
         <Grid item className={classes.textWrapper}>
           <Typography className={classes.location} variant="h3">
-            Villa Morra, Paraguay
+            Montevideo, Uruguay
           </Typography>
           <Typography className={classes.mainTitle} variant="h1">
-            <span>Cada espacio de tu vida,</span>
-            <span> conectado</span>
+            <span>Diseñados para</span>
+            <span> una nueva era</span>
           </Typography>
           <Grid item className={classes.buttonWrapper}>
             <button

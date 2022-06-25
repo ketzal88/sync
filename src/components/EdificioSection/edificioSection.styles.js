@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import edificio from "../../assets/images/edificio.jpg";
+import edificio from "../../assets/images/edificio-sync.png";
 
 export const useEdificioStyles = makeStyles((theme) => {
   return {
@@ -7,22 +7,14 @@ export const useEdificioStyles = makeStyles((theme) => {
       backgroundImage: `url(${edificio})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
+      backgroundPosition: "-200px top",
       width: "100%",
       maxWidth: "1920px",
-      [theme.breakpoints.down("lg")]: {
-        backgroundPosition: "-270px 0px",
-        height: "567px",
-      },
+      height: "500px",
       [theme.breakpoints.up("lg")]: {
-        backgroundPosition: "0% 100%",
-        backgroundSize: "70%",
-        height: "769px",
+        height: "85vh",
       },
-      [theme.breakpoints.up("xl")]: {
-        backgroundSize: "1270px 1087px",
-        minHeight: "calc(1311px - 234px)",
-      },
+      [theme.breakpoints.up("xl")]: {},
     },
     secondWrapper: {
       [theme.breakpoints.down("lg")]: {

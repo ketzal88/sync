@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import { navLinks } from "./headerLinksList";
 // import entrevistaRapida from "../../assets/images/entrevista_rapida.svg";
 import { useHeaderStyles } from "./header.styles";
-import logoVM from "../../assets/images/logoVM.svg";
+import logoSync from "../../assets/images/logo_sync.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuIconClose from "@mui/icons-material/Close";
 import { useScrollTo } from "../../customHooks/useScrollTo";
@@ -102,7 +102,7 @@ const Header = () => {
         </Box>
 
         <Link to="/">
-          <img src={logoVM} alt="Logo Sync" className={classes.logo} />
+          <img src={logoSync} alt="Logo Sync" className={classes.logo} />
         </Link>
 
         <IconButton
