@@ -22,28 +22,42 @@ const Footer = () => {
         component="footer"
         direction={{ xs: "column", md: "row" }}
         className={classes.footerContainer}
+        justifyContent={{ xs: "center" }}
       >
-        <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
         <Stack
+          id="contactSection"
+          className={classes.footerContent}
           direction={{ xs: "column", md: "row" }}
           justifyContent={{ xs: "center", lg: "space-between" }}
-          alignItems={{ xs: "center", lg: "space-between" }}
+          alignItems={{ xs: "center", sm: "start", md: "space-between" }}
           flexWrap="wrap"
           rowGap={{ xs: "72px", md: "0px" }}
-          columnGap={{ md: "102px" }}
+          columnGap={{ md: "102px", lg: "50px" }}
         >
+          <Box
+            className={classes.lgoFooterContainer}
+            justifyContent={{ xs: "center" }}
+          >
+            <a
+              href="https://vitriumcapital.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className={classes.logoFooter} src={logo} alt="Logo Sync" />
+            </a>
+          </Box>
           <Box className={classes.contacto}>
             <Typography variant="h5" className={classes.subTitle}>
               Contacto
             </Typography>
             <Typography paragraph className={classes.text}>
-              Paraguay: (+595) 21 728 8640
+              Paraguay: <a href="tel:+595217288640">(+595) 21 728 8640</a>
               <br />
-              Uruguay: (+598) 2917 1663
+              Uruguay: <a href="tel:+59829171663">(+598) 2917 1663</a>
               <br />
-              Argentina: (+54) 11 2152 0660
+              Argentina: <a href="tel:+541121520660">(+54) 11 2152 0660</a>
               <br />
-              USA: (+1) 305 567 3373
+              USA: <a href="tel:+13055673373">(+1) 305 567 3373</a>
             </Typography>
           </Box>
           <Box className={classes.email}>
@@ -51,26 +65,64 @@ const Footer = () => {
               Email
             </Typography>
             <Typography paragraph className={classes.text}>
-              ventas@vitriumcapital.com
+              <a href="mailto:ventas@vitriumcapital.com">
+                ventas@vitriumcapital.com
+              </a>
               <br />
-              brokers@vitriumcapital.com
+              <a href="mailto:brokers@vitriumcapital.com">
+                brokers@vitriumcapital.com
+              </a>
             </Typography>
           </Box>
           <Box className={classes.socialMedias}>
-            <Stack direction="row" gap="25px">
-              <img src={facebook} alt="Facebook" />
-              <img src={instagram} alt="Instagram" />
-              <img src={linkedin} alt="Linkedin" />
-              <img src={youtube} alt="Youtube" />
+            <Stack
+              direction="row"
+              gap="25px"
+              alignItems="center"
+              justifyContent={{ xs: "center", sm: "start" }}
+              sx={{ marginBottom: { xs: "35px", md: "0px" } }}
+            >
+              <a
+                href="https://www.facebook.com/VitriumCapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={facebook} alt="Facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/vitriumcapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={instagram} alt="Instagram" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/vitriumcapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedin} alt="Linkedin" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCiaS-EB1-EhmenfzEU5RPXg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={youtube} alt="Youtube" />
+              </a>
             </Stack>
             <Typography
               paragraph
               className={classes.text}
-              sx={{ marginTop: "24px !important" }}
+              sx={{
+                marginTop: "24px !important",
+                display: { xs: "none", md: "flex" },
+              }}
             >
               Aviso Legal | Politica de Privacida
               <br />
-              Vitrium Capital © Todos los derechos <br /> reservados
+              Vitrium Capital © Todos los
+              <br /> derechos reservados
             </Typography>
           </Box>
         </Stack>

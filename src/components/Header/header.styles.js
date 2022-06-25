@@ -4,10 +4,10 @@ export const useHeaderStyles = makeStyles((theme) => {
   return {
     headerWrapper: {
       top: 0,
-      position: ({ pathname }) => (pathname === "/" ? "fixed" : "relative"),
-      backgroundColor: ({ pathname }) =>
-        pathname === "/" ? "transparent" : theme.palette.primary.syncBlue,
-      maxWidth: ({ pathname }) => (pathname === "/" ? "1920px" : "100%"),
+      position: ({ isHomePage }) => (isHomePage ? "fixed" : "relative"),
+      backgroundColor: ({ isHomePage }) =>
+        isHomePage ? "transparent" : theme.palette.primary.syncBlue,
+      maxWidth: ({ isHomePage }) => (isHomePage ? "1920px" : "100%"),
       width: "100%",
       left: "50%",
       transform: "translateX(-50%)",
@@ -15,20 +15,25 @@ export const useHeaderStyles = makeStyles((theme) => {
       justifyContent: "center",
     },
     textWrapper: {
-      position: ({ pathname }) => (pathname === "/" ? "absolute" : "relative"),
-      maxWidth: ({ pathname }) => (pathname === "/" ? "100%" : "1920px"),
-      width: ({ pathname }) => (pathname === "/" ? "auto" : "100%"),
+      position: ({ isHomePage }) => (isHomePage ? "absolute" : "relative"),
+      maxWidth: ({ isHomePage }) => (isHomePage ? "100%" : "1920px"),
+      width: ({ isHomePage }) => (isHomePage ? "auto" : "100%"),
       display: "flex",
       left: "-1px",
       right: "0",
       zindex: "10",
       justifyContent: "space-between",
-      backgroundColor: ({ pathname, isOverLandingSection }) => {
-        if (pathname !== "/") return theme.palette.primary.syncBlue;
+      alignItems: "center",
+      backgroundColor: ({ isHomePage, isOverLandingSection }) => {
+        if (!isHomePage) return theme.palette.primary.syncBlue;
         if (isOverLandingSection) return "transparent";
         else return theme.palette.primary.syncBlue;
       },
-      transition: "background-color 0.5s ease-in-out",
+      height: "84px",
+      [theme.breakpoints.up("sm")]: {
+        height: "auto",
+        alignItems: "flex-start",
+      },
       [theme.breakpoints.down("md")]: {
         paddingInline: "38px",
         paddingTop: "0px",
@@ -36,33 +41,51 @@ export const useHeaderStyles = makeStyles((theme) => {
       [theme.breakpoints.up("md")]: {
         paddingLeft: "80px",
         paddingRight: "112px",
-        paddingTop: "86px",
+        paddingTop: "35px",
+      },
+      [theme.breakpoints.up("lg")]: {
+        paddingTop: "35px",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingLeft: "91px",
+        paddingLeft: "98px",
         paddingRight: "111px",
       },
     },
     drawerBox: {
-      paddingTop: "50px",
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "50px",
+      },
       [theme.breakpoints.up("md")]: {
         display: "none",
       },
     },
+    drawerCloseButton: {
+      // backgroundColor: "red !important",
+      position: "absolute !important",
+      right: "30px",
+    },
     logo: {
-      marginTop: "0px",
-      [theme.breakpoints.down("lg")]: {
+      width: "70px",
+      position: "absolute",
+      left: "50%",
+      top: "2px",
+      transform: "translateX(-50%)",
+      [theme.breakpoints.up("sm")]: {
+        position: "relative",
+        marginTop: 0,
         width: "132px",
         height: "136px",
+        marginLeft: "-44px",
       },
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up("md")]: {
         marginTop: "-30px",
+        marginLeft: "-20px",
         width: "132px",
-        height: "136px",
+        height: "95px",
       },
     },
     linksContainer: {
-      marginTop: "23px",
+      marginTop: "6px", //
       [theme.breakpoints.down("md")]: {
         display: "none",
       },
@@ -70,19 +93,20 @@ export const useHeaderStyles = makeStyles((theme) => {
     navLink: {
       textShadow: "0px 3px 6px #00000060",
       [theme.breakpoints.down("lg")]: {
-        marginTop: "12px",
+        padding: "12px",
         paddingRight: "24px",
         fontSize: "14px",
       },
-      [theme.breakpoints.up("lg")]: {
-        marginTop: "12px",
+      [theme.breakpoints.up("md")]: {
+        marginTop: "0px",
         paddingRight: "24px",
-        fontSize: "17px",
+        fontSize: "12px",
+        fontWeight: "700",
       },
       [theme.breakpoints.up("xl")]: {
-        marginTop: "23px",
+        marginTop: "0px",
         paddingRight: "24px",
-        fontSize: "23px",
+        fontSize: "14px",
       },
     },
     LinkVitrium: {
@@ -92,7 +116,11 @@ export const useHeaderStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.up("lg")]: {
         display: "flex",
+        paddingTop: "7px",
       },
+    },
+    customerService: {
+      backgroundColor: "white",
     },
     imgContainer: {
       display: "flex",

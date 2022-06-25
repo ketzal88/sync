@@ -18,30 +18,26 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
       paddingLeft: "100px",
     },
     [theme.breakpoints.up("xl")]: {
-      height: "1034px",
+      height: "calc(1299px - 265px)",
       paddingTop: "265px",
     },
   },
   imageBox: {
     objectFit: "cover",
-    objectPosition: "0 50%",
     [theme.breakpoints.down("lg")]: {
       width: "480px",
       height: "298px",
       marginTop: "65px",
-      backgroundPosition: "0px -59px",
     },
     [theme.breakpoints.up("lg")]: {
       width: "662px",
       height: "410px",
       marginTop: "85px",
-      backgroundPosition: "0px -59px",
     },
     [theme.breakpoints.up("xl")]: {
       width: "1080px",
       height: "669px",
       marginTop: "87px",
-      backgroundPosition: "0px -59px",
     },
   },
   textBox: {
@@ -75,14 +71,10 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
     fontWeight: "bold !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "24px !important",
-      lineHeight: ".8 !important",
-      letterSpacing: "0px !important",
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "34px !important",
       fontWeight: "bold !important",
-      lineHeight: ".8 !important",
-      letterSpacing: "0px !important",
     },
     [theme.breakpoints.up("xl")]: {
       paddingTop: "80px",
@@ -92,8 +84,6 @@ export const useInfoProjectSectionStyles = makeStyles((theme) => ({
   text: {
     overflow: "hidden",
     textOverflow: "ellipsis",
-    lineHeight: "1.1 !important",
-    letterSpacing: "0px !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "17px !important",
       paddingTop: "20px !important",

@@ -1,35 +1,34 @@
 import { makeStyles } from "@mui/styles";
-import imageLanding from "../../assets/images/landing-image.jpg";
+import headerDesk from "../../assets/images/Desktop/header.jpg";
+import headerLapt from "../../assets/images/1024/header.jpg";
+import headerMob from "../../assets/images/mobile/header.jpg";
 
 export const useLadingSectionStyles = makeStyles((theme) => {
   return {
     wrapper: {
       background:
         "transparent linear-gradient(0deg, #EAC752 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box",
-      backgroundImage: `url(${imageLanding})`,
+      backgroundImage: `url(${headerMob})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       height: "930px",
-      [theme.breakpoints.down("sm")]: {
-        backgroundPosition: "36% 0px",
-        paddingLeft: "38px !important",
-      },
+      backgroundPosition: "36% 0px",
+      minHeight: "745px",
+      paddingTop: "296px",
+      paddingLeft: "38px",
       [theme.breakpoints.up("md")]: {
+        backgroundImage: `url(${headerLapt})`,
         backgroundPosition: "center",
       },
-      [theme.breakpoints.down("lg")]: {
-        minHeight: "745px",
-        paddingLeft: "98px",
-        paddingTop: "296px",
-      },
       [theme.breakpoints.up("lg")]: {
+        backgroundImage: `url(${headerDesk})`,
         minHeight: "745px",
         paddingLeft: "98px",
-        paddingTop: "296px",
       },
       [theme.breakpoints.up("xl")]: {
         minHeight: "1080px",
-        paddingTop: "392px",
+        paddingLeft: "98px",
+        paddingTop: "492px",
         maxWidth: "1920px",
       },
     },
@@ -45,11 +44,14 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       },
     },
     mainTitle: () => ({
-      fontSize: "48px !important",
-      maxWidth: "min-content",
+      fontSize: "45px !important",
+      // maxWidth: "min-content",
       marginBottom: "162px !important",
       "& :nth-child(2)": {
         marginLeft: "10px",
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: "48px !important",
       },
       [theme.breakpoints.up("md")]: {
         fontSize: "60px !important",
@@ -58,7 +60,6 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         "& :nth-child(2)": {
           marginLeft: "0px",
           "&:before": {
-            color: "blue !important",
             content: "'\\a'",
             whiteSpace: "pre",
           },
@@ -116,6 +117,10 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         padding: "23px 64px",
         marginRight: "20px",
       },
+      [theme.breakpoints.down("sm")]: {
+        height: "64px",
+        padding: "14px",
+      },
     },
     recorridoButton: {
       width: "100%",
@@ -146,6 +151,10 @@ export const useLadingSectionStyles = makeStyles((theme) => {
         fontSize: "22px",
         fontWeight: "bold",
         padding: "23px 64px",
+      },
+      [theme.breakpoints.down("sm")]: {
+        height: "64px",
+        padding: "14px",
       },
     },
   };

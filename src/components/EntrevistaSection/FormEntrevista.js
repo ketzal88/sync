@@ -13,44 +13,53 @@ const countryOptions = [
   {
     label: "Argentina",
     value: "AR",
+    code: "+54",
   },
   {
     label: "Uruguay",
     value: "UY",
+    code: "+598",
   },
   {
     label: "Paraguay",
     value: "PY",
+    code: "+595",
   },
   {
     label: "Estados Unidos",
     value: "US",
+    code: "+1",
   },
   {
     label: "Perú",
     value: "PE",
+    code: "+51",
   },
   {
     label: "México",
     value: "MX",
+    code: "+52",
   },
   {
     label: "Ecuador",
     value: "ECU",
+    code: "+593",
   },
   {
     label: "Colombia",
     value: "CO",
+    code: "+57",
   },
   {
     label: "Otro",
     value: "Otro",
+    code: "Otro",
   },
 ];
 
 const FormEntrevista = () => {
   const classes = usePrensaSectionStyles();
-
+  const [countryCode, setCountryCode] = useState("");
   const [data, setData] = useState({
     oid: "00Dj0000001rNSE",
     retURL: "https://vitriumcapital.com/01delcentro/montevideo/gracias.html",
@@ -61,6 +70,11 @@ const FormEntrevista = () => {
     "00Nj000000ApuCe": "Landing",
     "00Nj000000Bohtn": "Formulario",
     "00Nj0000008bHZU": "UY - 01 del Centro",
+    // first_name: "Test",
+    // last_name: "Test",
+    // email: "test@gmail.com",
+    // phone: "3816261374",
+    // "00Nj0000008ze1B": "AR",
   });
 
   const handleChange = (e) => {
@@ -74,7 +88,7 @@ const FormEntrevista = () => {
       className={classes.formContainer}
       onSubmit={(e) => {
         e.preventDefault();
-        sendFormData(data);
+        sendFormData({ ...data, phone: countryCode + data.phone });
       }}
     >
       <FormControl className={classes.formControl}>
@@ -82,6 +96,9 @@ const FormEntrevista = () => {
           Nombre
         </InputLabel>
         <Input
+          required
+          name="first_name"
+          value={data?.first_name ?? ""}
           className={classes.inputForm}
           onChange={handleChange}
           classes={{ underline: classes.underlineInput }}
@@ -92,7 +109,11 @@ const FormEntrevista = () => {
           Apellido
         </InputLabel>
         <Input
+          required
+          name="last_name"
+          value={data?.last_name ?? ""}
           className={classes.inputForm}
+          onChange={handleChange}
           classes={{ underline: classes.underlineInput }}
         />
       </FormControl>
@@ -102,6 +123,9 @@ const FormEntrevista = () => {
         </InputLabel>
         <Input
           className={classes.inputForm}
+          name="email"
+          value={data?.email ?? ""}
+          onChange={handleChange}
           classes={{ underline: classes.underlineInput }}
         />
       </FormControl>
@@ -112,37 +136,70 @@ const FormEntrevista = () => {
       >
         <FormControl className={classes.codAreaForm}>
           <InputLabel shrink className={classes.inputLabel} required>
-            Cod. Área
+            Cod. País
           </InputLabel>
-          <Input
-            className={classes.inputForm}
-            classes={{ underline: classes.underlineInput }}
-          />
+          <Select
+            className={classes.selectInput}
+            value={countryCode}
+            onChange={(e) => {
+              const filteredCountry = countryOptions.filter(
+                (country) => country.code === e.target.value
+              );
+              setCountryCode(e.target.value);
+              setData({ ...data, "00Nj0000008ze1B": filteredCountry[0].value });
+            }}
+            sx={{
+              "&.MuiInput-root": () => ({
+                "&:before, &:after": {
+                  borderBottom: "none",
+                },
+                "&:hover, &:active, &:focus": {
+                  borderBottom: "none",
+                  "&:before, &:after": {
+                    borderBottom: "none",
+                  },
+                },
+              }),
+            }}
+          >
+            <MenuItem>Cod. de País</MenuItem>
+            {countryOptions.map(({ code }, index) => (
+              <MenuItem key={index} value={code}>
+                {code}
+              </MenuItem>
+            ))}
+          </Select>
         </FormControl>
         <FormControl className={classes.phoneNumberInput}>
           <InputLabel shrink className={classes.inputLabel} required>
             Teléfono
           </InputLabel>
           <Input
+            name="phone"
+            value={data?.phone ?? ""}
+            onChange={(e) => {
+              handleChange(e);
+              const filteredCountry = countryOptions.filter(
+                (country) => country.code === countryCode
+              );
+              setCountryCode(filteredCountry[0].code);
+            }}
+            onKeyDown={(e) =>
+              e.code.includes("Key") && !e.ctrlKey && e.preventDefault()
+            }
             className={classes.inputForm}
             classes={{ underline: classes.underlineInput }}
           />
         </FormControl>
       </Stack>
-      <FormControl variant="standard" className={classes.formControl}>
-        <InputLabel
-          shrink
-          className={classes.inputLabel}
-          sx={{ paddingLeft: "20px" }}
-          required
-        >
+      <FormControl className={classes.formControl}>
+        <InputLabel shrink className={classes.inputLabel} required>
           Selecciona un país
         </InputLabel>
         <Select
           name="00Nj0000008ze1B"
           className={classes.selectInput}
-          classes={{ underline: classes.underlineInput }}
-          value={data["00Nj0000008ze1B"]}
+          value={data["00Nj0000008ze1B"] ?? ""}
           onChange={handleChange}
           sx={{
             "&.MuiInput-root": () => ({
@@ -158,8 +215,13 @@ const FormEntrevista = () => {
             }),
           }}
         >
+          <MenuItem>Selecciona un país</MenuItem>
           {countryOptions.map(({ value, label }, index) => (
-            <MenuItem key={index} value={value}>
+            <MenuItem
+              key={index}
+              value={value}
+              selected={value === data["00Nj0000008ze1B"]}
+            >
               {label}
             </MenuItem>
           ))}
@@ -170,7 +232,11 @@ const FormEntrevista = () => {
           Consulta
         </InputLabel>
         <Input
+          required
+          name="00Nj000000BSaZp"
+          value={data?.["00Nj000000BSaZp"] ?? ""}
           className={classes.inputForm}
+          onChange={handleChange}
           classes={{ underline: classes.underlineInput }}
         />
       </FormControl>
@@ -179,14 +245,6 @@ const FormEntrevista = () => {
         sx={{ display: { xs: "none", md: "flex" } }}
       />
       <Box className={classes.formControl}>
-        {/* <RadioGroup>
-          <FormControlLabel
-            control={<Radio className={classes.radioButton} />}
-            componentsProps={usePrensaSectionStyles.labelRadioButton}
-            value="true"
-            label="Acepto términos y condiciones"
-          />
-        </RadioGroup> */}
         <button className={classes.buttonSubmit}>
           ENVIAR <ArrowForwardIosIcon className={classes.carrotButton} />
         </button>

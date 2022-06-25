@@ -6,7 +6,6 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       maxWidth: "1920px",
       overflow: "hidden",
       flexWrap: "wrap",
-      paddingBottom: "52px !important",
       [theme.breakpoints.up("md")]: {
         height: "768px",
         flexWrap: "nowrap",
@@ -23,6 +22,33 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       objectFit: "cover",
       height: "100%",
       width: "100%",
+      animation: `$imgEffect 3000ms ${theme.transitions.easing.easeInOut}`,
+    },
+    imageSectionExit: {
+      objectFit: "cover",
+      height: "100%",
+      width: "100%",
+      animation: `$imgEffectExit 500ms ${theme.transitions.easing.easeInOut}`,
+    },
+    "@keyframes imgEffect": {
+      "0%": {
+        opacity: 0,
+        transform: "translateX(-100%)",
+      },
+      "100%": {
+        opacity: 1,
+        transform: "translateX(0)",
+      },
+    },
+    "@keyframes imgEffectExit": {
+      "0%": {
+        opacity: 1,
+        transform: "translateX(0)",
+      },
+      "100%": {
+        opacity: 0,
+        transform: "translateX(100%)",
+      },
     },
     carrouselNumber: {
       color: "white",
@@ -42,10 +68,20 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       fontWeight: "bold !important",
     },
     textBox: {
+      position: "relative",
       color: "white",
-      width: "100%",
+      minWidth: "100%",
       paddingInline: "38px",
       paddingTop: "43px",
+      paddingBottom: "52px !important",
+      minHeight: "calc(533px - 95px)",
+      boxSizing: "border-box",
+      backgroundColor: "rgba(19,33,39,0.7)",
+      [theme.breakpoints.up("sm")]: {
+        backgroundColor: "transparent",
+        minWidth: 0,
+        boxSizing: "content-box",
+      },
       [theme.breakpoints.up("md")]: {
         paddingInline: "112px",
         paddingTop: "136px",
@@ -56,31 +92,25 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
         paddingTop: "136px",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingLeft: "80px",
-        paddingRight: "111px",
-        paddingTop: "236px",
+        padding: "163px 111px 0px 80px",
       },
-    },
-    titleSection: {
-      fontSize: "34px !important",
-      fontWeight: "700 !important",
-      [theme.breakpoints.up("md")]: {
-        fontSize: "48px !important",
-      },
-      [theme.breakpoints.up("xl")]: {
-        fontSize: "60px !important",
+      [theme.breakpoints.down("sm")]: {
+        width: "80%",
       },
     },
     subTitleSection: {
       fontWeight: "bold !important",
       fontSize: "24px !important",
-      paddingTop: "40px !important",
+      paddingTop: "25vh !important",
+      [theme.breakpoints.up("sm")]: {
+        paddingTop: "40px !important",
+      },
       [theme.breakpoints.up("md")]: {
-        paddingTop: "60px",
+        paddingTop: "70px !important",
         fontSize: "34px !important",
       },
       [theme.breakpoints.up("xl")]: {
-        paddingTop: "80px",
+        paddingTop: "155px !important",
         fontSize: "46px !important",
       },
     },
@@ -106,21 +136,28 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       },
     },
     arrowContainer: {
+      position: "absolute",
       marginTop: "56px",
-      marginLeft: "auto",
+      bottom: 0,
       width: "72px",
       height: "72px",
+      marginBottom: "150px",
+      marginRight: "38px",
+      right: 0,
+      animation: "none !important",
+      [theme.breakpoints.up("sm")]: {
+        marginBottom: "52px",
+      },
       [theme.breakpoints.up("md")]: {
-        marginLeft: "0px",
-        marginTop: "71px",
+        right: "auto",
+        marginBottom: "136px",
       },
       [theme.breakpoints.up("lg")]: {
-        marginTop: "68px",
         width: "74px",
         height: "74px",
       },
       [theme.breakpoints.up("xl")]: {
-        marginTop: "76px",
+        marginBottom: "222px",
         width: "124px",
         height: "124px",
       },

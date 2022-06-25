@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import edificio from "../../assets/images/edificio.png";
+import edificio from "../../assets/images/edificio.jpg";
 
 export const useEdificioStyles = makeStyles((theme) => {
   return {
@@ -15,25 +15,26 @@ export const useEdificioStyles = makeStyles((theme) => {
         height: "567px",
       },
       [theme.breakpoints.up("lg")]: {
-        backgroundPosition: "-350px 0px",
+        backgroundPosition: "0% 100%",
+        backgroundSize: "70%",
         height: "769px",
       },
       [theme.breakpoints.up("xl")]: {
-        backgroundPosition: "-750px 0px",
-        height: "1149px",
+        backgroundSize: "1270px 1087px",
+        minHeight: "calc(1311px - 234px)",
       },
     },
     secondWrapper: {
       [theme.breakpoints.down("lg")]: {
-        marginTop: "38px",
+        // marginTop: "38px",
         marginRight: "75px",
       },
       [theme.breakpoints.up("lg")]: {
-        marginTop: "93px",
+        // marginTop: "93px",
         marginRight: "124px",
       },
       [theme.breakpoints.up("xl")]: {
-        marginTop: "80px",
+        // marginTop: "251px",
         marginRight: "191px",
       },
     },
@@ -66,6 +67,7 @@ export const useEdificioStyles = makeStyles((theme) => {
     },
     listQuantity: {
       fontWeight: "bold !important",
+      letterSpacing: "-1px !important",
       [theme.breakpoints.down("lg")]: {
         fontSize: "17px !important",
       },

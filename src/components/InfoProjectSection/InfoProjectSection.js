@@ -1,9 +1,42 @@
 import { Box, Stack, Typography } from "@mui/material";
-import domotica from "../../assets/images/domotica.jpeg";
+import { useEffect, useRef, useState } from "react";
+import aboutProject from "../../assets/01-Sync-Asunción-Alta-1.mp4";
 import { useInfoProjectSectionStyles } from "./InfoProjectSection.style";
 
 const InfoProjectSection = () => {
   const classes = useInfoProjectSectionStyles();
+
+  const videoRef = useRef(null);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  const callback = function (entries) {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      setAutoPlay(true);
+      videoRef?.current?.play();
+    } else {
+      setAutoPlay(false);
+      videoRef?.current?.pause();
+    }
+  };
+
+  const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.2;
+      observer.observe(videoRef.current);
+    }
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (videoRef.current) observer.unobserve(videoRef.current);
+    };
+  }, [videoRef]);
+
   return (
     <Stack
       sx={{
@@ -19,19 +52,23 @@ const InfoProjectSection = () => {
           <Typography variant="h3" className={classes.titleSection}>
             Conoce el proyecto
           </Typography>
-          {/* <Box className={classes.imageBox} /> */}
-          <img className={classes.imageBox} src={domotica} alt="domótica" />
+          <video
+            ref={videoRef}
+            className={classes.imageBox}
+            src={aboutProject}
+            autoPlay={autoPlay}
+            loop={true}
+          />
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>
-            Más conectados <br /> que nunca
+            Algo Innovador
           </Typography>
           <Typography className={classes.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
-            malesuada pellentesque elit eget gravida cum sociis natoque
-            penatibus. Pharetra massa massa ultricies mi quis hendrerit dolor
-            magna.
+            Un desarrollo real y actual. Con el foco en el hoy, ofrece
+            soluciones tecnológicas para resolver el encuentro entre tu vida
+            familiar, social y laboral. Inspirado en la construcción de un
+            futuro conectado y saludable
           </Typography>
         </Box>
       </Stack>

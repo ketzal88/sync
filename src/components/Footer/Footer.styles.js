@@ -8,13 +8,31 @@ export const useFooterStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    paddingBlock: "72px",
+    padding: "0 !important",
+    margin: "0 !important",
+    paddingTop: "72px !important",
+    textAlign: "center",
     [theme.breakpoints.up("sm")]: {
-      justifyContent: "space-around",
-      paddingBlock: "53px",
+      textAlign: "left",
+      justifyContent: "space-between",
+      paddingLeft: "0px",
+      paddingRight: "0px",
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: "50px 0px !important",
     },
     [theme.breakpoints.up("lg")]: {
       paddingBlock: "111px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "32px",
+    },
+  },
+  footerContent: {
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+      paddingLeft: "80px",
+      paddingRight: "111px",
     },
   },
   subTitle: {
@@ -33,28 +51,30 @@ export const useFooterStyles = makeStyles((theme) => ({
   },
   text: {
     fontSize: "17px !important",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "20px !important",
     },
     [theme.breakpoints.up("md")]: {
       fontSize: "14px !important",
     },
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("xl")]: {
       fontSize: "20px !important",
     },
   },
-  socialMedias: {
-    [theme.breakpoints.down("xl")]: {
-      display: "none",
+  socialMedias: {},
+  lgoFooterContainer: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      textAlign: "center",
+      marginLeft: "-20px !important",
     },
   },
   logoFooter: {
     width: "168px",
     height: "88px",
-    marginBottom: "72px",
     [theme.breakpoints.up("md")]: {
-      marginLeft: "80px",
       marginBotom: "0px",
     },
+    [theme.breakpoints.down("xs")]: {},
   },
 }));

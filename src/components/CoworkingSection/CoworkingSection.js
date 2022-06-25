@@ -1,8 +1,9 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import cowork from "../../assets/images/Co-Work.jpeg";
+import cowork from "../../assets/images/Desktop/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
+import { Link } from "react-router-dom";
 
 const CoworkingSection = () => {
   const classes = useCoworkingSectionStyles();
@@ -22,24 +23,27 @@ const CoworkingSection = () => {
           <Typography className={classes.titleSection} variant="h2">
             Co-Working
           </Typography>
-          <Typography paragraph className={classes.textSection}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            asperiores consequatur. A laudantium, reiciendis quisquam hic
-            nostrum totam ex asperiores fugiat ipsa magnam consequatur tempore
-            vitae harum saepe reprehenderit repellat delectus velit sed natus
-            eaque incidunt quibusdam. Voluptatem quas, laudantium animi fugit
-            impedit provident dolorem dolorum quasi eligendi quam distinctio ad
-            eaque alias voluptas rerum esse vitae reiciendis sequi commodi.
+          <Typography className={classes.textSection}>
+            Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas y
+            mesas compartidas que ofrecen un ambiente de trabajo informal.
           </Typography>
         </Box>
       </Stack>
       <Stack
+        id="recorridoSection"
         direction="column"
         justifyContent="center"
         alignItems="center"
         className={classes.recorridoVirtualWrapper}
       >
-        <button className={classes.recorridoButton}>RECORRIDO VIRTUAL</button>
+        <Link
+          to="/recorrido-virtual"
+          target="_blank"
+          className={classes.recorridoButton}
+          sx={{ textAlign: "center" }}
+        >
+          Recorrido Virtual
+        </Link>
       </Stack>
     </Stack>
   );

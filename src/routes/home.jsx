@@ -1,4 +1,4 @@
-import "../App.scss";
+import "../App.css";
 import LandingSection from "../components/LandingSection/LandingSection";
 import AmenitiesSection from "../components/AmenitiesSection/AmenitiesSection";
 import ApartamentosSection from "../components/ApartamentosSection/ApartamentosSection";
@@ -10,10 +10,10 @@ import FirstCarrouselSection from "../components/FirstCarrouselSection/FirstCarr
 import InfoProjectSection from "../components/InfoProjectSection/InfoProjectSection";
 import CoworkingSection from "../components/CoworkingSection/CoworkingSection";
 
-export default function Home({ headerRef }) {
+export default function Home() {
   return (
     <>
-      <LandingSection headerRef={headerRef} />
+      <LandingSection />
       <EdificioSection />
       <FirstCarrouselSection />
       <InfoProjectSection />

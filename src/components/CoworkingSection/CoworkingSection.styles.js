@@ -6,8 +6,8 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     color: "white",
     maxWidth: "1920px",
     width: "100%",
-    height: "923px",
-    [theme.breakpoints.up("md")]: {
+
+    [theme.breakpoints.up("sm")]: {
       height: "759px",
       position: "relative",
     },
@@ -19,17 +19,23 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   imgSection: {
-    height: "491px",
+    height: "100vh",
     objectFit: "cover",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       height: "100%",
     },
   },
   textWrapper: {
-    backgroundColor: theme.palette.primary.syncBlue,
-    height: "432px",
+    height: "100vh",
+    marginTop: "-100vh",
     padding: "54px 38px 17px 25px",
-    [theme.breakpoints.up("md")]: {
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "0",
+      height: "100%",
       position: "absolute",
       backgroundColor: "transparent",
     },
@@ -45,7 +51,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   textSection: {
-    fontSize: "20px !important",
+    fontSize: "24px !important",
     marginTop: "40px !important",
     lineHeight: "1.3 !important",
     letterSpacing: "-.9px !important",
@@ -55,6 +61,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     textOverflow: "ellipsis !important",
     "-webkit-line-clamp": "8 !important",
     lineClamp: "8 !important",
+    textAlign: "center",
     [theme.breakpoints.up("md")]: {
       paddingInline: "211px !important",
       "-webkit-line-clamp": "4 !important",
@@ -62,20 +69,21 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       paddingInline: "382px !important",
+      marginTop: "10px !important",
     },
     [theme.breakpoints.up("xl")]: {
       "-webkit-line-clamp": "3 !important",
       lineClamp: "3 !important",
-      fontSize: "23px !important",
+      fontSize: "27px !important",
       paddingInline: "660px !important",
       lineHeight: "1.3 !important",
-      letterSpacing: "-.9px !important",
     },
   },
   recorridoVirtualWrapper: {
     backgroundImage: `url(${recorridoVirtual})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundPosition: "35% center",
     maxWidth: "1920px",
     width: "100%",
     height: "930px",
@@ -88,10 +96,13 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: theme.palette.primary.syncOrange,
-    fontSize: "22px",
+    color: theme.palette.primary.vmGreen,
+    textTransform: "uppercase",
+    fontSize: "16px",
     fontWeight: "bold",
-    padding: "29px 62px",
-    borderRadius: "46px",
+    padding: "22px 32px",
+    borderRadius: "40px",
+    border: "none",
+    [theme.breakpoints.up("sm")]: {},
   },
 }));

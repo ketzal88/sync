@@ -17,7 +17,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       paddingBlock: "40px",
-      height: "1262px",
+      height: "1280px",
     },
   },
   sectionTitle: {
@@ -25,6 +25,10 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     fontSize: "34px !important",
     paddingBottom: "42px",
     paddingLeft: "92px",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "0px",
+      textAlign: "center"
+    },
     [theme.breakpoints.up("md")]: {
       paddingTop: "50px !important",
     },
@@ -38,7 +42,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   imgContainer: {
-    objectFit: "cover",
+    objectFit: "fit",
     width: "100%",
     height: "527px",
     color: "white",
@@ -54,8 +58,24 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       width: "1200px",
       height: "700px",
     },
+    [theme.breakpoints.up("sm")]: {
+      height: "391px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "250px"
+    }
+  },
+  videoArrow: {
+    position: "absolute",
+    zIndex: 2,
+    cursor: "pointer",
+    top: "5%",
+    [theme.breakpoints.up("sm")]: {
+      top: "20%"
+    }
   },
   subTitle: {
+    textAlign: "center !important",
     marginTop: "40px !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "34px !important",
@@ -71,6 +91,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     },
   },
   text: {
+    textAlign: "center !important",
     [theme.breakpoints.down("lg")]: {
       fontSize: "20px !important",
       marginTop: "19px !important",
@@ -86,8 +107,8 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   },
   button: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: theme.palette.primary.syncOrange,
-    padding: "32px 116px",
+    color: theme.palette.primary.vmGreen,
+    padding: "32px 90px",
     marginTop: "40px",
     borderRadius: "46px",
     fontSize: "17px !important",
@@ -98,6 +119,10 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       marginTop: "25px",
       fontSize: "22px !important",
       padding: "26px 95px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "64px",
+      padding: "14px 90px",
     },
   },
 }));

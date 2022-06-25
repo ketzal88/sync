@@ -1,4 +1,11 @@
-import { Box, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  CardMedia,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import ArrowButton from "../ArrowButton/ArrowButton";
 import { useAmennitiesSectionStyles } from "./ammenitiesSection.styles";
 import { amenitiesItemsList } from "./amenitiesItemsList";
@@ -8,11 +15,13 @@ const AmenitiesSection = () => {
   const classes = useAmennitiesSectionStyles();
   const [selectedElement, setSelectedElement] = useState(0);
   const { title, subTitle, text, image } = amenitiesItemsList[selectedElement];
+  const mobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
     <Stack
       direction="column"
       alignItems="center"
+      id="amenitiesSection"
       sx={{
         backgroundColor: (theme) => theme.palette.primary.syncBlue,
       }}
@@ -23,7 +32,7 @@ const AmenitiesSection = () => {
         className={classes.titleWrapper}
       >
         <Typography variant="h2" className={classes.titleSection}>
-          Work & Live
+          Amenities
         </Typography>
       </Stack>
       <Box className={classes.wrapperSection}>
@@ -40,19 +49,20 @@ const AmenitiesSection = () => {
                 {text}
               </Typography>
               <Stack
-                sx={{ paddingTop: "auto" }}
-                flexDirection="row"
+                direction="row"
                 alignItems="center"
                 justifyContent="space-between"
+                className={classes.arrowCounterContainer}
               >
                 <Box className={classes.iconContainer}>
                   <ArrowButton
                     buttonAction={() => {
-                      if (selectedElement === 4) return setSelectedElement(0);
+                      if (selectedElement === 5) return setSelectedElement(0);
                       setSelectedElement(selectedElement + 1);
                     }}
                   />
                 </Box>
+
                 <Typography className={classes.carrouselNumber}>
                   <Typography
                     component="span"
@@ -64,13 +74,11 @@ const AmenitiesSection = () => {
                 </Typography>
               </Stack>
             </Box>
-            {/* <img className={classes.imgSection} src={galeria} alt="galeria" /> */}
             <CardMedia
               component="img"
               image={image}
               alt={subTitle}
               className={classes.imgSection}
-              // sx={imgStyles[selectedElement]}
             />
           </Grid>
         </Stack>

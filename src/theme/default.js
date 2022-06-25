@@ -13,9 +13,10 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#FFF",
-      syncBlue: "#132127",
+      syncBlue: "#1E252D",
       syncGrey: "#F7F7F7",
       syncOrange: "#F1804F",
+      vmGreen: "#64a730",
     },
   },
   typography: {
@@ -42,7 +43,6 @@ let theme = createTheme({
       },
     },
     h4: {
-      fontFamily: "Open Sans",
       fontWeight: "400",
       "@media (min-width: 1920px)": {
         fontSize: "23px",

@@ -18,6 +18,8 @@ import {
   pisoText,
 } from "../../utils/apartmentsUtils";
 import { useApartmentsPageStyles } from "./apartmentsPage.styles";
+import { useScrollTo } from "../../customHooks/useScrollTo";
+import { hoja_4, sol_1} from "../../assets/images";
 
 const PISOS_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -45,6 +47,8 @@ export default function ApartmentsPage() {
   const [open, setOpen] = useState(false);
   const [apartments, setApartments] = useState(DEFAULT_APARTMENTS || []);
   const classes = useApartmentsPageStyles();
+
+  useScrollTo();
 
   const closeModal = () => {
     setOpen(false);
@@ -155,25 +159,32 @@ export default function ApartmentsPage() {
                   IconComponent: (props) => (
                     <KeyboardArrowDownIcon
                       {...props}
-                      sx={{ color: "#F1804F !important" }}
+                      sx={{
+                        color: (theme) =>
+                          `${theme.palette.primary.vmGreen} !important`,
+                      }}
                     />
                   ),
                 }}
                 sx={{
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:after": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -235,25 +246,32 @@ export default function ApartmentsPage() {
                   IconComponent: (props) => (
                     <KeyboardArrowDownIcon
                       {...props}
-                      sx={{ color: "#F1804F !important" }}
+                      sx={{
+                        color: (theme) =>
+                          `${theme.palette.primary.vmGreen} !important`,
+                      }}
                     />
                   ),
                 }}
                 sx={{
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:after": {
-                    borderBottom: "4px solid #F1804F",
+                    borderBottom: (theme) =>
+                      `4px solid ${theme.palette.primary.vmGreen}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
-                      borderBottom: "4px solid #F1804F",
+                      borderBottom: (theme) =>
+                        `4px solid ${theme.palette.primary.vmGreen}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -297,9 +315,7 @@ export default function ApartmentsPage() {
                 className={classes.apartmentCard}
               >
                 <Grid item className={classes.apartmentImageContainer}>
-                  <Box
-                    className={classes.apartmentImage}
-                  >
+                  <Box className={classes.apartmentImage}>
                     <img
                       src={apartment.img1}
                       alt={`apartment-${apartment.name}`}
@@ -315,45 +331,37 @@ export default function ApartmentsPage() {
                   flexDirection="column"
                   flexWrap="unset"
                   className={classes.cardBody}
+                  justifyContent="center"
                 >
                   <Grid item xl={12}>
                     <Box sx={{ display: "flex" }}>
-                      <Typography
-                        className={classes.apartmentName}
-                      >
+                      <Typography className={classes.apartmentName}>
                         {apartment.name}
                       </Typography>
                     </Box>
                     <Box sx={{ display: "flex" }}>
-                      <Typography
-                        className={classes.apartmentSize  }
-                      >
-                        {formatSuperficie(apartment.superficie)}M<sup>2</sup>
+                      <Typography className={classes.apartmentSize}>
+                        {formatSuperficie(apartment.superficie)}<strong> M<sup>2</sup></strong>
                       </Typography>
                     </Box>
-                  </Grid>
-                  <Divider
-                    sx={{
-                      border: "4px solid #F1804F",
-                      width: "50%",
-                      marginBottom: "31px",
-                      marginTop: "20px",
-                    }}
-                    textAlign="left"
-                  />
-                  <Grid item xl={12}>
+                    <Divider
+                      sx={{
+                        border: (theme) =>
+                          `2px solid ${theme.palette.primary.vmGreen}`,
+                        width: "60%",
+                        marginBottom: "10px",
+                        marginTop: "10px",
+                      }}
+                      textAlign="left"
+                    />
                     <Box className={classes.filterBox}>
-                      <Typography
-                        className={classes.pisoText}
-                      >
+                      <Typography className={classes.pisoText}>
                         {apartment.piso}
                         {pisoText(apartment.piso)} piso
                       </Typography>
                     </Box>
                     <Box className={classes.filterBox}>
-                      <Typography
-                        className={classes.dormitoriosText}
-                      >
+                      <Typography className={classes.dormitoriosText}>
                         {apartment.dormitorios === 0
                           ? TIPOS_OPTIONS[0].label
                           : apartment.dormitorios}{" "}
@@ -374,7 +382,9 @@ export default function ApartmentsPage() {
                           borderRadius: "50%",
                           marginRight: "20px",
                         }}
-                      />
+                      >
+                        <img src={sol_1} />
+                      </Box>
                       <Box
                         sx={{
                           height: 49,
@@ -383,15 +393,9 @@ export default function ApartmentsPage() {
                           borderRadius: "50%",
                           marginRight: "20px",
                         }}
-                      />
-                      <Box
-                        sx={{
-                          height: 49,
-                          width: 49,
-                          backgroundColor: "white",
-                          borderRadius: "50%",
-                        }}
-                      />
+                      >
+                        <img src={hoja_4}/>
+                      </Box>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -402,9 +406,11 @@ export default function ApartmentsPage() {
                   flexDirection="column"
                   className={classes.buttonsContainer}
                 >
-                  <Grid
-                    container
+                  <Grid 
+                    container 
                     className={classes.buttons}
+                    justifyContent="center"
+
                   >
                     <Button
                       fullWidth
@@ -415,15 +421,14 @@ export default function ApartmentsPage() {
                       href="https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf"
                       download
                     >
-                      <Typography
-                        className={classes.descargarText}
-                      >
+                      <Typography className={classes.descargarText}>
                         Descargar PDF
                       </Typography>
                     </Button>
                   </Grid>
-                  <Grid
+                  <Grid 
                     container
+                    justifyContent="center"
                   >
                     <Button
                       variant="contained"
@@ -431,9 +436,7 @@ export default function ApartmentsPage() {
                       onClick={() => handleScheduleInterview(apartment)}
                       className={classes.agendaButton}
                     >
-                      <Typography
-                        className={classes.agendaText}
-                      >
+                      <Typography className={classes.agendaText}>
                         Agenda una entrevista
                       </Typography>
                     </Button>
@@ -447,6 +450,7 @@ export default function ApartmentsPage() {
           open={open}
           handleClose={closeModal}
           apartment={currentApartment}
+          classes={classes}
         />
       </Grid>
     </Stack>

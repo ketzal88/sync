@@ -9,7 +9,14 @@ const EdificioSection = () => {
     <Stack
       direction="row"
       justifyContent="center"
-      sx={{ display: { xs: "none", md: "flex" } }}
+      sx={{
+        display: {
+          xs: "none",
+          md: "flex",
+        },
+        paddingTop: { lg: "234px" },
+      }}
+      id="edificioSection"
     >
       <Box className={classes.container}>
         <Stack direction="row" justifyContent="flex-end">
