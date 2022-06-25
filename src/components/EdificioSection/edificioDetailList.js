@@ -12,7 +12,7 @@ export const edificioDetailList = [
     label: "Cocheras en subsuelo",
   },
   {
-    quantity: "20",
+    quantity: "22",
     label: "Cocheras en planta baja",
   },
 ];

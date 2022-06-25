@@ -14,7 +14,10 @@ const EdificioSection = () => {
           xs: "none",
           md: "flex",
         },
-        paddingTop: { lg: "234px" },
+        paddingTop: {
+          md: "25px",
+          lg: "100px",
+        },
       }}
       id="edificioSection"
     >

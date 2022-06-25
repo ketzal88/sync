@@ -1,4 +1,5 @@
 export const sendFormData = async (data) => {
+  const params = new URLSearchParams(data);
   try {
     const request = await window.fetch(
       `https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`,
