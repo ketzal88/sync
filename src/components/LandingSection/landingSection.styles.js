@@ -1,27 +1,25 @@
 import { makeStyles } from "@mui/styles";
-import headerDesk from "../../assets/images/Desktop/header.jpg";
-import headerLapt from "../../assets/images/1024/header.jpg";
-import headerMob from "../../assets/images/mobile/header.jpg";
+import landingImage from "../../assets/images/Desktop/landing-image.jpg";
 
 export const useLadingSectionStyles = makeStyles((theme) => {
   return {
     wrapper: {
       background:
         "transparent linear-gradient(0deg, #EAC752 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box",
-      backgroundImage: `url(${headerMob})`,
+      backgroundImage: `url(${landingImage})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       height: "930px",
-      backgroundPosition: "36% 0px",
+      backgroundPosition: "0% 0%",
       minHeight: "745px",
       paddingTop: "296px",
       paddingLeft: "38px",
       [theme.breakpoints.up("md")]: {
-        backgroundImage: `url(${headerLapt})`,
+        backgroundImage: `url(${landingImage})`,
         backgroundPosition: "center",
       },
       [theme.breakpoints.up("lg")]: {
-        backgroundImage: `url(${headerDesk})`,
+        backgroundImage: `url(${landingImage})`,
         minHeight: "745px",
         paddingLeft: "98px",
       },
