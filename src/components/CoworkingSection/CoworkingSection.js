@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import cowork from "../../assets/images/Desktop/coworking.jpg";
+import cowork from "../../assets/images/coworking.jpg";
 import { useCoworkingSectionStyles } from "./CoworkingSection.styles";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,9 @@ const CoworkingSection = () => {
             Co-Working
           </Typography>
           <Typography className={classes.textSection}>
-            Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas y
-            mesas compartidas que ofrecen un ambiente de trabajo informal.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            imperdiet condimentum massa, id fringilla quam lobortis eget. Cras
+            sed porta tortor.
           </Typography>
         </Box>
       </Stack>

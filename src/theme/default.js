@@ -17,6 +17,7 @@ let theme = createTheme({
       syncGrey: "#F7F7F7",
       syncOrange: "#F1804F",
       vmGreen: "#64a730",
+      blackOverlay: "rgba(19,33,39,0.7)",
     },
   },
   typography: {

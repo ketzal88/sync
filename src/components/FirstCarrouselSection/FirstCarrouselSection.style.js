@@ -76,7 +76,7 @@ export const useFirstCarrouselSection = makeStyles((theme) => {
       paddingBottom: "52px !important",
       minHeight: "calc(533px - 95px)",
       boxSizing: "border-box",
-      backgroundColor: "rgba(19,33,39,0.7)",
+      backgroundColor: theme.palette.primary.blackOverlay,
       [theme.breakpoints.up("sm")]: {
         backgroundColor: "transparent",
         minWidth: 0,

@@ -31,7 +31,7 @@ const UbicacionSection = () => {
           >
             <iframe
               title="Villa Morra"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4197083803074!2d-57.57726408443405!3d-25.29009913357617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8a21d9dc111%3A0xa253b4524e3a4096!2sGeneral%20Bernardo%20O&#39;Higgins%20668%2C%20Asunci%C3%B3n%2C%20Paraguay!5e0!3m2!1ses-419!2sar!4v1655127517599!5m2!1ses-419!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.9010433622257!2d-56.19513828462395!3d-34.90893278121838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81d27dd3230f%3A0x196409b507faca89!2sCanelones%201068%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1sen!2sar!4v1656377522197!5m2!1sen!2sar"
               width="100%"
               height="100%"
               style={{ border: 0 }}

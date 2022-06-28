@@ -4,7 +4,6 @@ import {
   Box,
   CardMedia,
   Chip,
-  Grid,
   Stack,
   Typography,
   useMediaQuery,

@@ -1,4 +1,3 @@
-import parrilleros from "../../assets/images/imagen-parrilleros.jpeg";
 import wetSpa from "../../assets/images/wet-spa.jpg";
 import solarium from "../../assets/images/solarium.jpg";
 import laundry from "../../assets/images/laundry.jpeg";
@@ -9,19 +8,19 @@ const title = "Work & Live";
 export const amenitiesItemsList = [
   {
     title,
-    subTitle: "Parrilleros",
-    text: "2 Parrillas con todo lo necesario para cocinar cómodamente.",
-    image: parrilleros,
-  },
-  {
-    title,
     subTitle: "Gimnasio",
     text: "Espacios pensados para disfrutar en cualquier momento del día. Sus exclusivas vistas panorámicas y la posibilidad de compartir momentos únicos brindan la fusión ideal entre comodidad y confort.",
     image: gym,
   },
   {
     title,
-    subTitle: "Solarium y jardines",
+    subTitle: "Wet Spa",
+    text: "Relax y confort para cualquier momento del día. Duchas e hidromasajes a disposición de los residentes.",
+    image: wetSpa,
+  },
+  {
+    title,
+    subTitle: "Solarium",
     text: "Espectaculares jardines que reciben sol durante todo el día. Reposeras, piscina y una vista exclusiva.",
     image: solarium,
   },
@@ -33,14 +32,8 @@ export const amenitiesItemsList = [
   },
   {
     title,
-    subTitle: "Co-Working",
-    text: "Cómodo y amplio espacio ubicado en la azotea. Oficinas privadas y mesas compartidas que ofrecen un ambiente de trabajo informal.",
+    subTitle: "Garages",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet condimentum massa, id fringilla quam lobortis eget. Cras sed porta tortor.",
     image: garage,
-  },
-  {
-    title,
-    subTitle: "Wet Spa con Hidromasaje",
-    text: "Relax y confort para cualquier momento del día. Duchas e hidromasajes a disposición de los residentes.",
-    image: wetSpa,
   },
 ];

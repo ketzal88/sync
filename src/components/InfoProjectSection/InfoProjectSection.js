@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import aboutProject from "../../assets/01-Sync-Asunción-Alta-1.mp4";
+import aboutProject from "../../assets/sync-video-promo.mp4";
 import { useInfoProjectSectionStyles } from "./InfoProjectSection.style";
 
 const InfoProjectSection = () => {
@@ -62,13 +62,14 @@ const InfoProjectSection = () => {
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>
-            Algo Innovador
+            Más conectados <br />
+            que nunca
           </Typography>
           <Typography className={classes.text}>
-            Un desarrollo real y actual. Con el foco en el hoy, ofrece
-            soluciones tecnológicas para resolver el encuentro entre tu vida
-            familiar, social y laboral. Inspirado en la construcción de un
-            futuro conectado y saludable
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            imperdiet condimentum massa, id fringilla quam lobortis eget. Cras
+            sed porta tortor. Etiam pharetra arcu risus. Duis egestas enim at
+            urna.
           </Typography>
         </Box>
       </Stack>
