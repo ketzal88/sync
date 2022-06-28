@@ -80,7 +80,7 @@ export const useAmennitiesSectionStyles = makeStyles((theme) => {
       marginTop: "-100vh",
       boxSizing: "border-box",
       paddingTop: "35vh",
-      backgroundColor: "rgba(19,33,39,0.7)",
+      backgroundColor: theme.palette.primary.blackOverlay,
       [theme.breakpoints.up("sm")]: {
         paddingTop: "43px",
         backgroundColor: "transparent",

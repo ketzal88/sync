@@ -27,7 +27,7 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     paddingLeft: "92px",
     [theme.breakpoints.down("sm")]: {
       paddingLeft: "0px",
-      textAlign: "center"
+      textAlign: "center",
     },
     [theme.breakpoints.up("md")]: {
       paddingTop: "50px !important",
@@ -62,8 +62,8 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       height: "391px",
     },
     [theme.breakpoints.down("sm")]: {
-      height: "250px"
-    }
+      height: "250px",
+    },
   },
   videoArrow: {
     position: "absolute",
@@ -71,8 +71,8 @@ export const useApartamentsStyles = makeStyles((theme) => ({
     cursor: "pointer",
     top: "5%",
     [theme.breakpoints.up("sm")]: {
-      top: "20%"
-    }
+      top: "20%",
+    },
   },
   subTitle: {
     textAlign: "center !important",
@@ -107,8 +107,8 @@ export const useApartamentsStyles = makeStyles((theme) => ({
   },
   button: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: theme.palette.primary.vmGreen,
-    padding: "32px 90px",
+    color: theme.palette.primary.syncOrange,
+    padding: "14px 90px",
     marginTop: "40px",
     borderRadius: "46px",
     fontSize: "17px !important",
@@ -119,10 +119,6 @@ export const useApartamentsStyles = makeStyles((theme) => ({
       marginTop: "25px",
       fontSize: "22px !important",
       padding: "26px 95px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "64px",
-      padding: "14px 90px",
     },
   },
 }));

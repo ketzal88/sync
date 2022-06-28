@@ -1,23 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useApartamentsStyles } from "./apartamentos.styles";
 import { Box, Stack, Typography } from "@mui/material";
-import { apartamentList } from "./apartamentList";
-import arrow from "../../assets/images/arrow.svg";
-import tipologia1 from "../../assets/TIPOLOGIA 01.mp4";
-import tipologia2 from "../../assets/TIPOLOGIA 02.mp4";
-import tipologia3 from "../../assets/TIPOLOGIA 03.mp4";
-
-const videoSources = {
-  0: tipologia1,
-  1: tipologia2,
-  2: tipologia3,
-};
+import apartamento from "../../assets/sync-paneo.mp4";
 
 const ApartamentosSection = () => {
   const classes = useApartamentsStyles();
   const videoRef = useRef(null);
   const [autoPlay, setAutoPlay] = useState(false);
-  const [selectedElement, setSelectedElement] = useState(0);
 
   const callback = function (entries) {
     const [entry] = entries;
@@ -54,47 +43,21 @@ const ApartamentosSection = () => {
           alignItems="center"
           sx={{ position: "relative" }}
         >
-          <img
-            src={arrow}
-            alt="right arrow"
-            className={classes.videoArrow}
-            style={{
-              right: 0,
-            }}
-            onClick={() => {
-              setSelectedElement(
-                selectedElement === 2 ? 0 : selectedElement + 1
-              );
-            }}
-          />
-          <img
-            src={arrow}
-            className={classes.videoArrow}
-            alt="left arrow"
-            style={{
-              transform: "rotate(180deg)",
-              left: 0,
-            }}
-            onClick={() => {
-              setSelectedElement(
-                selectedElement === 0 ? 2 : selectedElement - 1
-              );
-            }}
-          />
           <video
             ref={videoRef}
             className={classes.imgContainer}
-            src={videoSources[selectedElement]}
+            src={apartamento}
             autoPlay={autoPlay}
           />
+
           <Stack sx={{ height: { xs: "320px", md: "330px" } }}>
             <Typography variant="h2" className={classes.subTitle}>
-              {apartamentList[selectedElement].title}
+              Monoambiente
             </Typography>
             <Typography className={classes.text}>
-              <span>{apartamentList[selectedElement].firstDesc}</span>
+              <span>Sup total 47 m | Propio 34 m</span>
               <br />
-              <span>{apartamentList[selectedElement].secondDesc}</span>
+              <span>Terraza 2,60 m | CDM 10,40 m</span>
             </Typography>
             <button
               className={classes.button}

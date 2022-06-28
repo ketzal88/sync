@@ -10,7 +10,7 @@ export const useLadingSectionStyles = makeStyles((theme) => {
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       height: "930px",
-      backgroundPosition: "0% 0%",
+      backgroundPosition: "center 0%",
       minHeight: "745px",
       paddingTop: "296px",
       paddingLeft: "38px",

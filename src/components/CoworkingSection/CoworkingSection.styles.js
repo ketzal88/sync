@@ -33,11 +33,11 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    backgroundColor: theme.palette.primary.blackOverlay,
     [theme.breakpoints.up("sm")]: {
       marginTop: "0",
       height: "100%",
       position: "absolute",
-      backgroundColor: "transparent",
     },
   },
   titleSection: {
@@ -62,6 +62,10 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     "-webkit-line-clamp": "8 !important",
     lineClamp: "8 !important",
     textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: "100px",
+      paddingRight: "100px",
+    },
     [theme.breakpoints.up("md")]: {
       paddingInline: "211px !important",
       "-webkit-line-clamp": "4 !important",
@@ -96,7 +100,7 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   },
   recorridoButton: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: theme.palette.primary.vmGreen,
+    color: theme.palette.primary.syncOrange,
     textTransform: "uppercase",
     fontSize: "16px",
     fontWeight: "bold",
