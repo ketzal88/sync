@@ -80,13 +80,13 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     "& .MuiSelect-select": {
       height: "32px !important",
       borderRadius: "0 !important",
-      borderBottom: `4px solid #74A444`,
+      borderBottom: `4px solid ${theme.palette.primary.syncOrange}`,
       padding: "0 !important",
       "&:before": {
-        borderBottom: `4px solid #74A444`,
+        borderBottom: `4px solid ${theme.palette.primary.syncOrange}`,
       },
       "&:after, &:hover, &:active, &:focus": {
-        borderBottom: `4px solid #74A444`,
+        borderBottom: `4px solid ${theme.palette.primary.syncOrange}`,
       },
     },
     "& .MuiOutlinedInput-notchedOutline": {
@@ -127,7 +127,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   inputForm: {
     "&.MuiInput-root": {
       "&:hover": {
-        borderBottom: "4px solid #74A444 !important",
+        borderBottom: `4px solid ${theme.palette.primary.syncOrange} !important`,
         "&:not(.Mui-disabled):before": {
           borderBottom: "none",
         },
@@ -147,7 +147,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   underlineInput: {
-    borderBottom: `4px solid #74A444`,
+    borderBottom: `4px solid ${theme.palette.primary.syncOrange}`,
     marginTop: "44px !important",
   },
   sellerImgContainer: {
@@ -192,7 +192,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     },
   },
   sellerName: {
-    color: theme.palette.primary.vmGreen,
+    color: theme.palette.primary.syncOrange,
     fontWeight: "bold !important",
     marginBottom: "11px !important",
     fontSize: "25px !important",
@@ -226,7 +226,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   agendarEntrevistaButton: {
     display: "flex",
     borderRadius: "46px",
-    backgroundColor: theme.palette.primary.vmGreen,
+    backgroundColor: theme.palette.primary.syncOrange,
     border: "none",
     outline: "none",
     margin: "55px 0px",
@@ -314,7 +314,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
     "& svg": {
       width: "48px",
       height: "48px",
-      color: theme.palette.primary.vmGreen,
+      color: theme.palette.primary.syncOrange,
       borderRadius: "50%",
       "&:active": {
         borderRadius: "50%",
@@ -333,7 +333,7 @@ export const usePrensaSectionStyles = makeStyles((theme) => ({
   },
   buttonSubmit: {
     backgroundColor: theme.palette.primary.syncBlue,
-    color: theme.palette.primary.vmGreen,
+    color: theme.palette.primary.syncOrange,
     position: "relative",
     display: "flex",
     justifyContent: "center",

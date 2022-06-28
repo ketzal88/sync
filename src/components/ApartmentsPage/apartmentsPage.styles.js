@@ -5,7 +5,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     agendaButton: {
       height: "83px !important",
       borderRadius: "46px !important",
-      backgroundColor: `${theme.palette.primary.vmGreen} !important`,
+      backgroundColor: `${theme.palette.primary.syncOrange} !important`,
       py: "28px",
       [theme.breakpoints.up("xl")]: {
         width: "356px !important",
@@ -42,7 +42,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
       textTransform: "none",
       [theme.breakpoints.down("md")]: {
         flexDirection: "column !important",
-        paddingBottom: "6% !important"
+        paddingBottom: "6% !important",
       },
     },
     apartmentsContainer: {
@@ -122,7 +122,7 @@ export const useApartmentsPageStyles = makeStyles((theme) => {
     descargarButton: {
       height: "83px !important",
       borderRadius: "46px !important",
-      borderColor: `${theme.palette.primary.vmGreen} !important`,
+      borderColor: `${theme.palette.primary.syncOrange} !important`,
 
       py: "28px",
       [theme.breakpoints.up("xl")]: {

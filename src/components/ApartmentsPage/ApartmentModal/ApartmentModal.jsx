@@ -287,9 +287,9 @@ const ScheduleInterviewModal = ({
               icon={<RadioButtonUncheckedIcon />}
               checkedIcon={<CheckCircleIcon />}
               sx={{
-                color: theme.palette.primary.vmGreen,
+                color: theme.palette.primary.syncOrange,
                 "&.Mui-checked": {
-                  color: theme.palette.primary.vmGreen,
+                  color: theme.palette.primary.syncOrange,
                 },
               }}
             />
@@ -329,7 +329,7 @@ const ScheduleInterviewModal = ({
               sx={{
                 display: "flex",
                 justifySelf: "flex-end",
-                color: theme.palette.primary.vmGreen,
+                color: theme.palette.primary.syncOrange,
               }}
             />
           </Button>

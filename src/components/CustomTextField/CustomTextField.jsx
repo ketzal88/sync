@@ -51,16 +51,20 @@ const CustomTextField = ({
       sx={{
         height: inputHeight,
         "& .MuiFilledInput-underline:before": {
-          borderBottom: (theme) => `4px solid ${theme.palette.primary.vmGreen}`,
+          borderBottom: (theme) =>
+            `4px solid ${theme.palette.primary.syncOrange}`,
         },
         "& .MuiFilledInput-underline:after": {
-          borderBottom: (theme) => `4px solid ${theme.palette.primary.vmGreen}`,
+          borderBottom: (theme) =>
+            `4px solid ${theme.palette.primary.syncOrange}`,
         },
         "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before": {
-          borderBottom: (theme) => `4px solid ${theme.palette.primary.vmGreen}`,
+          borderBottom: (theme) =>
+            `4px solid ${theme.palette.primary.syncOrange}`,
         },
         "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after": {
-          borderBottom: (theme) => `4px solid ${theme.palette.primary.vmGreen}`,
+          borderBottom: (theme) =>
+            `4px solid ${theme.palette.primary.syncOrange}`,
         },
         "& .MuiFilledInput-root": {
           backgroundColor: "unset",

@@ -19,7 +19,7 @@ import {
 } from "../../utils/apartmentsUtils";
 import { useApartmentsPageStyles } from "./apartmentsPage.styles";
 import { useScrollTo } from "../../customHooks/useScrollTo";
-import { hoja_4, sol_1} from "../../assets/images";
+import { hoja_4, sol_1 } from "../../assets/images";
 
 const PISOS_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -161,7 +161,7 @@ export default function ApartmentsPage() {
                       {...props}
                       sx={{
                         color: (theme) =>
-                          `${theme.palette.primary.vmGreen} !important`,
+                          `${theme.palette.primary.syncOrange} !important`,
                       }}
                     />
                   ),
@@ -170,21 +170,21 @@ export default function ApartmentsPage() {
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
                     borderBottom: (theme) =>
-                      `4px solid ${theme.palette.primary.vmGreen}`,
+                      `4px solid ${theme.palette.primary.syncOrange}`,
                   },
                   "& .MuiFilledInput-underline:after": {
                     borderBottom: (theme) =>
-                      `4px solid ${theme.palette.primary.vmGreen}`,
+                      `4px solid ${theme.palette.primary.syncOrange}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
                       borderBottom: (theme) =>
-                        `4px solid ${theme.palette.primary.vmGreen}`,
+                        `4px solid ${theme.palette.primary.syncOrange}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
                       borderBottom: (theme) =>
-                        `4px solid ${theme.palette.primary.vmGreen}`,
+                        `4px solid ${theme.palette.primary.syncOrange}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -248,7 +248,7 @@ export default function ApartmentsPage() {
                       {...props}
                       sx={{
                         color: (theme) =>
-                          `${theme.palette.primary.vmGreen} !important`,
+                          `${theme.palette.primary.syncOrange} !important`,
                       }}
                     />
                   ),
@@ -257,21 +257,21 @@ export default function ApartmentsPage() {
                   height: "85px",
                   "& .MuiFilledInput-underline:before": {
                     borderBottom: (theme) =>
-                      `4px solid ${theme.palette.primary.vmGreen}`,
+                      `4px solid ${theme.palette.primary.syncOrange}`,
                   },
                   "& .MuiFilledInput-underline:after": {
                     borderBottom: (theme) =>
-                      `4px solid ${theme.palette.primary.vmGreen}`,
+                      `4px solid ${theme.palette.primary.syncOrange}`,
                   },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):before":
                     {
                       borderBottom: (theme) =>
-                        `4px solid ${theme.palette.primary.vmGreen}`,
+                        `4px solid ${theme.palette.primary.syncOrange}`,
                     },
                   "& .MuiFilledInput-underline:hover:not(.Mui-disabled):after":
                     {
                       borderBottom: (theme) =>
-                        `4px solid ${theme.palette.primary.vmGreen}`,
+                        `4px solid ${theme.palette.primary.syncOrange}`,
                     },
                   "& .MuiFilledInput-root": {
                     backgroundColor: "unset",
@@ -341,13 +341,17 @@ export default function ApartmentsPage() {
                     </Box>
                     <Box sx={{ display: "flex" }}>
                       <Typography className={classes.apartmentSize}>
-                        {formatSuperficie(apartment.superficie)}<strong> M<sup>2</sup></strong>
+                        {formatSuperficie(apartment.superficie)}
+                        <strong>
+                          {" "}
+                          M<sup>2</sup>
+                        </strong>
                       </Typography>
                     </Box>
                     <Divider
                       sx={{
                         border: (theme) =>
-                          `2px solid ${theme.palette.primary.vmGreen}`,
+                          `2px solid ${theme.palette.primary.syncOrange}`,
                         width: "60%",
                         marginBottom: "10px",
                         marginTop: "10px",
@@ -394,7 +398,7 @@ export default function ApartmentsPage() {
                           marginRight: "20px",
                         }}
                       >
-                        <img src={hoja_4}/>
+                        <img src={hoja_4} />
                       </Box>
                     </Grid>
                   </Grid>
@@ -406,11 +410,10 @@ export default function ApartmentsPage() {
                   flexDirection="column"
                   className={classes.buttonsContainer}
                 >
-                  <Grid 
-                    container 
+                  <Grid
+                    container
                     className={classes.buttons}
                     justifyContent="center"
-
                   >
                     <Button
                       fullWidth
@@ -426,10 +429,7 @@ export default function ApartmentsPage() {
                       </Typography>
                     </Button>
                   </Grid>
-                  <Grid 
-                    container
-                    justifyContent="center"
-                  >
+                  <Grid container justifyContent="center">
                     <Button
                       variant="contained"
                       fullWidth

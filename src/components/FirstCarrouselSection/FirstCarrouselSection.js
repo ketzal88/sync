@@ -244,7 +244,7 @@ const FirstCarrouselSection = () => {
             },
           }}
         >
-          <Stack
+          {/* <Stack
             direction="row"
             sx={{
               animation: "none !important",
@@ -276,7 +276,7 @@ const FirstCarrouselSection = () => {
                 onClick={changeTypeOfCarrousel(accessKey)}
               />
             ))}
-          </Stack>
+          </Stack> */}
           <Typography variant="h4" className={classes.subTitleSection}>
             {subTitle}
           </Typography>
