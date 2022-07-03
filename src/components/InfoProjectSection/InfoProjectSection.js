@@ -1,41 +1,23 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
 import aboutProject from "../../assets/sync-video-promo.mp4";
 import { useInfoProjectSectionStyles } from "./InfoProjectSection.style";
+import videoPlaceholder from "../../assets/images/placeholder-video.png";
 
 const InfoProjectSection = () => {
   const classes = useInfoProjectSectionStyles();
 
-  const videoRef = useRef(null);
-  const [autoPlay, setAutoPlay] = useState(false);
-
-  const callback = function (entries) {
-    const [entry] = entries;
-    if (entry.isIntersecting) {
-      setAutoPlay(true);
-      videoRef?.current?.play();
-    } else {
-      setAutoPlay(false);
-      videoRef?.current?.pause();
-    }
+  const fullScreenHandler = (e) => {
+    const video = e.target;
+    if (video.requestFullscreen) video.requestFullscreen();
+    /* Firefox */
+    if (video.mozRequestFullScreen) video.mozRequestFullScreen();
+    /* Chrome, Safari & Opera */
+    if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+    /* IE/Edge */
+    if (video.msRequestFullscreen) video.msRequestFullscreen();
+    video?.play();
+    video.setAttribute("controls", "controls");
   };
-
-  const observer = new IntersectionObserver(callback, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  });
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.volume = 0.2;
-      observer.observe(videoRef.current);
-    }
-    return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      if (videoRef.current) observer.unobserve(videoRef.current);
-    };
-  }, [videoRef]);
 
   return (
     <Stack
@@ -53,12 +35,13 @@ const InfoProjectSection = () => {
             Conoce el proyecto
           </Typography>
           <video
-            ref={videoRef}
             className={classes.imageBox}
-            src={aboutProject}
-            autoPlay={autoPlay}
-            loop={true}
-          />
+            poster={videoPlaceholder}
+            onClick={fullScreenHandler}
+            onPause={(e) => e.target.removeAttribute("controls")}
+          >
+            <source src={aboutProject} />
+          </video>
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.subTitleSection}>
