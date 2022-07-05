@@ -19,11 +19,19 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
     },
   },
   imgSection: {
-    height: "100vh",
+    height: "100%",
+    width: "100%",
     objectFit: "cover",
-    [theme.breakpoints.up("sm")]: {
-      height: "100%",
-    },
+    opacity: "1",
+    transition: "opacity .5s ease-out",
+    position: "absolute",
+    // backgroundSize: "cover",
+    // backgroundImage: `url(${cowork})`,
+    // backgroundRepeat: "no-repeat",
+    // backgroundAttachment: "fixed",
+    // [theme.breakpoints.up("sm")]: {
+    //   height: "100%",
+    // },
   },
   textWrapper: {
     height: "100vh",
@@ -43,6 +51,10 @@ export const useCoworkingSectionStyles = makeStyles((theme) => ({
   titleSection: {
     textAlign: "center",
     fontSize: "48px !important",
+    left: 0,
+    right: 0,
+    top: "30%",
+    position: "absolute",
     [theme.breakpoints.up("md")]: {
       fontSize: "96px !important",
     },
